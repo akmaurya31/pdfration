@@ -1,8 +1,8 @@
 <?php
-$databaseHost = 'localhost';
-$databaseName = 'thelicensehub_pdf';
-$databaseUsername = 'thelicensehub_pdf';
-$databasePassword = 'thelicensehub_@2121';
+$databaseHost = 'mydb.cj2aycaoyu63.us-west-1.rds.amazonaws.com';
+$databaseName = 'cardration';
+$databaseUsername = 'admin';
+$databasePassword = 'Luxyaragroup';
 
 // Open a new connection to the MySQL server
 $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName); 

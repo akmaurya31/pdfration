@@ -1,8 +1,8 @@
 <?php
-$databaseHost = 'localhost';
-$databaseName = 'thelicensehub_pdf';
-$databaseUsername = 'thelicensehub_pdf';
-$databasePassword = 'thelicensehub_@2121';
+$databaseHost = 'mydb.cj2aycaoyu63.us-west-1.rds.amazonaws.com';
+$databaseName = 'cardration';
+$databaseUsername = 'admin';
+$databasePassword = 'Luxyaragroup';
 
 // Open a new connection to the MySQL server
 $mysqlii = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName); 
@@ -82,24 +82,24 @@ function getCurWallet($mysqli,$userId) {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="dashboard.php">Demo</a>
+                        <a class="nav-link active" aria-current="page" href="dashboard.php"> 🎥 Demo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="rationCard.php">SendRequest</a>
+                        <a class="nav-link" href="rationCard.php">📩 Send Request</a>
                     </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link" href="information.php">Fill Details</a>
                     </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" href="rationList.php">Download</a>
+                        <a class="nav-link" href="rationList.php">⬇️Download</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pay.php">Recharge</a>
+                        <a class="nav-link" href="pay.php">💰Recharge</a>
                     </li>
                     <?php if($_SESSION['role']=='admin'){ ?>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="userList.php">userList</a>
+                        <a class="nav-link" href="userList.php">📋User List</a>
                     </li>
                     <?php } ?>
 
