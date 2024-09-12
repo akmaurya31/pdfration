@@ -8,7 +8,7 @@
               Request Ration Card
             </div>
             <div class="mb-3">
-              <label for="name" class="form-label font-bold">Candidate Name (मुखिया) :</label>
+              <label for="name" class="form-label font-bold">👤 Candidate Name (मुखिया) :</label>
               <input
                 id="name"
                 name="name"
@@ -21,7 +21,7 @@
             </div>
 
             <div class="mb-3 d-none">
-              <label for="adhar" class="form-label font-bold">Adhar Card No. :</label>
+              <label for="adhar" class="form-label font-bold">Aadhaar Card No. :</label>
               <input
                 id="adhar"
                 name="adhar"
@@ -34,7 +34,7 @@
             </div>
 
             <div class="mb-3">
-              <label for="ration" class="form-label font-bold">Ration Card No. :</label>
+              <label for="ration" class="form-label font-bold">📜 Ration Card No. (राशन कार्ड संख्या) :</label>
               <input
                 id="ration"
                 name="ration"
@@ -47,7 +47,7 @@
             </div>
 
             <div class="mb-3">
-              <label for="janpad" class="form-label font-bold"> जनपद :</label>
+              <label for="janpad" class="form-label font-bold"> 🏙️ District (जनपद):</label>
               <input
                 id="janpad"
                 name="janpad"

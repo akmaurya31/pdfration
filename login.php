@@ -10,8 +10,8 @@
           <h5 class="card-title text-center text-danger fw-bold">User Login Form</h5>
           <form action="addLogin.php" method="post" name="add">
             <div class="mb-3">
-              <label for="username" class="form-label fw-bold text-gray-600">UserID :</label>
-              <input type="text" class="form-control" id="username" name="username" placeholder="Enter UserID">
+              <label for="username" class="form-label fw-bold text-gray-600">User ID :</label>
+              <input type="text" class="form-control" id="username" name="username" placeholder="Enter User ID">
             </div>
             <div class="mb-3">
               <label for="password" class="form-label fw-bold text-gray-600">Password :</label>
@@ -36,5 +36,6 @@
 <h2 style="text-align: center;">📍 Address: 295/5, Deen Dayal Road, Asharfabad, Lucknow, Uttar Pradesh 226003</h2>
 
 <h3>अगर आप अपना यूजरनेम या पासवर्ड भूल गए हैं, तो चिंता मत करें! 😊
+  <br/>
 कृपया हमें तुरंत WhatsApp करें: 📱 <a href="https://wa.me/917518869428" target="_blank">+91 7518869428 📞</a>
 हम आपकी मदद के लिए यहाँ हैं! 🙌</h3>
