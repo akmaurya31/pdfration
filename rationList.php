@@ -285,7 +285,7 @@ $result = $mysqli->query($sql);
         // console.log(idd,"ffffffffffidd");
         $('#frid').val(idd);
             $.ajax({
-                url: 'getRation.php',
+                url: 'getRation',
                 method: 'POST',
                 data: { idd: idd },
                 success: function(response1) {
@@ -350,7 +350,7 @@ $result = $mysqli->query($sql);
 
     $.ajax({
         type: 'POST',
-        url: 'jqeditRation.php',
+        url: 'jqeditRation',
         data: formData,
         contentType: false,
         processData: false,
@@ -373,7 +373,7 @@ $result = $mysqli->query($sql);
         var idd = $(this).data('idd');
         $('#rid').val(idd);
             $.ajax({
-                url: 'getRation.php',
+                url: 'getRation',
                 method: 'POST',
                 data: { idd: idd },
                 success: function(response1) {
@@ -395,7 +395,7 @@ $result = $mysqli->query($sql);
             var formData = $(this).serialize();
             $.ajax({
                 type: 'POST',
-                url: 'jqdownloadRation.php',
+                url: 'jqdownloadRation',
                 data: formData,
                 success: function(response) {
                     // console.log('API Response:', response);
