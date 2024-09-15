@@ -12,22 +12,22 @@
                 
                 <div class="mb-3">
                     <label for="name" class="block font-semibold text-gray-700 mb-1">Name :</label>
-                    <input type="text" name="name" class="w-full px-3 py-2 border rounded" id="name" placeholder="Enter name">
+                    <input type="text" name="name" required class="w-full px-3 py-2 border rounded" id="name" placeholder="Enter name">
                 </div>
                 
                 <div class="mb-3">
                     <label for="email" class="block font-semibold text-gray-700 mb-1">Email :</label>
-                    <input type="email" name="email" class="w-full px-3 py-2 border rounded" id="email" placeholder="Enter email">
+                    <input type="email" name="email" required class="w-full px-3 py-2 border rounded" id="email" placeholder="Enter email">
                 </div>
 
                 <div class="mb-3">
                     <label for="contact_number" class="block font-semibold text-gray-700 mb-1">Contact Number :</label>
-                    <input type="number" name="contact_number" class="w-full px-3 py-2 border rounded" id="contact_number" placeholder="Enter contact number">
+                    <input type="number" name="contact_number" required class="w-full px-3 py-2 border rounded" id="contact_number" placeholder="Enter contact number">
                 </div>
 
                 <div class="mb-3">
                     <label for="password" class="block font-semibold text-gray-700 mb-1">Password :</label>
-                    <input type="password" name="password" class="w-full px-3 py-2 border rounded" id="password" placeholder="Enter password">
+                    <input type="password" name="password" required class="w-full px-3 py-2 border rounded" id="password" placeholder="Enter password">
                 </div>
 
                 <div class="mb-3 flex items-center">
