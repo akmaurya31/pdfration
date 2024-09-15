@@ -1,6 +1,13 @@
-<script src="https://cdn.tailwindcss.com"></script>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- <div class="container mx-auto mt-5 max-w-[1320px]"> -->
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+</head>
 <?php session_start(); ?>
 
 
