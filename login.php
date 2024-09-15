@@ -6,7 +6,7 @@
       <div class="bg-white shadow-lg rounded-lg">
         <div class="p-6">
           <h5 class="text-center text-red-600 font-bold text-lg mb-4">🔐 User Login Form</h5>
-          <form action="addLogin.php" method="post" name="add">
+          <form action="addLogin" method="post" name="add">
             <div class="mb-4">
               <label for="username" class="block font-bold text-gray-700 mb-1">User ID :</label>
               <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded" id="username" name="username" placeholder="Enter User ID">

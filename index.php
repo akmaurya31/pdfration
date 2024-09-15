@@ -7,7 +7,7 @@
 
     <div class="flex justify-center">
         <div class="w-full max-w-md">
-            <form action="addNewUser.php" method="post" name="add" class="p-4 border rounded shadow-lg">
+            <form action="addNewUser" method="post" name="add" class="p-4 border rounded shadow-lg">
                 <h4 class="text-center text-red-600 font-bold text-lg mb-4">📝User Signup Form</h4>
                 
                 <div class="mb-3">

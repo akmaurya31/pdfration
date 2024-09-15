@@ -1,14 +1,5 @@
 <?php
-// $databaseHost = 'mydb.cj2aycaoyu63.us-west-1.rds.amazonaws.com';
-// $databaseName = 'cardration';
-// $databaseUsername = 'admin';
-// $databasePassword = 'Luxyaragroup';
-
-$databaseHost = 'localhost';
-$databaseName = 'cardration';
-$databaseUsername = 'root';
-$databasePassword = 'root@123';
-
+include('dbconn.php');
 
 // Open a new connection to the MySQL server
 $mysqlii = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName); 

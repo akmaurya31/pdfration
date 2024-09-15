@@ -4,6 +4,8 @@ require_once("dbConnection.php");
 // Start the session
 session_start();
 
+print_r($_POST);
+
 // Retrieve data from the session
 $name = $_POST['name'];
 $email = $_POST['email'];
