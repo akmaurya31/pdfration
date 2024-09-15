@@ -4,6 +4,7 @@ $databaseName = 'cardration';
 $databaseUsername = 'admin';
 $databasePassword = 'Luxyaragroup';
 
+
 // $databaseHost = 'localhost';
 // $databaseName = 'cardration';
 // $databaseUsername = 'root';
