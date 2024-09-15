@@ -103,9 +103,10 @@ function getCurWallet($mysqli,$userId) {
       </li>
       <?php } ?>
 
-      
+      <?php $current_balance = isset($_SESSION['current_balance']) ? $_SESSION['current_balance'] : '0'; ?>
+
       <li>
-        <a href="wallet.php" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">  👛Wallet ₹ [<?php echo $_SESSION['current_balance']; ?>]</a>
+        <a href="wallet.php" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">  👛Wallet ₹ <?php echo $current_balance; ?></a>
       </li>
 
       <li>
