@@ -18,7 +18,7 @@
       <p class="text-lg mb-2">📱 ₹400 का रिचार्ज</p>
       <p class="text-lg mb-2">💼 ₹400 का वॉलेट बैलेंस (4 कार्ड)</p>
       <p class="text-lg mb-4">🎉 + ₹200 का लाभ</p>
-      <button type="button" class="bg-blue-500 text-white rounded-full px-4 py-2 mt-4 hover:bg-blue-600">
+      <button type="button" class="bg-blue-500 text-white rounded-full px-4 py-2 mt-4 hover:bg-blue-600" onclick="document.getElementById('exampleModal').classList.remove('hidden');">
     Pay Now
   </button>
     </div>
@@ -30,7 +30,7 @@
       <p class="text-lg mb-2">📱 ₹1000 का रिचार्ज</p>
       <p class="text-lg mb-2">💼 ₹1100 का वॉलेट बैलेंस (12 कार्ड)</p>
       <p class="text-lg mb-4">📈 + ₹800 का लाभ</p>
-      <button type="button" class="bg-yellow-500 text-white rounded-full px-4 py-2 mt-4 hover:bg-blue-600">
+      <button type="button" class="bg-yellow-500 text-white rounded-full px-4 py-2 mt-4 hover:bg-blue-600" onclick="document.getElementById('exampleModal').classList.remove('hidden');">
     Pay Now
   </button>
     </div>
@@ -42,7 +42,7 @@
       <p class="text-lg mb-2">📱 ₹1700 का रिचार्ज</p>
       <p class="text-lg mb-2">💼 ₹2000 का वॉलेट बैलेंस (22 कार्ड)</p>
       <p class="text-lg mb-4">🎁 + ₹1600 का लाभ</p>
-      <button type="button" class="bg-red-500 text-white rounded-full px-4 py-2 mt-4 hover:bg-blue-600">
+      <button type="button" class="bg-red-500 text-white rounded-full px-4 py-2 mt-4 hover:bg-blue-600" onclick="document.getElementById('exampleModal').classList.remove('hidden');">
     Pay Now
   </button>
     </div>
@@ -54,9 +54,14 @@
       <p class="text-lg mb-2">📱 ₹5000 का रिचार्ज</p>
       <p class="text-lg mb-2">💼 ₹6000 का वॉलेट बैलेंस (40 कार्ड)</p>
       <p class="text-lg mb-4">🎁 + ₹2250 का लाभ</p>
-      <button type="button" class="bg-green-500 text-white rounded-full px-4 py-2 mt-4 hover:bg-blue-600">
+  
+  <button type="button" class="bg-green-500 text-white rounded-full px-4 py-2 mt-4 hover:bg-blue-600" onclick="document.getElementById('exampleModal').classList.remove('hidden');">
     Pay Now
   </button>
+
+  <!-- <button type="button" class="bg-red-500 text-white rounded-full px-4 py-2" data-toggle="modal" data-target="#myModal" onclick="document.getElementById('exampleModal').classList.remove('hidden');">Pay Now</button> -->
+
+
     </div>
   </div>
 
