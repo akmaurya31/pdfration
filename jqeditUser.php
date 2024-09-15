@@ -10,7 +10,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pay =$_POST['status'];
     $user_id = $_POST['uid'];
     $transaction_id = $_POST['transaction_id'];
-    $sql = "UPDATE users SET name='$name', username='$username', email='$email', contact_number='$contactDetail', password='$password' WHERE id=$user_id";
+    $address =$_POST['address'];
+    $sql = "UPDATE users SET name='$name', username='$username', email='$email', contact_number='$contactDetail', password='$password',address='$address' WHERE id=$user_id";
     if ($mysqli->query($sql) === TRUE) {
         echo "User information updated successfully.";
     } else {

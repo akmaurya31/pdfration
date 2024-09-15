@@ -16,9 +16,8 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
                     <th class="px-6 py-3">No.</th>
                     <th class="px-6 py-3">Name</th>
                     <th class="px-6 py-3">User Name</th>
-                    <!-- <th class="px-6 py-3">Email</th> -->
-                    <th class="px-6 py-3">Contact Name</th>
-                    <th class="px-6 py-3">Password</th>
+                    <th class="px-6 py-3">Address</th>
+                    <th class="px-6 py-3">Contact Name </th>
                     <th class="px-6 py-3">Plan Status</th>
                     <th class="px-6 py-3">Transaction ID / UTR</th>
                     <th class="px-6 py-3">Current Balance</th>
@@ -46,9 +45,8 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
                             <td class="px-6 py-4"><?php echo $row['id']; ?></td>
                             <td class="px-6 py-4"><?php echo $row['name']; ?><br /><?php //echo $row['janpad']; ?></td>
                             <td class="px-6 py-4"><?php echo $row['username']; ?> <br/><?php echo $row['email']; ?></td>
-                            <!-- <td class="px-6 py-4"><?php echo $row['email']; ?></td> -->
-                            <td class="px-6 py-4"><?php echo $row['contact_number']; ?></td>
-                            <td class="px-6 py-4"><?php echo $row['password']; ?></td>
+                            <td class="px-6 py-4"><?php echo $row['address']; ?></td>
+                            <td class="px-6 py-4"><?php echo $row['contact_number']; ?><br/><?php echo $row['password']; ?></td>
                             <td class="px-6 py-4"><?php echo $row['pay']; ?></td>
                             <td class="px-6 py-4"><?php echo $row['transaction_id']; ?></td>
                             <td class="px-6 py-4"><?php echo $rscurr; ?></td>
@@ -56,11 +54,11 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
                             <td class="px-6 py-4 flex flex-col space-y-2">
                                 <button class="neditButton bg-green-500 text-white py-1 px-2 rounded" data-toggle="modal" data-target="#myModal" data-userid="<?php echo $row['id']; ?>" 
                                 data-modal-target="myModal" data-modal-toggle="myModal"
-                                >Profile Edit</button>
+                                >ProfileEdit</button>
 
-                                <button class="planedit bg-blue-500 text-white py-1 px-2 rounded" data-toggle="modal" data-target="#myModal_plan" data-userid="<?php echo $row['id']; ?>"
+                                <!-- <button class="planedit bg-blue-500 text-white py-1 px-2 rounded" data-toggle="modal" data-target="#myModal_plan" data-userid="<?php echo $row['id']; ?>"
                                 data-modal-target="myModal_plan" data-modal-toggle="myModal_plan"
-                                >Purchase Plan</button>
+                                >Purchase Plan</button> -->
 
                                 <button class="rechargeedit bg-purple-500 text-white py-1 px-2 rounded" data-toggle="modal" data-target="#myModal_recharge" data-userid="<?php echo $row['id']; ?>"
                                 data-modal-target="myModal_recharge" data-modal-toggle="myModal_recharge"
@@ -141,6 +139,11 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
                                 <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
                                 <input type="text" id="password" name="password" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
                             </div>
+                        </div>
+
+                        <div class="col-span-1 md:col-span-2 mb-4">
+                             <label for="address" class="block text-sm font-medium text-gray-700">Address</label>
+                          <textarea id="address" name="address" rows="4" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"></textarea>
                         </div>
                     </div>
                     <button type="submit" id="s1" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700">Submit</button>
@@ -301,6 +304,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
                     $('#nemail').val(response.email);
                     $('#ncontactDetail').val(response.contact_number);
                     $('#pay_date').val(response.pay_date);
+                    $('#address').val(response.address);
                     var status = response.pay;
                     $('#status').val(status);
                     $('#contactDetail').val(response.contactDetail);
