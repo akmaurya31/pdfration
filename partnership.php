@@ -31,7 +31,7 @@
             <h4 class="text-lg font-semibold text-gray-800 mb-2">हमारी वेबसाइट:</h4>
             <p class="text-gray-700 mb-2"><a href="https://pdf.luxyaragroup.io" class="text-blue-600 hover:underline">pdf.luxayaragroup.io</a></p>
             <h4 class="text-lg font-semibold text-gray-800 mb-2">पता:</h4>
-            <p class="text-gray-700">Amriss Digital Center, 295/5 Balda Shahgnaj Chowk, Lucknow</p>
+            <p class="text-gray-700">Amrish Digital Center, 295/5 Balda Shahgnaj Chowk, Lucknow</p>
         </div>
     </div>
 </div>

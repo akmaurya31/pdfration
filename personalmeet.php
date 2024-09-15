@@ -26,12 +26,12 @@
             हम आपके साथ बैठक के लिए पूरी तरह से तैयार हैं। आपके व्यवसाय को समझने और पार्टनरशिप के अवसरों पर चर्चा करने के लिए हम उत्सुक हैं। 😊
         </p>
         <div class="bg-gray-200 p-4 rounded-lg">
-            <h4 class="text-lg font-semibold text-gray-800 mb-2">संपर्क विवरण:</h4>
+            <h4 class="text-lg font-semibold text-gray-800 mb-2">संपर्क करें:</h4>
             <p class="text-gray-700 mb-2">📞 <strong>7518869428</strong></p>
             <h4 class="text-lg font-semibold text-gray-800 mb-2">हमारी वेबसाइट:</h4>
-            <p class="text-gray-700 mb-2">
-                <a href="http://pdf.luxayaragroup.io" class="text-blue-600 hover:underline">pdf.luxayaragroup.io</a>
-            </p>
+            <p class="text-gray-700 mb-2"><a href="https://pdf.luxyaragroup.io" class="text-blue-600 hover:underline">pdf.luxayaragroup.io</a></p>
+            <h4 class="text-lg font-semibold text-gray-800 mb-2">पता:</h4>
+            <p class="text-gray-700">Amrish Digital Center, 295/5 Balda Shahgnaj Chowk, Lucknow</p>
         </div>
     </div>
 </div>

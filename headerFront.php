@@ -37,7 +37,7 @@
                 <ul class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
                     
                     <li>
-                        <a href="other.php" class="text-gray-900 dark:text-white hover:underline">🛠️OtherSerivces</a>
+                        <a href="otherservices.php" class="text-gray-900 dark:text-white hover:underline">🛠️OtherSerivces</a>
                     </li>
                     <li>
                         <a href="partnership.php" class="text-gray-900 dark:text-white hover:underline">🤝Partnership</a>
