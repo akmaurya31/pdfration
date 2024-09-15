@@ -289,7 +289,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
     $('.neditButton').click(function() {
         var userId = $(this).data('userid');
             $.ajax({
-                url: 'getUser.php',
+                url: 'getUser',
                 method: 'POST',
                 data: { uid: userId },
                 success: function(response1) {
@@ -332,7 +332,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
     $('.planedit').click(function() {
         var userId = $(this).data('userid');
             $.ajax({
-                url: 'getUser.php',
+                url: 'getUser',
                 method: 'POST',
                 data: { uid: userId },
                 success: function(response1) {
@@ -369,7 +369,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
     $('.rechargeedit').click(function() {
         var userId = $(this).data('userid');
             $.ajax({
-                url: 'getUser.php',
+                url: 'getUser',
                 method: 'POST',
                 data: { uid: userId },
                 success: function(response1) {
