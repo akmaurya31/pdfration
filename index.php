@@ -1,12 +1,14 @@
-<script src="https://cdn.tailwindcss.com"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<div class="container mx-auto mt-5 max-w-[1320px]">
-    <h1 class="text-center text-2xl font-bold my-4 ">Ration Card Print Portal</h1>
+<?php include('headerFront.php'); ?>
+
+
+<h1 class="text-center text-2xl font-bold my-4 "> 🛒Ration Card Print Portal</h1>
+
+
 
     <div class="flex justify-center">
         <div class="w-full max-w-md">
             <form action="addNewUser.php" method="post" name="add" class="p-4 border rounded shadow-lg">
-                <h4 class="text-center text-red-600 font-bold text-lg mb-4">User Signup Form</h4>
+                <h4 class="text-center text-red-600 font-bold text-lg mb-4">📝User Signup Form</h4>
                 
                 <div class="mb-3">
                     <label for="name" class="block font-semibold text-gray-700 mb-1">Name :</label>
@@ -33,10 +35,10 @@
                     <label class="ml-2 font-semibold text-gray-700" for="remember">Remember</label>
                 </div>
 
-                <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Signup</button>
+                <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">📝 Signup</button>
                 
                 <div class="text-right mt-3">
-                    <a href="login.php" class="text-blue-600 hover:underline">Login</a>
+                    <a href="login.php" class="text-blue-600 hover:underline">🔐Login</a>
                 </div>
             </form>
         </div>
@@ -56,3 +58,5 @@
         </h3>
     </div>
 </div>
+
+<?php include('footer.php'); ?>

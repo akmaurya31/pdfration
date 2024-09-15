@@ -1,8 +1,14 @@
 <?php
-$databaseHost = 'mydb.cj2aycaoyu63.us-west-1.rds.amazonaws.com';
+// $databaseHost = 'mydb.cj2aycaoyu63.us-west-1.rds.amazonaws.com';
+// $databaseName = 'cardration';
+// $databaseUsername = 'admin';
+// $databasePassword = 'Luxyaragroup';
+
+$databaseHost = 'localhost';
 $databaseName = 'cardration';
-$databaseUsername = 'admin';
-$databasePassword = 'Luxyaragroup';
+$databaseUsername = 'root';
+$databasePassword = 'root@123';
+
 
 // Open a new connection to the MySQL server
 $mysqlii = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName); 
@@ -46,95 +52,152 @@ function getCurWallet($mysqli,$userId) {
   }
 }
 
-
-
-
-
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <style>
-        /* Style for navbar links */
-        .navbar-nav .nav-link {
-            color: white !important; /* Set text color to white */
-        }
-    </style>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
+
 <body>
-    <?php $dd='bg-primary'; if($_SESSION['role']=='admin'){ $dd='bg-danger'; }  ?>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <?php $dd=''; // $dd='bg-primary'; if($_SESSION['role']=='admin'){ $dd='bg-danger'; }  ?>
+
+
     
+
+<nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+  <a href="login.php" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img src="images/logo1.png" class="h-8" alt="">
+      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">.</span>
+  </a>
+  <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+      <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get started</button>
+      <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+  </div>
+  <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+    <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+      <li>
+        <a href="dashboard.php" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">  🎥 Demo</a>
+      </li>
+      <li>
+        <a href="rationCard.php" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">  📩 Send Request</a>
+      </li>
+      <li>
+        <a href="rationList.php" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">⬇️Download</a>
+      </li>
+      <li>
+        <a href="pay.php" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">  💰Recharge</a>
+      </li>
+
+      <li>
+        <a href="userList.php" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">  📋User List</a>
+      </li>
+
+      
+      <li>
+        <a href="wallet.php" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">  👛Wallet</a>
+      </li>
+
+      <li>
+        <a href="logout.php" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">  🚪 Logout</a>
+      </li>
+
+
+    </ul>
+  </div>
+  </div>
+</nav>
+
+<div class="max-w-screen-xl flex flex-wrap items-center justify-center pt-20 mx-auto">
+    <?php // include('headerFront.php'); ?>
+    <div class="inline-flex rounded-md shadow-sm" role="group">
+    <a href="other.php" 
+     class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+    🎥 Services
+    </a>
+    <a href="partnership.php" 
+   class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+    📩 Partnership
+</a>
+<a href="personalmeet.php" 
+   class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+    📋 PersonalMeet
+</a>
+    </div> 
+</div> 
+
     
-    <nav class="navbar navbar-expand-lg navbar-light <?php echo $dd ?> ">
-        <div class="container">
-            <!-- <a class="navbar-brand" href="#">#</a> -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="dashboard.php"> 🎥 Demo</a>
+    <!-- <nav class="bg-white  shadow-lg <?php echo $dd; ?> ">
+        <div class="container mx-auto flex justify-between items-center px-4 py-3">
+            <div class="flex items-center">
+                <button class="text-gray-700 focus:outline-none lg:hidden" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="hidden lg:flex lg:items-center" id="navbarNav">
+                <ul class="flex space-x-6">
+                    <li>
+                        <a class="text-gray-700 hover:text-blue-600" href="dashboard.php">🎥 Demo</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="rationCard.php">📩 Send Request</a>
+                    <li>
+                        <a class="text-gray-700 hover:text-blue-600" href="rationCard.php">📩 Send Request</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="information.php">Fill Details</a>
-                    </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="rationList.php">⬇️Download</a>
+                    <li>
+                        <a class="text-gray-700 hover:text-blue-600" href="rationList.php">⬇️Download</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pay.php">💰Recharge</a>
+                    <li>
+                        <a class="text-gray-700 hover:text-blue-600" href="pay.php">💰Recharge</a>
                     </li>
                     <?php if($_SESSION['role']=='admin'){ ?>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="userList.php">📋User List</a>
+                    <li>
+                        <a class="text-gray-700 hover:text-blue-600" href="userList.php">📋User List</a>
                     </li>
                     <?php } ?>
-
-                   
                 </ul>
             </div>
-            <!-- Right side of the navbar -->
-            <div class="ml-auto">
-                <ul class="navbar-nav">
 
-                   <li class="nav-item">
-                        <a class="nav-link" href="#"><?php echo $_SESSION['contact_number'] ?> - <?php echo $_SESSION['username'] ?></a>
+          
+            <div class="flex items-center space-x-6">
+                <ul class="flex items-center space-x-4">
+                    <li>
+                        <span class="text-gray-700"><?php echo $_SESSION['contact_number'] ?> - <?php echo $_SESSION['username'] ?></span>
                     </li>
 
-                    <li class="nav-item">
-                      <?php
-                       $ro=getCurWallet($mysqlii,$_SESSION['idd']);
-                       $roinc=0;
-                       if(isset($ro->current_balance) && $ro->current_balance>0){
-                        $roinc=$ro->current_balance;
-                       }
-                      ?>
-                        <a class="nav-link" href="wallet.php"> <b>₹</b> <?php echo $roinc  ?></a>
+                    <li>
+                        <?php
+                        $ro=getCurWallet($mysqlii,$_SESSION['idd']);
+                        $roinc=0;
+                        if(isset($ro->current_balance) && $ro->current_balance>0){
+                            $roinc=$ro->current_balance;
+                        }
+                        ?>
+                        <a class="text-gray-700 hover:text-blue-600" href="wallet.php"><b>₹</b> <?php echo $roinc ?></a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+                    <li class="relative">
+                        <button class="text-gray-700 hover:text-blue-600 focus:outline-none" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                             Profile
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <!-- <li><a class="dropdown-item" href="#">Edit Profile</a></li> -->
-                            <!-- <li><a class="dropdown-item" href="#">Change Password</a></li> -->
-                            <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+                        </button>
+                        <ul class="absolute right-0 mt-2 w-48 bg-white shadow-lg py-2 z-50">
+                            <li><a class="block px-4 py-2 text-gray-700 hover:bg-gray-100" href="logout.php">Logout</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav> -->

@@ -6,170 +6,205 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
 }
 ?>
 
-<div class="container bg-light mb-4">
-    <h3 class="text-center underline">All User List</h3>
-    <button>Date <input type="date" id="edate" class="text-dark" /></button>
-    <table class="table" id="ttble">
-        <thead class="bg-dark text-white">
-            <tr>
-                <th scope="col">No.</th>
-                <th scope="col">Name</th>
-                <th scope="col">User Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Contact Name</th>
-                <th scope="col">Password</th>
-                <th scope="col">Plan Status</th>
-                <th scope="col">Transaction ID /UTR</th>
-                <th scope="col">Current Balance</th>
-                <th scope="col">-</th>
-                <th scope="col">Action</th>
-            </tr>
-        </thead>
-        <tbody class="bg-white divide-y divide-gray-200">
-            <?php
-            require_once("dbConnection.php");
-            
-            $sql = "SELECT * FROM users";
-            $result = $mysqli->query($sql);
+<div class="container mb-4 mx-auto max-w-[1350px] pt-5">
+    <h3 class="text-center   text-2xl font-bold">🧑All User List🧑</h3>
+    
+    <div class="overflow-x-auto">
+        <table id="" class="min-w-full bg-white border border-gray-200 rounded-lg shadow-md">
+            <thead class="bg-gray-800 text-white">
+                <tr>
+                    <th class="px-6 py-3">No.</th>
+                    <th class="px-6 py-3">Name</th>
+                    <th class="px-6 py-3">User Name</th>
+                    <!-- <th class="px-6 py-3">Email</th> -->
+                    <th class="px-6 py-3">Contact Name</th>
+                    <th class="px-6 py-3">Password</th>
+                    <th class="px-6 py-3">Plan Status</th>
+                    <th class="px-6 py-3">Transaction ID / UTR</th>
+                    <th class="px-6 py-3">Current Balance</th>
+                    <th class="px-6 py-3">Pay Date</th>
+                    <th class="px-6 py-3">Action</th>
+                </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-gray-200">
+                <?php
+                require_once("dbConnection.php");
+                $users_per_page = 10;
+                $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+                $offset = ($page - 1) * $users_per_page;
 
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    $rs=getCurWallet($mysqli,$row['id']);
-                    // $rs->current_balance = isset($rs->current_balance) ? $rs->current_balance : 0;
-                    // $rs->current_balance = isset($rs) && isset($rs->current_balance) ? $rs->current_balance : 0;
-                    // $rs->current_balance = $rs && isset($rs->current_balance) ? $rs->current_balance : 0;
-                    $rscurr=0;
-                    if(isset($rs->current_balance)){
-                        if($rs->current_balance>0){
-                            $rscurr=$rs->current_balance;
-                        }else{
-                            $rscurr=0;
-                        }
+                // Fetch users for the current page
+                $sql = "SELECT * FROM users LIMIT $users_per_page OFFSET $offset";
+                $result = $mysqli->query($sql);
+
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        $rs = getCurWallet($mysqli, $row['id']);
+                        $rscurr = isset($rs->current_balance) && $rs->current_balance > 0 ? $rs->current_balance : 0;
+                ?>
+                        <tr>
+                            <td class="px-6 py-4"><?php echo $row['id']; ?></td>
+                            <td class="px-6 py-4"><?php echo $row['name']; ?><br /><?php //echo $row['janpad']; ?></td>
+                            <td class="px-6 py-4"><?php echo $row['username']; ?> <br/><?php echo $row['email']; ?></td>
+                            <!-- <td class="px-6 py-4"><?php echo $row['email']; ?></td> -->
+                            <td class="px-6 py-4"><?php echo $row['contact_number']; ?></td>
+                            <td class="px-6 py-4"><?php echo $row['password']; ?></td>
+                            <td class="px-6 py-4"><?php echo $row['pay']; ?></td>
+                            <td class="px-6 py-4"><?php echo $row['transaction_id']; ?></td>
+                            <td class="px-6 py-4"><?php echo $rscurr; ?></td>
+                            <td class="px-6 py-4"><?php echo $row['pay_date']; ?></td>
+                            <td class="px-6 py-4 flex flex-col space-y-2">
+                                <button class="neditButton bg-green-500 text-white py-1 px-2 rounded" data-toggle="modal" data-target="#myModal" data-userid="<?php echo $row['id']; ?>" 
+                                data-modal-target="myModal" data-modal-toggle="myModal"
+                                >Profile Edit</button>
+
+                                <button class="planedit bg-blue-500 text-white py-1 px-2 rounded" data-toggle="modal" data-target="#myModal_plan" data-userid="<?php echo $row['id']; ?>"
+                                data-modal-target="myModal_plan" data-modal-toggle="myModal_plan"
+                                >Purchase Plan</button>
+
+                                <button class="rechargeedit bg-purple-500 text-white py-1 px-2 rounded" data-toggle="modal" data-target="#myModal_recharge" data-userid="<?php echo $row['id']; ?>"
+                                data-modal-target="myModal_recharge" data-modal-toggle="myModal_recharge"
+                                >Recharge</button>
+                            </td>
+                        </tr>
+                <?php
                     }
-            ?>
-                    <tr>
-                        <td class="px-6 py-2 pb-0 whitespace-nowrap"><?php echo $row['id']; ?></td>
-                        <td class="px-6 py-2 pb-0 whitespace-nowrap"><?php echo $row['name']; ?><br/><?php echo $row['janpad']; ?></td>
-                        <td class="px-6 py-2 pb-0 whitespace-nowrap"><?php echo $row['username']; ?></td>
-                        <td class="px-6 py-2 pb-0 whitespace-nowrap"><?php echo $row['email']; ?></td>
-                        <td class="px-6 py-2 pb-0 whitespace-nowrap"><?php echo $row['contact_number']; ?></td>
-                        <td class="px-6 py-2 pb-0 whitespace-nowrap"><?php echo $row['password']; ?></td>
-                        <td class="px-6 py-2 pb-0 whitespace-nowrap"><?php echo $row['pay']; ?></td>
-                        <td class="px-6 py-2 pb-0 whitespace-nowrap"><?php echo $row['transaction_id']; ?></td>
-                        <td class="px-6 py-2 pb-0 whitespace-nowrap"><?php echo $rscurr; ?></td>
-                        <td class="px-6 py-2 pb-0 whitespace-nowrap"><?php echo $row['pay_date']; ?></td>
-                        <td class="px-6 py-2 pb-0 whitespace-nowrap">
-                            <button class="neditButton btn btn-success py-1 text-white" data-toggle="modal" data-target="#myModal" data-userid="<?php echo $row['id']; ?>">Profile Edit</button>
-
-                            <button class="planedit btn btn-success py-1 text-white" data-toggle="modal" data-target="#myModal_plan" data-userid="<?php echo $row['id']; ?>">Purchase Plan</button>
-
-                            <button class="rechargeedit btn btn-success py-1 text-white" data-toggle="modal" data-target="#myModal_recharge" data-userid="<?php echo $row['id']; ?>">Recharge</button>
-                        </td>
-                    </tr>
-            <?php
+                } else {
+                    echo "<tr><td colspan='11' class='text-center px-6 py-4'>No users found</td></tr>";
                 }
-            } else {
-                echo "<tr><td colspan='9' class='px-6 py-4 text-center'>No users found</td></tr>";
-            }
-            $mysqli->close();
-            ?>
-        </tbody>
-    </table>
+
+                // Calculate total pages
+                $total_users_sql = "SELECT COUNT(*) as total_users FROM users";
+                $total_users_result = $mysqli->query($total_users_sql);
+                $total_users_row = $total_users_result->fetch_assoc();
+                $total_users = $total_users_row['total_users'];
+
+                $total_pages = ceil($total_users / $users_per_page);
+
+                $mysqli->close();
+                ?>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination flex justify-center mt-4">
+        <?php if ($page > 1): ?>
+            <a href="?page=<?php echo $page - 1; ?>" class="px-4 py-2 bg-gray-200 rounded-l">Previous</a>
+        <?php endif; ?>
+
+        <?php for ($i = 1; $i <= $total_pages; $i++): ?>
+            <a href="?page=<?php echo $i; ?>" class="px-4 py-2 bg-gray-200 <?php echo $i == $page ? 'bg-blue-500 text-white' : ''; ?>"><?php echo $i; ?></a>
+        <?php endfor; ?>
+
+        <?php if ($page < $total_pages): ?>
+            <a href="?page=<?php echo $page + 1; ?>" class="px-4 py-2 bg-gray-200 rounded-r">Next</a>
+        <?php endif; ?>
+    </div>
 </div>
 
-<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <!-- <h4 class="modal-title">Update User</h4> -->
+<div id="myModal" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+   <!-- Modal -->
+    <div class="  inset-0 flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg shadow-lg w-full max-w-lg">
+            <!-- Modal Header -->
+            <div class="flex justify-between items-center p-4 border-b">
+                <h2 class="text-xl font-bold">Update User</h2>
+                <button type="button" class="text-gray-600 hover:text-gray-800" data-dismiss="modal">&times;</button>
             </div>
-            <div class="modal-body">
+
+            <!-- Modal Body -->
+            <div class="p-4">
                 <form id="userForm">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" class="form-control" id="nname" name="name" />
-                                <input type="hidden" class="form-control" id="nuid" name="uid" />
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <div class="mb-4">
+                                <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                                <input type="text" id="nname" name="name" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
+                                <input type="hidden" id="nuid" name="uid" />
                             </div>
-                            <div class="form-group">
-                                <label for="username">Username</label>
-                                <input type="text" class="form-control" id="username" name="username" />
+                            <div class="mb-4">
+                                <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+                                <input type="text" id="username" name="username" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
                             </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" class="form-control" id="nemail" name="email" />
+                            <div class="mb-4">
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                                <input type="email" id="nemail" name="email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
                             </div>
                         </div>
-                        <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="contactDetail">Contact Detail</label>
-                                    <input type="text" class="form-control" id="ncontactDetail" name="contactDetail" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="password">Password</label>
-                                    <input type="text" class="form-control" id="password" name="password" />
-                                </div>
-                                
+                        <div>
+                            <div class="mb-4">
+                                <label for="contactDetail" class="block text-sm font-medium text-gray-700">Contact Detail</label>
+                                <input type="text" id="ncontactDetail" name="contactDetail" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
                             </div>
-                           
+                            <div class="mb-4">
+                                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                                <input type="text" id="password" name="password" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
+                            </div>
+                        </div>
                     </div>
-                    <button type="submit" name="s1" id="s1" class="btn btn-primary">Submit</button>
+                    <button type="submit" id="s1" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700">Submit</button>
                 </form>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+            <!-- Modal Footer -->
+            <div class="flex justify-end p-4 border-t">
+                <button type="button" class="bg-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-400" data-dismiss="modal" onclick="document.getElementById('myModal').classList.add('hidden');">Close</button>
             </div>
         </div>
     </div>
 </div>
 
-<div class="modal fade" id="myModal_plan" role="dialog">
-    <div class="modal-dialog modal-lg"> <!-- Added modal-lg for larger modal size -->
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">Update Plan</h4> <!-- Uncommented and renamed the modal title -->
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+<div id="myModal_plan" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+<!-- Modal -->
+    <div class="  inset-0 flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg shadow-lg w-full max-w-4xl"> <!-- Max width set for large modal -->
+            <!-- Modal Header -->
+            <div class="flex justify-between items-center p-4 border-b">
+                <h4 class="text-xl font-bold">Update Plan</h4>
+                <button type="button" class="text-gray-600 hover:text-gray-800" data-dismiss="modal">&times;</button>
             </div>
-            <div class="modal-body">
+
+            <!-- Modal Body -->
+            <div class="p-4">
                 <form id="pform">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="pdetail">User Detail</label> <!-- Added label for user detail -->
-                                <input type="text" class="form-control" id="puid" name="puid" readonly> <!-- Changed to text input and set readonly -->
-                            </div>
+                    <div class="grid grid-cols-1 gap-4"> <!-- Adjusted to grid with one column -->
+                        <!-- User Detail -->
+                        <div class="mb-4">
+                            <label for="pdetail" class="block text-sm font-medium text-gray-700">User Detail</label>
+                            <input type="text" id="puid" name="puid" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" readonly>
                         </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="plan">Choose Plan</label>
-                                <select class="form-control" id="plan" name="plan">
-                                    <option value="" selected>Select plan</option> <!-- Added selected attribute to the default option -->
-                                    <option value="400">400</option>
-                                    <!-- Uncommented and added other plan options -->
-                                    <!-- <option value="850">850 for 2 months</option>
-                                    <option value="1500">1500 for 3 months</option>
-                                    <option value="2500">2500 for 4 months</option> -->
-                                </select>
-                            </div>
+                        
+                        <!-- Choose Plan -->
+                        <div class="mb-4">
+                            <label for="plan" class="block text-sm font-medium text-gray-700">Choose Plan</label>
+                            <select id="plan" name="plan" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option value="" selected>Select plan</option>
+                                <option value="400">400</option>
+                                <!-- Other options -->
+                                <!-- <option value="850">850 for 2 months</option>
+                                <option value="1500">1500 for 3 months</option>
+                                <option value="2500">2500 for 4 months</option> -->
+                            </select>
                         </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="transaction_id">Transaction ID/UTR</label>
-                                <input type="text" class="form-control" id="transaction_id" name="transaction_id">
-                            </div>
+
+                        <!-- Transaction ID -->
+                        <div class="mb-4">
+                            <label for="transaction_id" class="block text-sm font-medium text-gray-700">Transaction ID/UTR</label>
+                            <input type="text" id="transaction_id" name="transaction_id" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                         </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="pay_date">Payment Date</label>
-                                <input type="date" class="form-control" id="pay_date" name="pay_date">
-                            </div>
+
+                        <!-- Payment Date -->
+                        <div class="mb-4">
+                            <label for="pay_date" class="block text-sm font-medium text-gray-700">Payment Date</label>
+                            <input type="date" id="pay_date" name="pay_date" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="submit" name="s1" id="s1" class="btn btn-primary">Submit</button>
+
+                    <!-- Modal Footer -->
+                    <div class="flex justify-end pt-4 border-t">
+                        <button type="button" class="bg-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-400 mr-2" data-dismiss="modal">Close</button>
+                        <button type="submit" id="s1" class="bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700">Submit</button>
                     </div>
                 </form>
             </div>
@@ -177,66 +212,77 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
     </div>
 </div>
 
+<div id="myModal_recharge" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <!-- Recharge Modal -->
+        <div class="  inset-0 flex items-center justify-center z-50">
+            <div class="bg-white rounded-lg shadow-lg w-full max-w-4xl"> <!-- Large modal size using max-w-4xl -->
+                <!-- Modal Header -->
+                <div class="flex justify-between items-center p-4 border-b">
+                    <button type="button" class="text-gray-600 hover:text-gray-800" data-dismiss="modal">&times;</button>
+                </div>
 
-<div class="modal fade" id="myModal_recharge" role="dialog">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <!-- <h4 class="modal-title">Recharge Details</h4> -->
-            </div>
-            <div class="modal-body">
-                <form id="rform">
-                    <div class="row">
-                        <input type="hidden" class="form-control" id="r_id" name="r_id" />
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-group">
-                                <label for="amount">Amount</label>
-                                <input type="text" class="form-control" id="r_amount" name="r_amount" />
-                            </div> 
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-group">
-                                <label for="transaction_id">Transaction ID/ UTR</label>
-                                <input type="text" class="form-control" id="r_transaction_id" name="r_transaction_id" />
+                <!-- Modal Body -->
+                <div class="p-4">
+                    <form id="rform">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4"> <!-- Two columns layout for medium screens and above -->
+                            <!-- Hidden input for r_id -->
+                            <input type="hidden" id="r_id" name="r_id" />
+
+                            <!-- Amount -->
+                            <div class="mb-4">
+                                <label for="r_amount" class="block text-sm font-medium text-gray-700">Amount</label>
+                                <input type="text" id="r_amount" name="r_amount" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+
+                            <!-- Transaction ID / UTR -->
+                            <div class="mb-4">
+                                <label for="r_transaction_id" class="block text-sm font-medium text-gray-700">Transaction ID/UTR</label>
+                                <input type="text" id="r_transaction_id" name="r_transaction_id" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+
+                            <!-- Payment Date -->
+                            <div class="mb-4">
+                                <label for="r_pay_date" class="block text-sm font-medium text-gray-700">Date</label>
+                                <input type="date" id="r_pay_date" name="r_pay_date" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-group">
-                                <label for="pay_date">Date</label>
-                                <input type="date" class="form-control" id="r_pay_date" name="r_pay_date" />
-                            </div>
+
+                        <!-- Modal Footer -->
+                        <div class="flex justify-end pt-4 border-t">
+                            <button type="submit" id="s1" class="bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 mr-2">Submit</button>
+                            <button type="button" class="bg-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-400" data-dismiss="modal">Close</button>
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" name="s1" id="s1" class="btn btn-primary">Submit</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
 </div>
-
 
 
  
-  <div class="modal fade" id="myModal2" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="">QR Code</h4>
-        </div>
-        <div class="modal-body">
-          <img src="images/payment.jpeg" />
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
+
+  <div id="myModal_recharge" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+  <!-- QR Code Modal -->
+<div class="  inset-0 flex items-center justify-center z-50">
+  <div class="bg-white rounded-lg shadow-lg w-full max-w-md"> <!-- Set modal width with max-w-md -->
+    <!-- Modal Header -->
+    <div class="flex justify-between items-center p-4 border-b">
+      <h4 class="text-lg font-semibold">QR Code</h4>
+      <button type="button" class="text-gray-600 hover:text-gray-800" data-dismiss="modal">&times;</button>
+    </div>
+
+    <!-- Modal Body -->
+    <div class="p-4 flex justify-center">
+      <img src="images/payment.jpeg" alt="QR Code" class="w-full max-w-xs rounded-md"> <!-- Responsive image with max-w-xs -->
+    </div>
+
+    <!-- Modal Footer -->
+    <div class="flex justify-end p-4 border-t">
+      <button type="button" class="bg-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-400" data-dismiss="modal">Close</button>
     </div>
   </div>
+</div>
+</div>
 
 
   <script>
@@ -282,11 +328,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
             });
         });
     });
-</script>
-
-
-
-<script>
+ 
     $('.planedit').click(function() {
         var userId = $(this).data('userid');
             $.ajax({
@@ -323,12 +365,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
             });
         });
     });
-</script>
-
-
-
-
-<script>
+ 
     $('.rechargeedit').click(function() {
         var userId = $(this).data('userid');
             $.ajax({
@@ -365,14 +402,10 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
             });
         });
     });
-</script>
-
-
-
-<script>
-    $(document).ready(function() {
-        $('#ttble').DataTable();
-    });
+ 
+    // $(document).ready(function() {
+    //     $('#ttble').DataTable();
+    // });
 </script>
 
   <?php require_once("footer.php");  ?>
