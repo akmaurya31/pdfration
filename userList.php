@@ -316,7 +316,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
             var formData = $(this).serialize();
             $.ajax({
                 type: 'POST',
-                url: 'jqeditUser.php',
+                url: 'jqeditUser',
                 data: formData,
                 success: function(response) {
                     console.log('API Response:', response);
@@ -353,7 +353,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
             var formData = $(this).serialize();
             $.ajax({
                 type: 'POST',
-                url: 'jqeditPlan.php',
+                url: 'jqeditPlan',
                 data: formData,
                 success: function(response) {
                     console.log('API Response:', response);
@@ -390,7 +390,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
             var formData = $(this).serialize();
             $.ajax({
                 type: 'POST',
-                url: 'jqeditRecharge.php',
+                url: 'jqeditRecharge',
                 data: formData,
                 success: function(response) {
                     console.log('API Response:', response);
