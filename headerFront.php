@@ -1,7 +1,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- <div class="container mx-auto mt-5 max-w-[1320px]"> -->
-
+<?php session_start(); ?>
 
 
     <nav class="bg-white border-gray-200 dark:bg-gray-900">
@@ -11,8 +11,16 @@
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">CSC</span>
             </a>
             <div class="flex items-center space-x-6 rtl:space-x-reverse">
-                <a href="tel:5541251234" class="text-sm  text-gray-500 dark:text-white hover:underline"> 📞 (91)7518869428</a>
+                <a href="tel:7518869428" class="text-sm  text-gray-500 dark:text-white hover:underline"> 📞 (91)7518869428</a>
+              
+              <?php  //print_r($_SESSION); 
+              if (isset($_SESSION['is_login'])) { ?>
+                <a href="dashboard.php" class="text-sm  text-blue-600 dark:text-blue-500 hover:underline">Dashboard</a>
+                <?php } else{ ?>
                 <a href="login.php" class="text-sm  text-blue-600 dark:text-blue-500 hover:underline">Login</a>
+                <?php } ?>
+          
+          
             </div>
         </div>
     </nav>

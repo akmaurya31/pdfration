@@ -69,7 +69,7 @@ function getCurWallet($mysqli,$userId) {
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">.</span>
   </a>
   <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-      <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get started</button>
+      <a type="button" href="festivaloffer.php" class="text-white bg-green-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Festival Offer</a>
       <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
@@ -129,66 +129,4 @@ function getCurWallet($mysqli,$userId) {
     </div> 
 </div> 
 
-    
-    <!-- <nav class="bg-white  shadow-lg <?php echo $dd; ?> ">
-        <div class="container mx-auto flex justify-between items-center px-4 py-3">
-            <div class="flex items-center">
-                <button class="text-gray-700 focus:outline-none lg:hidden" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-
-            <div class="hidden lg:flex lg:items-center" id="navbarNav">
-                <ul class="flex space-x-6">
-                    <li>
-                        <a class="text-gray-700 hover:text-blue-600" href="dashboard.php">🎥 Demo</a>
-                    </li>
-                    <li>
-                        <a class="text-gray-700 hover:text-blue-600" href="rationCard.php">📩 Send Request</a>
-                    </li>
-                    <li>
-                        <a class="text-gray-700 hover:text-blue-600" href="rationList.php">⬇️Download</a>
-                    </li>
-                    <li>
-                        <a class="text-gray-700 hover:text-blue-600" href="pay.php">💰Recharge</a>
-                    </li>
-                    <?php if($_SESSION['role']=='admin'){ ?>
-                    <li>
-                        <a class="text-gray-700 hover:text-blue-600" href="userList.php">📋User List</a>
-                    </li>
-                    <?php } ?>
-                </ul>
-            </div>
-
-          
-            <div class="flex items-center space-x-6">
-                <ul class="flex items-center space-x-4">
-                    <li>
-                        <span class="text-gray-700"><?php echo $_SESSION['contact_number'] ?> - <?php echo $_SESSION['username'] ?></span>
-                    </li>
-
-                    <li>
-                        <?php
-                        $ro=getCurWallet($mysqlii,$_SESSION['idd']);
-                        $roinc=0;
-                        if(isset($ro->current_balance) && $ro->current_balance>0){
-                            $roinc=$ro->current_balance;
-                        }
-                        ?>
-                        <a class="text-gray-700 hover:text-blue-600" href="wallet.php"><b>₹</b> <?php echo $roinc ?></a>
-                    </li>
-
-                    <li class="relative">
-                        <button class="text-gray-700 hover:text-blue-600 focus:outline-none" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                            Profile
-                        </button>
-                        <ul class="absolute right-0 mt-2 w-48 bg-white shadow-lg py-2 z-50">
-                            <li><a class="block px-4 py-2 text-gray-700 hover:bg-gray-100" href="logout.php">Logout</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav> -->
+     
