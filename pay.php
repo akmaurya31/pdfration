@@ -3,60 +3,91 @@
 <div class="container max-w-[1200px] mx-auto py-12">
     <h2 class="text-3xl text-blue-600 font-bold text-center mb-8">🌟 Ration Card Print Portal Recharge Plans 🌟 </h2>
     
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-        <!-- Basic Plan -->
-        <div class="bg-white border border-blue-500 rounded-lg shadow-lg p-6 text-center">
-            <h2 class="text-2xl text-blue-600 font-semibold mb-3">Basic</h2>
-            <hr class="w-1/4 border-blue-500 mx-auto mb-4">
-            <h3 class="text-xl text-blue-600 font-semibold mb-4">₹ 400/-</h3>
-            <ul class="text-gray-600 mb-4">
-                <li class="text-lg mb-2">Wallet Balance ₹400</li>
-                <li class="text-sm">Payment Transaction ID Screenshot, WhatsApp 7518869428. Your ID will be activated in 1 to 2 hours. Thanks!</li>
-            </ul>
-            <button type="button" class="bg-blue-500 text-white rounded-full px-4 py-2" data-toggle="modal" data-target="#myModal" onclick="document.getElementById('exampleModal').classList.remove('hidden');">Pay Now</button>
-        </div>
-        
-        <!-- Standard Plan -->
-        <div class="bg-white border border-yellow-500 rounded-lg shadow-lg p-6 text-center">
-            <h2 class="text-2xl text-yellow-500 font-semibold mb-3">Standard*</h2>
-            <hr class="w-1/4 border-yellow-500 mx-auto mb-4">
-            <h3 class="text-xl text-yellow-500 font-semibold mb-4">₹ 1000/-</h3>
-            <ul class="text-gray-600 mb-4">
-                <li class="text-lg mb-2">Wallet Balance ₹1100</li>
-                <li class="text-sm">Payment Transaction ID Screenshot, WhatsApp 7518869428. Your ID will be activated in 1 to 2 hours. Thanks!</li>
-            </ul>
-            <button type="button" class="bg-yellow-500 text-gray-800 rounded-full px-4 py-2" data-toggle="modal" data-target="#myModal" onclick="document.getElementById('exampleModal').classList.remove('hidden');">Pay Now</button>
-        </div>
-        
-        <!-- Premium Plan 1 -->
-        <div class="bg-white border border-red-500 rounded-lg shadow-lg p-6 text-center">
-            <h2 class="text-2xl text-red-500 font-semibold mb-3">Premium*</h2>
-            <hr class="w-1/4 border-red-500 mx-auto mb-4">
-            <h3 class="text-xl text-red-500 font-semibold mb-4">₹ 1700/-</h3>
-            <ul class="text-gray-600 mb-4">
-                <li class="text-lg mb-2">Wallet Balance ₹2000</li>
-                <li class="text-sm">Payment Transaction ID Screenshot, WhatsApp 7518869428. Your ID will be activated in 1 to 2 hours. Thanks!</li>
-            </ul>
-            <button type="button" class="bg-red-500 text-white rounded-full px-4 py-2" data-toggle="modal" data-target="#myModal" onclick="document.getElementById('exampleModal').classList.remove('hidden');">Pay Now</button>
-        </div>
-        
-        <!-- Golden Plan -->
-        <div class="bg-white border border-green-500 rounded-lg shadow-lg p-6 text-center">
-            <h2 class="text-2xl text-green-500 font-semibold mb-3">Golden</h2>
-            <hr class="w-1/4 border-green-500 mx-auto mb-4">
-            <h3 class="text-xl text-green-500 font-semibold mb-4">₹ 5000/-</h3>
-            <ul class="text-gray-600 mb-4">
-                <li class="text-lg mb-2">Wallet Balance ₹6000</li>
-                <li class="text-sm">Payment Transaction ID Screenshot, WhatsApp 7518869428. Your ID will be activated in 1 to 2 hours. Thanks!</li>
-            </ul>
-            <button type="button" class="bg-green-500 text-white rounded-full px-4 py-2" data-toggle="modal" data-target="#myModal" onclick="document.getElementById('exampleModal').classList.remove('hidden');">Pay Now</button>
-        </div>
+    <div class="max-w-screen-lg mx-auto px-4 py-8">
+  <h1 class="text-3xl font-bold text-center mb-6 text-gray-800">🌟 रिचार्ज और लाभ का बेहतरीन मौका! 🌟</h1>
+  
+  <p class="text-lg text-center mb-4 text-gray-700">
+    यदि आप ₹150 का राशन कार्ड बना रहे हैं, तो: 💰
+  </p>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <!-- Basic Package -->
+    <div class="bg-white border border-blue-500 rounded-lg shadow-lg p-6 text-center">
+      <h2 class="text-2xl text-blue-600 font-semibold mb-3">Basic</h2>
+      <hr class="w-1/4 border-blue-500 mx-auto mb-4">
+      <p class="text-lg mb-2">📱 ₹400 का रिचार्ज</p>
+      <p class="text-lg mb-2">💼 ₹400 का वॉलेट बैलेंस (4 कार्ड)</p>
+      <p class="text-lg mb-4">🎉 + ₹200 का लाभ</p>
+      <button type="button" class="bg-blue-500 text-white rounded-full px-4 py-2 mt-4 hover:bg-blue-600">
+    Pay Now
+  </button>
     </div>
+
+    <!-- Standard Package -->
+    <div class="bg-white border border-yellow-500 rounded-lg shadow-lg p-6 text-center">
+      <h2 class="text-2xl text-yellow-500 font-semibold mb-3">Standard</h2>
+      <hr class="w-1/4 border-yellow-500 mx-auto mb-4">
+      <p class="text-lg mb-2">📱 ₹1000 का रिचार्ज</p>
+      <p class="text-lg mb-2">💼 ₹1100 का वॉलेट बैलेंस (12 कार्ड)</p>
+      <p class="text-lg mb-4">📈 + ₹800 का लाभ</p>
+      <button type="button" class="bg-yellow-500 text-white rounded-full px-4 py-2 mt-4 hover:bg-blue-600">
+    Pay Now
+  </button>
+    </div>
+
+    <!-- Premium Package -->
+    <div class="bg-white border border-red-500 rounded-lg shadow-lg p-6 text-center">
+      <h2 class="text-2xl text-red-600 font-semibold mb-3">Premium</h2>
+      <hr class="w-1/4 border-red-500 mx-auto mb-4">
+      <p class="text-lg mb-2">📱 ₹1700 का रिचार्ज</p>
+      <p class="text-lg mb-2">💼 ₹2000 का वॉलेट बैलेंस (22 कार्ड)</p>
+      <p class="text-lg mb-4">🎁 + ₹1600 का लाभ</p>
+      <button type="button" class="bg-red-500 text-white rounded-full px-4 py-2 mt-4 hover:bg-blue-600">
+    Pay Now
+  </button>
+    </div>
+
+    <!-- Enterprise Package -->
+    <div class="bg-white border border-green-500 rounded-lg shadow-lg p-6 text-center">
+      <h2 class="text-2xl text-green-600 font-semibold mb-3">Enterprise</h2>
+      <hr class="w-1/4 border-green-500 mx-auto mb-4">
+      <p class="text-lg mb-2">📱 ₹5000 का रिचार्ज</p>
+      <p class="text-lg mb-2">💼 ₹6000 का वॉलेट बैलेंस (40 कार्ड)</p>
+      <p class="text-lg mb-4">🎁 + ₹2250 का लाभ</p>
+      <button type="button" class="bg-green-500 text-white rounded-full px-4 py-2 mt-4 hover:bg-blue-600">
+    Pay Now
+  </button>
+    </div>
+  </div>
+
+  <div class="max-w-screen-lg mx-auto px-4 py-8">
+  <p class="text-lg text-center mt-8 mb-4 text-gray-700">
+    🎊 <strong>बड़ी पेशकश:</strong> अगर आप 10 राशन कार्ड बनवाते हैं, तो आपको 1 राशन कार्ड बिल्कुल फ्री मिलेगा!
+  </p>
+
+  <p class="text-lg text-center mt-4 mb-4 text-gray-700">
+    📸 <strong>Payment Transaction ID Screenshot:</strong> कृपया व्हाट्सएप पर हमें भेजें 
+    <a href="https://wa.me/7518869428" target="_blank" class="text-blue-500 hover:underline">7518869428</a>।
+  </p>
+
+  <p class="text-lg text-center mt-4 mb-4 text-gray-700">
+    ⏳ Your ID will be activated in 1 to 2 hours. Thank you for your patience!
+  </p>
 </div>
 
-<div id="message" class="fixed bottom-0 left-0 w-full bg-green-500 text-white text-center py-3 hidden" role="alert">
-    Plan purchased successfully!
+  <p class="text-lg text-center text-gray-700">
+    Amrish Digital CSC Center<br>
+    295/5, Asharfabad Chowk,<br>
+    Lucknow - 226003<br>
+    📞 <a href="https://wa.me/7518869428" class="text-blue-500 hover:underline">7518869428</a>
+  </p>
 </div>
+</div>
+
+
+
+
+ 
 
 <!-- Modal -->
 <div
@@ -117,6 +148,7 @@
 </div> -->
 
 <h1 class="text-center text-2xl font-semibold mt-8">
-  रिचार्ज करने के बाद <a href="https://wa.me/7518869428" class="text-blue-500 underline" target="_blank">7518869428</a> पर स्क्रीनशॉट व्हाट्सएप पर भेजे! 📲
+  रिचार्ज करने के बाद <a href="https://wa.me/7518869428" class="text-blue-500 underline" target="_blank">7518869428</a> पर स्क्रीनशॉट व्हाट्सएप पर भेजें! 📲 <span class="text-red-500 font-bold">भूलें नहीं!</span>
 </h1>
+
 <?php require_once("footer.php");?>
