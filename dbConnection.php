@@ -1,4 +1,19 @@
 <?php
+require 'vendor/autoload.php';
+
+use Aws\S3\S3Client;
+use Aws\Exception\AwsException;
+use Dotenv\Dotenv;
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+$region = $_ENV['AWS_REGION'];
+$AWS_ACCESS_KEY_ID = $_ENV['AWS_ACCESS_KEY_ID'];
+$AWS_SECRET_ACCESS_KEY = $_ENV['AWS_SECRET_ACCESS_KEY'];
+$S3_BUCKET_NAME = $_ENV['S3_BUCKET_NAME'];
+
+ 
+
+
 
 include('dbconn.php');
 
@@ -75,6 +90,9 @@ function getUserHeader($mysqli,$userId) {
 
 
 
+
+
+
 function numberToWords($number) {
     $ones = array(
         1 => "one",
@@ -126,3 +144,74 @@ function numberToWords($number) {
 // for ($i = 1; $i <= 99; $i++) {
 //     echo $i . " => " . numberToWords($i) . "\n";
 // }
+
+
+
+
+function uploadFileToS3($file1) {
+        global $AWS_ACCESS_KEY_ID;
+        global $AWS_SECRET_ACCESS_KEY;
+        global $region;
+        global $S3_BUCKET_NAME;
+
+        $file=$file1['pdfUpload'];
+        $bucketName=$S3_BUCKET_NAME;               // S3 bucket name
+        $folderName='luxyara/uploadcards';       // Folder path inside the bucket
+        $region=$region;              // S3 region
+        $accessKey= $AWS_ACCESS_KEY_ID;      // AWS Access Key
+        $secretKey=$AWS_SECRET_ACCESS_KEY;  // AWS Secret Key
+        if (isset($file) && $file['error'] == 0) {
+            
+        // Retrieve file details
+        $fileName = $file['name'];
+        $fileTmpName = $file['tmp_name'];
+        $extension = pathinfo($fileName, PATHINFO_EXTENSION);
+        $newFileName = 'file_' . uniqid() . '.' . $extension;
+        
+        // AWS S3 configuration
+        $key = $folderName . '/' . $newFileName;  // Path in the S3 bucket
+       
+        // Create an S3 client
+        $s3 = new S3Client([
+            'region' => $region,
+            'version' => 'latest',
+            'credentials' => [
+                'key' => $accessKey,
+                'secret' => $secretKey,
+            ],
+        ]);
+
+       
+
+        try {
+            // Upload the file to S3
+            $result = $s3->putObject([
+                'Bucket' => $bucketName,
+                'Key' => $key,
+                'SourceFile' => $fileTmpName,  // Temporary file path
+                'ACL' => 'public-read',  // Permissions for the file
+                'ContentType' => mime_content_type($fileTmpName),  // File MIME type
+            ]);
+        
+            // The result contains details of the uploaded file
+            return [
+                'status' => 'success',
+                'url' => $result['ObjectURL'],
+            ];
+
+        } catch (AwsException $e) {
+            // Catch an S3 specific exception.
+            return [
+                'status' => 'error',
+                'message' => $e->getMessage(),
+            ];
+        }
+    } else {
+        return [
+            'status' => 'error',
+            'message' => 'No file uploaded or file upload error.',
+        ];
+    }
+}
+
+

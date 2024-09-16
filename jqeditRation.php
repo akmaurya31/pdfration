@@ -63,10 +63,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $extions = pathinfo($pdfName, PATHINFO_EXTENSION);
         $newpdfName = 'pdf_' . $rid . '.' . $extions;
         $pdfPath = 'images/uploads/' . $newpdfName;
-        move_uploaded_file($pdfTmpName, $pdfPath);
+        // move_uploaded_file($pdfTmpName, $pdfPath);
+        uploadFileToS3($_FILES);
 
     } else {
-        $pdfPath = ''; // Default path if no file uploaded
+        $pdfPath = '';  
     }
 
 
