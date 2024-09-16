@@ -2,3 +2,5 @@
 vendor/
 .env
 pdfvendor.php
+pdfvendor.php
+composer.lock

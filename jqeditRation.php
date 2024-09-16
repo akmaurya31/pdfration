@@ -62,9 +62,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $pdfTmpName = $_FILES['pdfUpload']['tmp_name'];
         $extions = pathinfo($pdfName, PATHINFO_EXTENSION);
         $newpdfName = 'pdf_' . $rid . '.' . $extions;
-        $pdfPath = 'images/uploads/' . $newpdfName;
+        $pdfPath='';
+        //.$pdfPath = 'images/uploads/' . $newpdfName;
         // move_uploaded_file($pdfTmpName, $pdfPath);
-        uploadFileToS3($_FILES);
+        // uploadFileToS3($_FILES);
+
+
+
+        $pdfm=uploadPDFToServer($pdfTmpName,$extions);
+        // Decode the JSON response
+        $responseData = json_decode($pdfm, true); // true converts it to an associative array
+
+        // Check if the response contains a success status and the fileUrl
+        if ($responseData && isset($responseData['status']) && $responseData['status'] === 'success') {
+             $pdfPath = $responseData['fileUrl']; // Store the fileUrl in $pdfpath
+            //echo "File uploaded successfully! File URL: " . $pdfpath;
+             
+            
+        } else {
+            echo "File upload failed!";
+        }
 
     } else {
         $pdfPath = '';  
@@ -105,8 +122,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if($screenshotPath!=''){
         $sql = "UPDATE ration_req SET screenshot_path='$screenshotPath' WHERE id=$rid";
     }
-     if($pdfPath!=''){
-          $sql = "UPDATE ration_req SET pdf_path='$pdfPath' WHERE id=$rid";
+    
+    if($pdfPath!=''){
+           $sql = "UPDATE ration_req SET pdf_path='$pdfPath' WHERE id=$rid";
     }
   
         

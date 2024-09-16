@@ -1,15 +1,15 @@
 <?php
-require 'vendor/autoload.php';
+// require 'vendor/autoload.php';
 
-use Aws\S3\S3Client;
-use Aws\Exception\AwsException;
-use Dotenv\Dotenv;
-$dotenv = Dotenv::createImmutable(__DIR__);
-$dotenv->load();
-$region = $_ENV['AWS_REGION'];
-$AWS_ACCESS_KEY_ID = $_ENV['AWS_ACCESS_KEY_ID'];
-$AWS_SECRET_ACCESS_KEY = $_ENV['AWS_SECRET_ACCESS_KEY'];
-$S3_BUCKET_NAME = $_ENV['S3_BUCKET_NAME'];
+// use Aws\S3\S3Client;
+// use Aws\Exception\AwsException;
+// use Dotenv\Dotenv;
+// $dotenv = Dotenv::createImmutable(__DIR__);
+// $dotenv->load();
+// $region = $_ENV['AWS_REGION'];
+// $AWS_ACCESS_KEY_ID = $_ENV['AWS_ACCESS_KEY_ID'];
+// $AWS_SECRET_ACCESS_KEY = $_ENV['AWS_SECRET_ACCESS_KEY'];
+// $S3_BUCKET_NAME = $_ENV['S3_BUCKET_NAME'];
 
  
 
@@ -214,4 +214,44 @@ function uploadFileToS3($file1) {
     }
 }
 
+function uploadPDFToServer($filePath, $extension) {
+    // Check if the file exists
+    if (!file_exists($filePath)) {
+        return "File not found!";
+    }
 
+    // Get the directory and original file name
+    $pathInfo = pathinfo($filePath);
+    $newFilePath = $pathInfo['dirname'] . '/' . $pathInfo['filename'] . '.' . $extension;
+
+    // Rename the file from .tmp to .pdf (or whatever extension you pass)
+    if (!rename($filePath, $newFilePath)) {
+        return "Error renaming the file!";
+    }
+
+    $curl = curl_init();
+
+    // Set cURL options
+    curl_setopt_array($curl, array(
+        CURLOPT_URL => 'https://be.luxyaragroup.io/api/php/add_product', // Your API endpoint
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'POST',
+        CURLOPT_POSTFIELDS => array('pdf_upload' => new CURLFILE($newFilePath)), // Renamed file to upload
+    ));
+
+    // Execute the request
+    $response = curl_exec($curl);
+
+    // Close the cURL session
+    curl_close($curl);
+
+    // Return the response
+    return $response;
+}
+
+ 
