@@ -106,7 +106,7 @@ $result = $mysqli->query($sql);
                         }
                         if ($cnt >= 1) {
                             ?>
-                            <a class="text-blue-500 hover:underline" target="_blank" href='<?php echo $row['pdf_path']; ?>'>Download PDF</a>
+                            <a class="text-blue-500 hover:underline" target="_blank" href='<?php echo $row['pdf_path']; ?>'>Download PDF1</a>
                             <?php
                         }
                         ?>
