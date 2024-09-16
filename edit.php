@@ -26,7 +26,7 @@ $email = $resultData['email'];
 	    <a href="index.php">Home</a>
     </p>
 	
-	<form name="edit" method="post" action="editAction.php">
+	<form name="edit" method="post" action="editAction">
 		<table border="0">
 			<tr> 
 				<td>Name</td>

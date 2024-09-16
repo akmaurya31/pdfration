@@ -2,7 +2,7 @@
 <div class="container mx-auto my-5 px-4">
   <div class="flex justify-center">
     <div class="w-full max-w-md">
-      <form action="addNewRationCard.php" method="post" name="add">
+      <form action="addNewRationCard" method="post" name="add">
         <div class="p-4 bg-light rounded shadow-md">
           <div class="text-xl text-center font-bold text-red-500 mb-4">
           🛒 Request Ration Card

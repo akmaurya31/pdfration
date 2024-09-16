@@ -20,7 +20,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
 }
 ?>
 
-<form action="addInformation.php" method="post" name="add">
+<form action="addInformation" method="post" name="add">
   <div class="container my-4 shadow shadow-light" style="width:800px; border:1px solid gray; border-radius:10px">
     <div class="bg-light p-4 overflow-auto  flex flex-col mx-auto gap-y-5 h-800px w-650px">
       <div class="flex flex-row justify-center  p-4">

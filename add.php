@@ -9,7 +9,7 @@
 		<a href="index.php">Home</a>
 	</p>
 
-	<form action="addAction.php" method="post" name="add">
+	<form action="addAction" method="post" name="add">
 		<table width="25%" border="0">
 			<tr> 
 				<td>Name</td>
