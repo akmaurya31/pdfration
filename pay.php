@@ -52,8 +52,8 @@
       <h2 class="text-2xl text-green-600 font-semibold mb-3">Enterprise</h2>
       <hr class="w-1/4 border-green-500 mx-auto mb-4">
       <p class="text-lg mb-2">📱 ₹5000 का रिचार्ज</p>
-      <p class="text-lg mb-2">💼 ₹6000 का वॉलेट बैलेंस (40 कार्ड)</p>
-      <p class="text-lg mb-4">🎁 + ₹2250 का लाभ</p>
+      <p class="text-lg mb-2">💼 ₹6000 का वॉलेट बैलेंस (65 कार्ड)</p>
+      <p class="text-lg mb-4">🎁 + ₹3300 का लाभ</p>
   
   <button type="button" class="bg-green-500 text-white rounded-full px-4 py-2 mt-4 hover:bg-blue-600" onclick="document.getElementById('exampleModal').classList.remove('hidden');">
     Pay Now
