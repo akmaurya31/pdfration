@@ -7,15 +7,14 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
 ?>
 
 <div class="container mb-4 mx-auto max-w-[1350px] pt-5">
-    <h3 class="text-center   text-2xl font-bold">🧑All User List🧑</h3>
+    <h3 class="text-center   text-2xl font-bold py-2">🧑All User List🧑</h3>
     
     <div class="overflow-x-auto">
         <table id="" class="min-w-full bg-white border border-gray-200 rounded-lg shadow-md">
-            <thead class="bg-gray-800 text-white">
+            <thead class="bg-gray-100 text-black">
                 <tr>
                     <th class="px-6 py-3">No.</th>
-                    <th class="px-6 py-3">Name</th>
-                    <th class="px-6 py-3">User Name</th>
+                    <th class="px-6 py-3">Name/Email</th>
                     <th class="px-6 py-3">Address</th>
                     <th class="px-6 py-3">Contact Name </th>
                     <th class="px-6 py-3">Plan Status</th>
@@ -42,15 +41,15 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
                         $rscurr = isset($rs->current_balance) && $rs->current_balance > 0 ? $rs->current_balance : 0;
                 ?>
                         <tr>
-                            <td class="px-6 py-4"><?php echo $row['id']; ?></td>
-                            <td class="px-6 py-4"><?php echo $row['name']; ?><br /><?php //echo $row['janpad']; ?></td>
-                            <td class="px-6 py-4"><?php echo $row['username']; ?> <br/><?php echo $row['email']; ?></td>
-                            <td class="px-6 py-4"><?php echo $row['address']; ?></td>
-                            <td class="px-6 py-4"><?php echo $row['contact_number']; ?><br/><?php echo $row['password']; ?></td>
-                            <td class="px-6 py-4"><?php echo $row['pay']; ?></td>
-                            <td class="px-6 py-4"><?php echo $row['transaction_id']; ?></td>
-                            <td class="px-6 py-4"><?php echo $rscurr; ?></td>
-                            <td class="px-6 py-4"><?php echo $row['pay_date']; ?></td>
+                            <td class="px-6 py-4 font-bold"><?php echo $row['id']; ?></td>
+                            <td class="px-6 py-4 font-bold"><?php echo $row['name']; ?>
+                            <br /><?php echo $row['email']; ?></td>
+                            <td class="px-6 py-4 font-bold"><?php echo $row['address']; ?></td>
+                            <td class="px-6 py-4 font-bold text-green-700"><?php echo $row['contact_number']; ?><br/><?php echo $row['password']; ?></td>
+                            <td class="px-6 py-4 font-bold text-color-red"><?php echo $row['pay']; ?></td>
+                            <td class="px-6 py-4 font-bold"><?php echo $row['transaction_id']; ?></td>
+                            <td class="px-6 py-4 font-bold"><?php echo $rscurr; ?></td>
+                            <td class="px-6 py-4 font-bold"><?php echo $row['pay_date']; ?></td>
                             <td class="px-6 py-4 flex flex-col space-y-2">
                                 <button class="neditButton bg-green-500 text-white py-1 px-2 rounded" data-toggle="modal" data-target="#myModal" data-userid="<?php echo $row['id']; ?>" 
                                 data-modal-target="myModal" data-modal-toggle="myModal"

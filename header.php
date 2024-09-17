@@ -11,6 +11,7 @@ if (!isset($_SESSION['is_login'])) {
     header("Location: login.php");
     exit();
 }
+// print_r($_SESSION);
 
 function getUserDataById($mysqli,$userId) {
     $sql = "SELECT * FROM users WHERE id='" . $userId . "'";
@@ -61,12 +62,14 @@ function getCurWallet($mysqli,$userId) {
 
 <body>
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
-    <?php $dd=''; // $dd='bg-primary'; if($_SESSION['role']=='admin'){ $dd='bg-danger'; }  ?>
+    <?php $dd='bg-white';
+    
+    if($_SESSION['role']=='admin'){ $dd='bg-red-500'; }  ?>
 
 
     
 
-<nav class="bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200  ">
+<nav class="<?php echo $dd; ?> fixed w-full z-20 top-0 start-0 border-b border-gray-200   ">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="login.php" class="flex items-center space-x-3 rtl:space-x-reverse">
       <img src="images/logo1.png" class="h-8" alt="">
