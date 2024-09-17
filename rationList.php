@@ -38,8 +38,8 @@ $result = $mysqli->query($sql);
 ?>
 
 <div class="container my-4 mx-auto">
-    <h3 class="text-center   text-2xl font-bold py-2">🧑All Ration List🛒</h3>
-    
+    <h4 class="text-xl text-center bg-blue-500 text-white py-2 my-4 rounded font-bold mx-auto w-[30%]">🧑All Ration List🛒</h4>
+    <!-- <h3 class="text-center   text-2xl font-bold py-2">🧑All Ration List🛒</h3> -->
     
     <div class="max-w-[1350px] mx-auto">
         <table id="requestTable" class="w-full text-sm text-left rtl:text-right text-black-500 ">
