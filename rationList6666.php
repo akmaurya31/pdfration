@@ -1,9 +1,8 @@
-<?php
-include('header.php'); 
-$rlok = 'd-none';
-if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
-    $rlok = '';
-}
+<?php include('header.php'); 
+$rlok='d-none';
+  if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
+    $rlok='';
+} 
 require_once("dbConnection.php");
 
 // Number of records per page
@@ -15,27 +14,12 @@ $page_number = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 // Calculate the starting record for the current page
 $start_from = ($page_number - 1) * $records_per_page;
 
-// Get the search term from the GET request
-$search = isset($_GET['search']) ? $mysqli->real_escape_string($_GET['search']) : '';
-
-// Determine the total number of records with or without search
-if (!empty($search)) {
-    if ($_SESSION['role'] == 'admin') {
-        $sql = "SELECT COUNT(*) FROM ration_req WHERE 
-                (name LIKE '%$search%' OR ration LIKE '%$search%' OR user_id IN (SELECT id FROM users WHERE contact_number LIKE '%$search%'))";
-    } else {
-        $sql = "SELECT COUNT(*) FROM ration_req WHERE user_id='" . $_SESSION['idd'] . "' AND 
-                (name LIKE '%$search%' OR ration LIKE '%$search%')";
-    }
+// Determine the total number of records
+if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
+    $sql = "SELECT COUNT(*) FROM ration_req";
 } else {
-    // Original query without search
-    if ($_SESSION['role'] == 'admin') {
-        $sql = "SELECT COUNT(*) FROM ration_req";
-    } else {
-        $sql = "SELECT COUNT(*) FROM ration_req WHERE user_id='" . $_SESSION['idd'] . "'";
-    }
+    $sql = "SELECT COUNT(*) FROM ration_req WHERE user_id='" . $_SESSION['idd'] . "'";
 }
-
 $result = $mysqli->query($sql);
 $row = $result->fetch_row();
 $total_records = $row[0];
@@ -43,40 +27,20 @@ $total_records = $row[0];
 // Calculate the total number of pages
 $total_pages = ceil($total_records / $records_per_page);
 
-// Fetch records with or without search
-if (!empty($search)) {
-    if ($_SESSION['role'] == 'admin') {
-        $sql = "SELECT * FROM ration_req WHERE 
-                (name LIKE '%$search%' OR ration LIKE '%$search%' OR user_id IN (SELECT id FROM users WHERE contact_number LIKE '%$search%')) 
-                ORDER BY id DESC LIMIT $start_from, $records_per_page";
-    } else {
-        $sql = "SELECT * FROM ration_req WHERE user_id='" . $_SESSION['idd'] . "' AND 
-                (name LIKE '%$search%' OR ration LIKE '%$search%') 
-                ORDER BY id DESC LIMIT $start_from, $records_per_page";
-    }
+// Fetch the records for the current page
+if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
+    $sql = "SELECT * FROM ration_req ORDER BY id DESC LIMIT $start_from, $records_per_page";
 } else {
-    // Original query without search
-    if ($_SESSION['role'] == 'admin') {
-        $sql = "SELECT * FROM ration_req ORDER BY id DESC LIMIT $start_from, $records_per_page";
-    } else {
-        $sql = "SELECT * FROM ration_req WHERE user_id='" . $_SESSION['idd'] . "' ORDER BY id DESC LIMIT $start_from, $records_per_page";
-    }
+    $sql = "SELECT * FROM ration_req WHERE user_id='" . $_SESSION['idd'] . "' ORDER BY id DESC LIMIT $start_from, $records_per_page";
 }
-
 $result = $mysqli->query($sql);
+// The rest of your PHP code for displaying records remains unchanged
 ?>
 
 <div class="container my-4 mx-auto">
     <h4 class="text-xl text-center bg-blue-500 text-white py-2 my-4 rounded font-bold mx-auto w-[30%]">🧑All Ration List🛒</h4>
-
-    <div class="max-w-[1350px] mx-auto text-center py-2">
-    <!-- Search form -->
-        <form method="GET" action="">
-            <input type="text" name="search" placeholder="Search by Mobile, Name or Ration Card" value="<?php echo isset($_GET['search']) ? $_GET['search'] : ''; ?>" class="border p-2 w-[50%]" />
-            <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded">Search</button>
-        </form>
-    </div>
-
+    <!-- <h3 class="text-center   text-2xl font-bold py-2">🧑All Ration List🛒</h3> -->
+    
     <div class="max-w-[1350px] mx-auto">
         <table id="requestTable" class="w-full text-sm text-left rtl:text-right text-black-500 ">
             <thead class="bg-gray-100 border-b border-gray-200">
@@ -96,10 +60,17 @@ $result = $mysqli->query($sql);
                 while ($row = $result->fetch_assoc()) {
                     $cnt = ReqDownload($mysqli, $row['user_id'], $row['id']);
                     $bal = getCurWallet($mysqli, $row['user_id']);
-                    $bbal = isset($bal->current_balance) && $bal->current_balance > 0 ? $bal->current_balance : 0;
+                    $bbal = 0;
+                    if (isset($bal->current_balance) && $bal->current_balance > 0) {
+                        $bbal = $bal->current_balance;
+                    }
                     $rs = getUserDataById($mysqli, $row['user_id']);
 
-                    echo $cnt >= 1 ? "<tr class='bg-yellow-200'>" : "<tr class='bg-white-500'>";
+                    if ($cnt >= 1) {
+                        echo "<tr class='bg-yellow-200'>";
+                    } else {
+                        echo "<tr class='bg-white-500'>";
+                    }
                     ?>
                     <td class="px-6 py-3 font-bold"><?php echo $m . '00' . $row['id']; $m++; ?></td>
                     <td class="<?php echo $rlok; ?> px-6 py-3 text-md font-bold">
@@ -108,21 +79,33 @@ $result = $mysqli->query($sql);
                         echo $yyh->contact_number . '<br/>Balance-' . $bbal;
                         ?>
                     </td>
-                    <td class="px-6 py-3 text-md font-bold"><?php echo $row['name'] ?></td>
-                    <td class="px-6 py-3 text-sm font-bold"><?php echo $row['janpad'] . '<br/>' . $row['edate']; ?></td>
-                    <td class="px-6 py-3 text-md font-bold"><?php echo $row['ration'] . '<br/>'; ?>
+                    <td class="px-6 py-3 text-md font-bold">
+                        <?php echo $row['name'] ?>
+                    </td>
+                    <td class="px-6 py-3 text-sm font-bold">
+                        <?php echo $row['janpad'] . '<br/>' . $row['edate']; ?>
+                    </td>
+                    <td class="px-6 py-3 text-md font-bold">
+                        <?php echo $row['ration']. '<br/>'; ?>
+
                         <?php if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') { ?>
                             <button class="neditButton bg-green-500 text-white py-1 px-2 rounded" data-toggle="modal" data-target="#myModal" data-idd="<?php echo $row['id']; ?>" 
-                            data-modal-target="popup-modal" data-modal-toggle="popup-modal">Check Detail</button>
+                            data-modal-target="popup-modal" data-modal-toggle="popup-modal"
+                            >Check Detail</button>
                         <?php } ?>
                     </td>
                     <td class="px-6 py-3">
                         <?php
-                        if ($_SESSION['role'] == 'admin' && isset($bal->current_balance) && $bal->current_balance >= 65 && $cnt < 1) {
-                            ?>
-                            <button class="ndownload bg-green-500 text-white py-1 px-2 rounded" data-toggle="modal" data-target="#myModal2" data-idd="<?php echo $row['id']; ?>"
-                            data-modal-target="popup-modal1" data-modal-toggle="popup-modal1">Download Req</button>
-                            <?php
+                        if ($_SESSION['role'] == 'admin') {
+                            if (isset($bal->current_balance) && $bal->current_balance >= 65) {
+                                if ($cnt < 1) {
+                                    ?>
+                                    <button class="ndownload bg-green-500 text-white py-1 px-2 rounded" data-toggle="modal" data-target="#myModal2" data-idd="<?php echo $row['id']; ?>"
+                                    data-modal-target="popup-modal1" data-modal-toggle="popup-modal1"
+                                    >Download Req</button>
+                                    <?php
+                                }
+                            }
                         }
                         if ($cnt >= 1) {
                             ?>
@@ -141,23 +124,22 @@ $result = $mysqli->query($sql);
             ?>
             </tbody>
         </table>
-
-        <!-- Pagination -->
         <div class="flex justify-between items-center mt-4 mx-auto">
-            <div>
-                <span class="text-gray-600">Page <?php echo $page_number; ?> of <?php echo $total_pages; ?></span>
-            </div>
-            <div>
-                <?php if ($page_number > 1) { ?>
-                    <a href="?page=<?php echo $page_number - 1; ?>&search=<?php echo $search; ?>" class="bg-blue-500 text-white py-1 px-4 rounded">Previous</a>
-                <?php } ?>
-                <?php if ($page_number < $total_pages) { ?>
-                    <a href="?page=<?php echo $page_number + 1; ?>&search=<?php echo $search; ?>" class="bg-blue-500 text-white py-1 px-4 rounded">Next</a>
-                <?php } ?>
-            </div>
+        <div>
+            <span class="text-gray-600">Page <?php echo $page_number; ?> of <?php echo $total_pages; ?></span>
+        </div>
+        <div>
+            <?php if ($page_number > 1) { ?>
+                <a href="?page=<?php echo $page_number - 1; ?>" class="bg-blue-500 text-white py-1 px-4 rounded">Previous</a>
+            <?php } ?>
+            <?php if ($page_number < $total_pages) { ?>
+                <a href="?page=<?php echo $page_number + 1; ?>" class="bg-blue-500 text-white py-1 px-4 rounded">Next</a>
+            <?php } ?>
         </div>
     </div>
+    </div>
 </div>
+
 
  
  

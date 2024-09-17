@@ -7,16 +7,8 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
 ?>
 
 <div class="container mb-4 mx-auto max-w-[1350px] pt-5">
-    <h3 class="text-center text-2xl font-bold py-2">🧑All User List🧑</h3>
-
-    <!-- Search Form -->
-    <div class="mx-auto max-w-[1350px]">
-    <form method="GET" class="mb-4 flex justify-center">
-        <input type="text" name="search" placeholder="Search by name or email..." class="border border-gray-300 p-2 rounded-l border p-2 w-[50%]" value="<?php echo isset($_GET['search']) ? $_GET['search'] : ''; ?>">
-        <button type="submit" class="bg-blue-500 text-white p-2 rounded-r px-4">Search</button>
-    </form>
-</div>
-
+    <h3 class="text-center   text-2xl font-bold py-2">🧑All User List🧑</h3>
+    
     <div class="overflow-x-auto">
         <table id="" class="min-w-full bg-white border border-gray-200 rounded-lg shadow-md">
             <thead class="bg-gray-100 text-black">
@@ -24,7 +16,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
                     <th class="px-6 py-3">No.</th>
                     <th class="px-6 py-3">Name/Email</th>
                     <th class="px-6 py-3">Address</th>
-                    <th class="px-6 py-3">Contact Name</th>
+                    <th class="px-6 py-3">Contact Name </th>
                     <th class="px-6 py-3">Plan Status</th>
                     <th class="px-6 py-3">Transaction ID / UTR</th>
                     <th class="px-6 py-3">Current Balance</th>
@@ -35,15 +27,12 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
             <tbody class="bg-white divide-y divide-gray-200">
                 <?php
                 require_once("dbConnection.php");
-
                 $users_per_page = 10;
                 $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
                 $offset = ($page - 1) * $users_per_page;
 
-                $search = isset($_GET['search']) ? $mysqli->real_escape_string($_GET['search']) : '';
-
-                // Modify query for search functionality
-                $sql = "SELECT * FROM users WHERE name LIKE '%$search%' OR email LIKE '%$search%'  OR contact_number LIKE '%$search%' LIMIT $users_per_page OFFSET $offset";
+                // Fetch users for the current page
+                $sql = "SELECT * FROM users LIMIT $users_per_page OFFSET $offset";
                 $result = $mysqli->query($sql);
 
                 if ($result->num_rows > 0) {
@@ -63,10 +52,16 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
                             <td class="px-6 py-4 font-bold"><?php echo $row['pay_date']; ?></td>
                             <td class="px-6 py-4 flex flex-col space-y-2">
                                 <button class="neditButton bg-green-500 text-white py-1 px-2 rounded" data-toggle="modal" data-target="#myModal" data-userid="<?php echo $row['id']; ?>" 
-                                data-modal-target="myModal" data-modal-toggle="myModal">ProfileEdit</button>
+                                data-modal-target="myModal" data-modal-toggle="myModal"
+                                >ProfileEdit</button>
+
+                                <!-- <button class="planedit bg-blue-500 text-white py-1 px-2 rounded" data-toggle="modal" data-target="#myModal_plan" data-userid="<?php echo $row['id']; ?>"
+                                data-modal-target="myModal_plan" data-modal-toggle="myModal_plan"
+                                >Purchase Plan</button> -->
 
                                 <button class="rechargeedit bg-purple-500 text-white py-1 px-2 rounded" data-toggle="modal" data-target="#myModal_recharge" data-userid="<?php echo $row['id']; ?>"
-                                data-modal-target="myModal_recharge" data-modal-toggle="myModal_recharge">Recharge</button>
+                                data-modal-target="myModal_recharge" data-modal-toggle="myModal_recharge"
+                                >Recharge</button>
                             </td>
                         </tr>
                 <?php
@@ -76,7 +71,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
                 }
 
                 // Calculate total pages
-                $total_users_sql = "SELECT COUNT(*) as total_users FROM users WHERE name LIKE '%$search%' OR email LIKE '%$search%' OR contact_number LIKE '%$search%'";
+                $total_users_sql = "SELECT COUNT(*) as total_users FROM users";
                 $total_users_result = $mysqli->query($total_users_sql);
                 $total_users_row = $total_users_result->fetch_assoc();
                 $total_users = $total_users_row['total_users'];
@@ -92,15 +87,15 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
     <!-- Pagination -->
     <div class="pagination flex justify-center mt-4">
         <?php if ($page > 1): ?>
-            <a href="?page=<?php echo $page - 1; ?>&search=<?php echo $search; ?>" class="px-4 py-2 bg-gray-200 rounded-l">Previous</a>
+            <a href="?page=<?php echo $page - 1; ?>" class="px-4 py-2 bg-gray-200 rounded-l">Previous</a>
         <?php endif; ?>
 
         <?php for ($i = 1; $i <= $total_pages; $i++): ?>
-            <a href="?page=<?php echo $i; ?>&search=<?php echo $search; ?>" class="px-4 py-2 bg-gray-200 <?php echo $i == $page ? 'bg-blue-500 text-white' : ''; ?>"><?php echo $i; ?></a>
+            <a href="?page=<?php echo $i; ?>" class="px-4 py-2 bg-gray-200 <?php echo $i == $page ? 'bg-blue-500 text-white' : ''; ?>"><?php echo $i; ?></a>
         <?php endfor; ?>
 
         <?php if ($page < $total_pages): ?>
-            <a href="?page=<?php echo $page + 1; ?>&search=<?php echo $search; ?>" class="px-4 py-2 bg-gray-200 rounded-r">Next</a>
+            <a href="?page=<?php echo $page + 1; ?>" class="px-4 py-2 bg-gray-200 rounded-r">Next</a>
         <?php endif; ?>
     </div>
 </div>
