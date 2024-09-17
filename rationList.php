@@ -67,7 +67,7 @@ $result = $mysqli->query($sql);
                     $rs = getUserDataById($mysqli, $row['user_id']);
 
                     if ($cnt >= 1) {
-                        echo "<tr class='bg-yellow-200'>";
+                        echo "<tr class='bg-yellow-200' style='background-color:yellow'>";
                     } else {
                         echo "<tr class='bg-white-500'>";
                     }
