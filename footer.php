@@ -44,18 +44,7 @@
     </div>
 </footer>
 
-<script>
-    $(document).ready(function() {
-        $('#requestTable').DataTable({
-            "paging": true,         // Enable pagination
-            "searching": true,      // Enable search
-            "ordering": true,       // Enable column ordering
-            "pageLength": 10        // Number of rows per page
-        });
-    });
-</script>
-
-
+ 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
