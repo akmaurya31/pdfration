@@ -40,7 +40,7 @@ $result = $mysqli->query($sql);
 <div class="container my-4 mx-auto">
     <h4 class="text-xl text-center bg-blue-500 text-white py-2 my-4 rounded font-bold mx-auto w-[30%]">All Request List</h4>
     <div class="max-w-[1350px] mx-auto">
-        <table id="requestTable" class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <table id="requestTable" class="w-full text-sm text-left rtl:text-right text-black-500 ">
             <thead class="bg-gray-100 border-b border-gray-200">
                 <tr class="text-left">
                     <th class="px-6 py-3 font-bold text-gray-700">Sn</th>
@@ -65,26 +65,27 @@ $result = $mysqli->query($sql);
                     $rs = getUserDataById($mysqli, $row['user_id']);
 
                     if ($cnt >= 1) {
-                        echo "<tr class='bg-yellow-100   dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600'>";
+                        echo "<tr class='bg-yellow-200'>";
                     } else {
-                        echo "<tr>";
+                        echo "<tr class='bg-white-500'>";
                     }
                     ?>
-                    <td class="px-6 py-3"><?php echo $m . '00' . $row['id']; $m++; ?></td>
-                    <td class="<?php echo $rlok; ?> px-6 py-3">
+                    <td class="px-6 py-3 font-bold"><?php echo $m . '00' . $row['id']; $m++; ?></td>
+                    <td class="<?php echo $rlok; ?> px-6 py-3 text-md font-bold">
                         <?php
                         $yyh = getUserHeader($mysqli, $row['user_id']);
-                        echo $yyh->contact_number . '-' . $yyh->username . '<br/>Balance-' . $bbal;
+                        echo $yyh->contact_number . '<br/>Balance-' . $bbal;
                         ?>
                     </td>
-                    <td class="px-6 py-3">
-                        <?php echo $row['name'] . '<br/>' . $row['edate']; ?>
+                    <td class="px-6 py-3 text-md font-bold">
+                        <?php echo $row['name'] ?>
                     </td>
-                    <td class="px-6 py-3">
-                        <?php echo $row['janpad']; ?>
+                    <td class="px-6 py-3 text-sm font-bold">
+                        <?php echo $row['janpad'] . '<br/>' . $row['edate']; ?>
                     </td>
-                    <td class="px-6 py-3">
-                        <?php echo $row['ration']; ?>
+                    <td class="px-6 py-3 text-md font-bold">
+                        <?php echo $row['ration']. '<br/>'; ?>
+
                         <?php if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') { ?>
                             <button class="neditButton bg-green-500 text-white py-1 px-2 rounded" data-toggle="modal" data-target="#myModal" data-idd="<?php echo $row['id']; ?>" 
                             data-modal-target="popup-modal" data-modal-toggle="popup-modal"
@@ -106,7 +107,7 @@ $result = $mysqli->query($sql);
                         }
                         if ($cnt >= 1) {
                             ?>
-                            <a class="text-blue-500 hover:underline" target="_blank" href='<?php echo $row['pdf_path']; ?>'>Download PDF1</a>
+                            <a class="text-blue-500 border-[3px] p-3 font-bold hover:underline" target="_blank" href='<?php echo $row['pdf_path']; ?>'>Download PDF</a>
                             <?php
                         }
                         ?>
