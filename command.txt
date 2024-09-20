@@ -1,0 +1,1020 @@
+rm -rf vendor/
+sudo a2enmod rewrite
+sudo nano /etc/apache2/sites-available/bharatcschub.online.conf
+sudo apachectl configtest
+sudo systemctl restart apache2
+
+sudo certbot --apache -d bharatcschub.online -d www.bharatcschub.online -v
+sudo certbot --apache -d bharatcschub.online
+sudo certbot --apache -d bharatcschub.online -d www.bharatcschub.online
+sudo systemctl enable apache2
+sudo apachectl configtest
+
+
+sudo truncate -s 0 /var/log/letsencrypt/letsencrypt.log
+
+curl -I http://bharatcschub.online
+dig bharatcschub.online
+sudo chmod 644 /var/log/letsencrypt/letsencrypt.log
+sudo rm /var/log/letsencrypt/letsencrypt.log
+
+1094  nano .htaccess 
+ 1095  ls
+ 1096  cd ..
+ 1097  cd luxfeadmin/
+ 1098  ll
+ 1099  mv index.html index1.html 
+ 1100  sudo service apache2 restart
+ 1101  mv index.html index1.html cd 
+ 1102  cd /opt
+ 1103  ls
+ 1104  mkdir feadmin
+ 1105  ls
+ 1106  cd feadmin/
+ 1107  ls
+ 1108  nano .htaccess
+ 1109  ls
+ 1110  ll
+ 1111  cd ..
+ 1112  ls
+ 1113  nano admin.sh 
+ 1114  cd 
+ 1115  cd /opt/
+ 1116  ls
+ 1117  nano admin.sh 
+ 1118  bash admin.sh 
+ 1119  nano admin.sh 
+ 1120  bash admin.sh 
+ 1121  cd /var/www/luxfeadmin/
+ 1122  ls
+ 1123  ll
+ 1124  cd /opt
+ 1125  ls
+ 1126  nano admin.sh 
+ 1127  bash admin.sh 
+ 1128  cd /var/www/luxfeadmin/
+ 1129  ls
+ 1130  ll
+ 1131  ls
+ 1132  cd 
+ 1133  ls
+ 1134  cd /opt
+ 1135  ls
+ 1136  bash admin.sh
+ 1137  ls
+ 1138  rm admin.sh.save 
+ 1139  ls
+ 1140  nano admin.sh 
+ 1141  cd ..
+ 1142  ls
+ 1143  cd
+ 1144  history
+ 1145  history | head -n 100
+ 1146  history | awk 'NR>=1 && NR<=100'
+ 1147  history | head -n 10
+ 1148  history | head -n 1
+ 1149  ls
+ 1150  cd
+ 1151  cd opt
+ 1152  cd /opt
+ 1153  ls
+ 1154  cd ansible.sh
+ 1155  nano ansible.sh
+ 1156  ls
+ 1157  bash ansible.sh 
+ 1158  df -h
+ 1159  sudo apt remove -y ansible
+ 1160  cd
+ 1161  history
+ 1162  history | head -n 100
+ 1163  history
+ 1164  ls
+ 1165  cd
+ 1166  sudo apt remove -y ansible
+ 1167  sudo apt-add-repository --remove ppa:ansible/ansible
+ 1168  sudo apt remove -y ansible
+ 1169  sudo apt autoremove -y
+ 1170  pwd
+ 1171  ls
+ 1172  cd
+ 1173  ls
+ 1174  cd /var/www/
+ 1175  ls
+ 1176  cd luxbe
+ 1177  ls
+ 1178  ll
+ 1179  cd ..
+ 1180  lls
+ 1181  ls
+ 1182  cd luxfef
+ 1183  ls
+ 1184  cd luxfe
+ 1185  ls
+ 1186  ll
+ 1187  cd /etc/
+ 1188  ls
+ 1189  cd apache2/
+ 1190  ls
+ 1191  cd sites-available/
+ 1192  ls
+ 1193  ll
+ 1194  dpkg -l
+ 1195  q
+ 1196  node -v
+ 1197  npm -v
+ 1198  ls
+ 1199  cd 
+ 1200  ls
+ 1201  cd /etc/apache2/
+ 1202  ls
+ 1203  cd sites-available/
+ 1204  ls
+ 1205  nano luxyaragroup.io
+ 1206  nano default-ssl.conf 
+ 1207  nano be-luxyaragroup.conf 
+ 1208  ls
+ 1209  df -h
+ 1210  ls
+ 1211  cd 
+ 1212  ls
+ 1213  cd fe
+ 1214  ls
+ 1215  cd ..
+ 1216  cd be
+ 1217  ls
+ 1218  cd vuezenbe24062024/
+ 1219  ls
+ 1220  history
+ 1221  pm2 logs 0 --lines 100
+ 1222  pm2 flush 2
+ 1223  pm2 logs 0 --lines 100
+ 1224  history
+ 1225  pm2 flush
+ 1226  pm2 logs 0 --lines 100
+ 1227  df -h
+ 1228  sudo du -ahx / | sort -rh | head -n 20
+ 1229  cd /tmp
+ 1230  ls
+ 1231  ll
+ 1232  sudo rm -rf /tmp/*
+ 1233  ls
+ 1234  df -h
+ 1235  sudo du -ahx / | sort -rh | head -n 20
+ 1236  sudo rm -rf /var/log/*.log
+ 1237  sudo rm -rf /var/cache/*
+ 1238  sudo apt-get autoremove
+ 1239  sudo apt-get clean
+ 1240  df -h
+ 1241  sudo find / -type f -exec du -h {} + | sort -rh | head -n 20
+ 1242  df -h
+ 1243  ls
+ 1244  cd /dev
+ 1245  ls
+ 1246  cd root
+ 1247  ls
+ 1248  cd root 
+ 1249  ls
+ 1250  cd /root
+ 1251  ls
+ 1252  cd snap/
+ 1253  ls
+ 1254  sudo systemctl stop mysql
+ 1255  sudo apt-get remove --purge mysql-server mysql-client mysql-common
+ 1256  sudo dpkg --configure -a
+ 1257  df -h
+ 1258  sudo apt-get autoremove
+ 1259  sudo apt-get clean
+ 1260  sudo rm -rf /var/lib/mysql
+ 1261  sudo rm -rf /etc/mysql
+ 1262  df -h
+ 1263  sudo rm -rf /var/lib/mysql
+ 1264  sudo rm -rf /etc/mysql
+ 1265  sudo apt-get clean
+ 1266  sudo apt-get autoremove
+ 1267  ls
+ 1268  df -h
+ 1269  ls
+ 1270  df -h
+ 1271  ls
+ 1272  cd 
+ 1273  ls
+ 1274  cd be
+ 1275  ll
+ 1276  cd fe
+ 1277  ls
+ 1278  cdc 
+ 1279  cd 
+ 1280  ls
+ 1281  cd fe
+ 1282  ls
+ 1283  cd v
+ 1284  cd vuezenfe24062024/
+ 1285  ls
+ 1286  cd 
+ 1287  ls
+ 1288  df -h
+ 1289  ll
+ 1290  cd 
+ 1291  ls
+ 1292  cd fe
+ 1293  ls
+ 1294  cd vuezenfe24062024/
+ 1295  ls
+ 1296  ll
+ 1297  nano .env
+ 1298  ls
+ 1299  cd ..
+ 1300  ls
+ 1301  cd ..
+ 1302  cd fe
+ 1303  ls
+ 1304  cd vuezenfe24062024/
+ 1305  ls
+ 1306  ll
+ 1307  nano .env2.txt 
+ 1308  cd ..
+ 1309  ls
+ 1310  cd feadmin/
+ 1311  ls
+ 1312  cd vuezenfeadmin24062024/
+ 1313  la
+ 1314  ls
+ 1315  nano prod.env.txt 
+ 1316  nano local.env.txt 
+ 1317  cd ..
+ 1318  ls
+ 1319  ll
+ 1320  ls
+ 1321  rm -r fe
+ 1322  ls
+ 1323  rm -r feadmin/
+ 1324  ls
+ 1325  ll
+ 1326  sudo apt remove ansible
+ 1327  sudo apt purge ansible
+ 1328  dpkg -l | grep ansible
+ 1329  sudo apt --fix-broken install
+ 1330  sudo apt remove ansible
+ 1331  sudo apt autoremove
+ 1332  sudo apt update
+ 1333  sudo apt upgrade
+ 1334  dh -f
+ 1335  df -h
+ 1336  ll
+ 1337  rm -r ~/.ansible
+ 1338  ll
+ 1339  cd .bash_history 
+ 1340  sudo apt autoremove
+ 1341  sudo apt clean
+ 1342  sudo apt-get purge mysql-server mysql-client mysql-common mysql-server-core-* mysql-client-core-*
+ 1343  df -h
+ 1344  sudo apt clean
+ 1345  sudo apt autoclean
+ 1346  df -h
+ 1347  sudo apt clean
+ 1348  df -h
+ 1349  ll
+ 1350  sudo apt autoremove
+ 1351  sudo apt-get clean
+ 1352  sudo apt-get autoclean
+ 1353  sudo apt-get remove --purge linux-image-X.X.XX-XX-generic
+ 1354  sudo apt-get autoremove
+ 1355  sudo apt-get remove --purge snapd
+ 1356  sudo rm -rf ~/snap
+ 1357  sudo rm -rf /var/snap
+ 1358  sudo rm -rf /var/lib/snapd
+ 1359  sudo rm -rf /snap
+ 1360  sudo apt-get autoremove
+ 1361  sudo rm -rf /var/cache/*
+ 1362  sudo rm -rf /tmp/*
+ 1363  sudo rm -rf ~/.cache/*
+ 1364  sudo du -sh /* 2>/dev/null
+ 1365  cd /opt
+ 1366  ;s
+ 1367  ls
+ 1368  cd feadmin/
+ 1369  cd 
+ 1370  cd /opt
+ 1371  ls
+ 1372  cd feadmin/
+ 1373  ls
+ 1374  ll
+ 1375  nano .htaccess 
+ 1376  cd ..
+ 1377  rm -r feadmin/
+ 1378  ls
+ 1379  rm -r be/
+ 1380  ls
+ 1381  ll
+ 1382  cd ..
+ 1383  sudo du -sh /* 2>/dev/null
+ 1384  df -h
+ 1385  ls
+ 1386  sudo rm -rf /var/log/*.gz
+ 1387  sudo rm -rf /var/log/*.[0-9]
+ 1388  sudo rm -rf /var/log/*-????????.gz
+ 1389  sudo rm -rf /var/log/*-????????.log
+ 1390  df -h
+ 1391  sudo systemctl list-units --type=service --all
+ 1392  df -h
+ 1393  ls
+ 1394  cd
+ 1395  cd /opt
+ 1396  ls
+ 1397  nano admin.sh
+ 1398  ls
+ 1399  cd mkdir fe
+ 1400  mkdri fe
+ 1401  mkdir fe
+ 1402  cd fe
+ 1403  nano .htaccess
+ 1404  cd /var/html
+ 1405  ls
+ 1406  cd /var/www
+ 1407  ls
+ 1408  cd luxfe
+ 1409  ll
+ 1410  ls
+ 1411  cd ..
+ 1412  ls
+ 1413  cd luxfeadmin/
+ 1414  ls
+ 1415  ll
+ 1416  nano .htaccess 
+ 1417  cd /opt
+ 1418  ls
+ 1419  cd fe
+ 1420  ls
+ 1421  ll
+ 1422  nano .htaccess 
+ 1423  nano .htaccess
+ 1424  cd ..
+ 1425  ls
+ 1426  nano fe.sh
+ 1427  ls
+ 1428  bash fe.sh 
+ 1429  cd /var
+ 1430  ls
+ 1431  cd www
+ 1432  ls
+ 1433  cd luxfe
+ 1434  ls
+ 1435  ll
+ 1436  rm -r *
+ 1437  ls
+ 1438  ll
+ 1439  cd /opt
+ 1440  l
+ 1441  cd fe1.sh
+ 1442  nano fe1.sh
+ 1443  bash fe1.sh 
+ 1444  ll
+ 1445  nano fe2.sh
+ 1446  bash fe2.sh 
+ 1447  ls
+ 1448  bash fe2.sh 
+ 1449  nano f3.sh
+ 1450  bash f3.sh 
+ 1451  cd fe
+ 1452  cd /var
+ 1453  ls
+ 1454  cd wwww
+ 1455  cd www
+ 1456  ls
+ 1457  cd luxfe
+ 1458  ls
+ 1459  ll
+ 1460  ls
+ 1461  systemctl restart apache2
+ 1462  cd ..
+ 1463  ls
+ 1464  git clone https://github.com/akmaurya31/vuezenfe24062024.git
+ 1465  ls
+ 1466  cd luxfe
+ 1467  ls
+ 1468  ll
+ 1469  cd ..
+ 1470  rm -r luxfe
+ 1471  ll
+ 1472  mv vuezenfe24062024 luxfe
+ 1473  ll
+ 1474  ls
+ 1475  cd luxfe
+ 1476  ls
+ 1477  ll
+ 1478  cd ..
+ 1479  mv luxfe luxfebuild
+ 1480  ls
+ 1481  mkdir luxfe
+ 1482  mv luxfebuild/build/* luxfe/
+ 1483  mkdir luxfe && mv luxfebuild/build/* luxfe/
+ 1484  ls
+ 1485  nano s1.sh
+ 1486  bash s1.sh
+ 1487  ll
+ 1488  cd luxve
+ 1489  cd lux be
+ 1490  cd luxbe
+ 1491  ls
+ 1492  ll
+ 1493  cd ..
+ 1494  rm -r luxbe
+ 1495  ll
+ 1496  rm -r luxfe
+ 1497  ll
+ 1498  rm -r luxfebuild/
+ 1499  ls
+ 1500  rm -r s1.sh 
+ 1501  ll
+ 1502  cd fe
+ 1503  l
+ 1504  ls
+ 1505  cd ..
+ 1506  rm -r fe
+ 1507  ls
+ 1508  ll
+ 1509  cd html
+ 1510  ls
+ 1511  cd ..
+ 1512  git clone https://github.com/akmaurya31/vuezenfe24062024.git
+ 1513  cd vuezenfe24062024/
+ 1514  ls
+ 1515  cd ..
+ 1516  ls
+ 1517  nano s1.sh
+ 1518  cd vuezenfe24062024/
+ 1519  ls
+ 1520  nano s1.sh
+ 1521  bash s1.sh
+ 1522  cd ..
+ 1523  ls
+ 1524  df -h
+ 1525  ls
+ 1526  cd
+ 1527  ls
+ 1528  cd ve
+ 1529  cd be
+ 1530  ls
+ 1531  cd vuezenbe24062024/
+ 1532  ls
+ 1533  ll
+ 1534  nano .env
+ 1535  pme status
+ 1536  pm2 status
+ 1537  pm2 start
+ 1538  pm2 start server.js --name "backend"
+ 1539  cd
+ 1540  history
+ 1541  pm2 start server.js --name "backend"
+ 1542  ls
+ 1543  cd be
+ 1544  ls
+ 1545  cd vuezenbe24062024/
+ 1546  ls
+ 1547  cd server.js 
+ 1548  ls
+ 1549  nano server.js 
+ 1550  cd 
+ 1551  ls
+ 1552  history
+ 1553  cd be/vuezenbe24062024/
+ 1554  ls
+ 1555  pm2 start server.js --name "backend"
+ 1556  cd /var/www
+ 1557  ls
+ 1558  cd luxfe
+ 1559  ls
+ 1560  git status
+ 1561  git branch
+ 1562  cd ..
+ 1563  cd 
+ 1564  ls
+ 1565  cd var/www/html
+ 1566  ls
+ 1567  cd var
+ 1568  ll
+ 1569  cd /var/
+ 1570  ls
+ 1571  cd www
+ 1572  ls
+ 1573  cd html/
+ 1574  ls
+ 1575  ll
+ 1576  cd ..
+ 1577  ll
+ 1578  mkdir pdf
+ 1579  ls
+ 1580  cd pdf
+ 1581  ls
+ 1582  ll
+ 1583  cd ..
+ 1584  cd luxfe
+ 1585  ls
+ 1586  cd ..
+ 1587  ls
+ 1588  cd pdf
+ 1589  ls
+ 1590  nano index.html
+ 1591  ls
+ 1592  cd /var
+ 1593  ll
+ 1594  cd ..
+ 1595  ls
+ 1596  cd /etc
+ 1597  ls
+ 1598  cd 
+ 1599  ls
+ 1600  cd /etc/apache2/sites-available
+ 1601  ls
+ 1602  nano pdf.luxyaragroup.io.conf
+ 1603  ll
+ 1604  sudo a2ensite pdf.luxyaragroup.io.conf
+ 1605  sudo systemctl reload apache2
+ 1606  ls
+ 1607  sudo su
+ 1608  cd 
+ 1609  cd /var
+ 1610  ll
+ 1611  cd www
+ 1612  cd pdf/
+ 1613  ls
+ 1614  git clone https://github.com/akmaurya31/pdfration.git
+ 1615  ll
+ 1616  cd pdfration/
+ 1617  ls
+ 1618  ll
+ 1619  cd ..
+ 1620  cd /etc/
+ 1621  ls
+ 1622  cd apache2/
+ 1623  ls
+ 1624  cd sites-
+ 1625  cd sites-enabled/
+ 1626  ls
+ 1627  cd pdf.luxyaragroup.io.conf 
+ 1628  nano pdf.luxyaragroup.io.conf 
+ 1629  sudo a2ensite sub.example.com.conf
+ 1630  sudo a2ensite pdf.luxyaragroup.io.conf
+ 1631  sudo systemctl reload apache2
+ 1632  sudo chmod -R 755 /var/www/pdfration
+ 1633  sudo chmod -R 755 /var/www/pd
+ 1634  sudo chmod -R 755 /var/www/pdf
+ 1635  php -v
+ 1636  sudo apt install php8.3-cli
+ 1637  php -v
+ 1638  php-fpm -v
+ 1639  systemctl status php8.3.6
+ 1640  sudo systemctl status php8.3.6
+ 1641  sudo systemctl status apache2
+ 1642  php -v
+ 1643  sudo apt install libapache2-mod-php8.3
+ 1644  sudo systemctl restart apache2
+ 1645  cd /var/www/
+ 1646  cd pdf/pdfration/
+ 1647  ls
+ 1648  nano dbConnection.php 
+ 1649  nano addLogin.php 
+ 1650  sudo systemctl restart apache2
+ 1651  ll
+ 1652  nano error_log
+ 1653  sudo rm error_log
+ 1654  ll
+ 1655  sudo nano /etc/php/8.3/apache2/
+ 1656  ls
+ 1657  sudo nano /etc/php/8.3/apache2/
+ 1658  cd /var
+ 1659  ls
+ 1660  cd log
+ 1661  ls
+ 1662  nano lastlog
+ 1663  cd apache2/
+ 1664  ls
+ 1665  nano error.log
+ 1666  rm error.log
+ 1667  ll
+ 1668  ls
+ 1669  nano error.log.1
+ 1670  rm error.log.1
+ 1671  nano error.log
+ 1672  ll
+ 1673  ls
+ 1674  rm *error*
+ 1675  ls
+ 1676  ll
+ 1677  ls
+ 1678  rm *.gz
+ 1679  ls
+ 1680  ll
+ 1681  rm *.log*
+ 1682  ls
+ 1683  ll
+ 1684  ls
+ 1685  ll
+ 1686  cd /etc/apache2/
+ 1687  ls
+ 1688  cd sites-available/
+ 1689  ls
+ 1690  nano pdf.luxyaragroup.io.conf 
+ 1691  sudo systemctl reload apache2
+ 1692  sudo systemctl restart apache2
+ 1693  ls
+ 1694  ll
+ 1695  cd /var/log
+ 1696  cd apache2/
+ 1697  ls
+ 1698  ll
+ 1699  nano pdf.luxyaragroup.io_error.log 
+ 1700  sudo apt-get install php-mysqli
+ 1701  sudo systemctl restart apache2
+ 1702  ls
+ 1703  cd /var/www
+ 1704  cd 
+ 1705  l
+ 1706  cd /var/www/pdf/
+ 1707  ls
+ 1708  cd pdfration/
+ 1709  ls
+ 1710  nano addLogin.php 
+ 1711  cd /var/www/
+ 1712  ls
+ 1713  cd pdf/
+ 1714  ls
+ 1715  cd pdfration/
+ 1716  ls
+ 1717  nano pay.php
+ 1718  cd /var/log/apache2/
+ 1719  ls
+ 1720  nano pdf.luxyaragroup.io_error.log 
+ 1721  cd
+ 1722  ls
+ 1723  ll
+ 1724  cd /var/www
+ 1725  ls
+ 1726  cd pdf
+ 1727  ls
+ 1728  cd pdfration/
+ 1729  ll
+ 1730  sudo apt update
+ 1731  sudo certbot --apache -d pdf.luxyaragroup.io
+ 1732  sudo apt install certbot python3-certbot-apache
+ 1733  sudo certbot --apache -d pdf.luxyaragroup.io
+ 1734  cd 
+ 1735  ls
+ 1736  cd /var/log
+ 1737  ls
+ 1738  cd apache2/
+ 1739  ls
+ 1740  nano error.log
+ 1741  nano pdf.luxyaragroup.io_error.log 
+ 1742  cd /var/www/pdf/pdfration/
+ 1743  ll
+ 1744  nano header.php 
+ 1745  ls
+ 1746  cd
+ 1747  ls
+ 1748  cd /var/www
+ 1749  ls
+ 1750  cd pdf
+ 1751  ls
+ 1752  cd pdfration/
+ 1753  ls
+ 1754  nano dbConnection.php 
+ 1755  git pull origin main
+ 1756  git stash
+ 1757  git pull origin main
+ 1758  cd
+ 1759  df -h
+ 1760  cd /var/www/
+ 1761  ls
+ 1762  cd pdf
+ 1763  ls
+ 1764  cd pdfration/
+ 1765  ls
+ 1766  cd images/
+ 1767  ls
+ 1768  cd uploads/
+ 1769  ls
+ 1770  cd /var/www
+ 1771  ls
+ 1772  cd indiamart
+ 1773  mkdir imart
+ 1774  ls
+ 1775  cd imart
+ 1776  ls
+ 1777  cd
+ 1778  cd /var/www
+ 1779  ls
+ 1780  cd pdf
+ 1781  ls
+ 1782  cd pdfration/
+ 1783  ls
+ 1784  git pull origin main
+ 1785  ls
+ 1786  nano eror
+ 1787  ls
+ 1788  nano error_log 
+ 1789  git pull origin main
+ 1790  ls
+ 1791  cd ..
+ 1792  cd 
+ 1793  cd /var/www/pdf/
+ 1794  ls
+ 1795  cd pdfration/
+ 1796  git pull origin main
+ 1797  cd
+ 1798  cd /var/www/
+ 1799  ls
+ 1800  cd pdf
+ 1801  ls
+ 1802  cd pdfration/
+ 1803  ls
+ 1804  git pull origin main
+ 1805  ls
+ 1806  git pull origin main
+ 1807  cd
+ 1808  cd /var/www
+ 1809  cd
+ 1810  ls
+ 1811  cd ..
+ 1812  ls
+ 1813  cd /var
+ 1814  ls
+ 1815  cd www
+ 1816  ls
+ 1817  cd pdf
+ 1818  cd pdfration/
+ 1819  ls
+ 1820  git pull origin main
+ 1821  cd
+ 1822  cd /var/www/pdf/pdfration/
+ 1823  git pull origin main
+ 1824  cd ..
+ 1825  cd  /var/www
+ 1826  ls
+ 1827  cd pdf
+ 1828  /s
+ 1829  cd pdfration/
+ 1830  ls
+ 1831  cd images/
+ 1832  ls
+ 1833  cd uploads/
+ 1834  ls
+ 1835  cd .
+ 1836  cd ..
+ 1837  git pull origin main
+ 1838  ls
+ 1839  cd ..
+ 1840  cd 
+ 1841  ls
+ 1842  cd 
+ 1843  ls
+ 1844  cd /var/www
+ 1845  ls
+ 1846  cd pdf
+ 1847  ls
+ 1848  cd pdfration/
+ 1849  ls
+ 1850  cd images/
+ 1851  ls
+ 1852  cd uploads/
+ 1853  ls
+ 1854  cd
+ 1855  find /var/www/ -name "*publicluxs3*"
+ 1856  cd
+ 1857  ls
+ 1858  cd be
+ 1859  ls
+ 1860  find -name "publicluxs3"
+ 1861  sudo find / -name "publicluxs3"
+ 1862  cd vuezenbe24062024/
+ 1863  ls
+ 1864  cd src
+ 1865  ls
+ 1866  cd controllers/
+ 1867  ls
+ 1868  cd admin
+ 1869  ls
+ 1870  cd ..
+ 1871  ls
+ 1872  cd use
+ 1873  cd user
+ 1874  ls
+ 1875  cd ..
+ 1876  l
+ 1877  cd ..
+ 1878  ls
+ 1879  cd config
+ 1880  ls
+ 1881  nano dbConfig.js 
+ 1882  cd ..
+ 1883  ls
+ 1884  cd /var/www
+ 1885  ls
+ 1886  cd pdf
+ 1887  ls
+ 1888  cd pdfration/
+ 1889  ls
+ 1890  cd images/
+ 1891  ls
+ 1892  cd uploads/
+ 1893  ls
+ 1894  sudo find /be/ -type f -exec grep -l "publicluxs3" {} \;
+ 1895  sudo find root/be/ -type f -exec grep -l "publicluxs3" {} \;
+ 1896  sudo find/ root/be/ -type f -exec grep -l "publicluxs3" {} \;
+ 1897  sudo find /root/be/ -type f -exec grep -l "publicluxs3" {} \;
+ 1898  nano /root/be/vuezenbe24062024/.env
+ 1899  sudo find /root/be/ -type f -exec grep -l "S3_BUCKET_NAME" {} \;
+ 1900  nano /root/be/vuezenbe24062024/src/helpers/validateImageFile.js
+ 1901  ls
+ 1902  cd 
+ 1903  ls
+ 1904  cd be
+ 1905  ls
+ 1906  cd vuezenbe24062024/
+ 1907  l
+ 1908  nano .env
+ 1909  cd 
+ 1910  ls
+ 1911  cd /var/www/
+ 1912  ls
+ 1913  cd pdf
+ 1914  cd pdfration/
+ 1915  ls
+ 1916  git pull origin main
+ 1917  composer install
+ 1918  sudo apt install composer
+ 1919  git status
+ 1920  composer install
+ 1921  ll
+ 1922  ls
+ 1923  df -h
+ 1924  mkdir vendor
+ 1925  ls
+ 1926  cd
+ 1927  ls
+ 1928  cd be
+ 1929  ls
+ 1930  cd vuezenbe24062024/
+ 1931  ls
+ 1932  git pull origin main
+ 1933  pm2 status
+ 1934  pm2 restart 0
+ 1935  git pull origin main
+ 1936  pm2 restart 0
+ 1937  cd /var/www/pdf/pdfration/
+ 1938  ls
+ 1939  git pull origin main
+ 1940  cd
+ 1941  ls
+ 1942  php --ini
+ 1943  /etc/php/8.3/cli/php.ini
+ 1944  nano /etc/php/8.3/cli/php.ini
+ 1945  ls
+ 1946  cd 
+ 1947  ls
+ 1948  cd /etc/
+ 1949  ls
+ 1950  cd php
+ 1951  ls
+ 1952  cd 8.3/
+ 1953  ls
+ 1954  cd cli/
+ 1955  ls
+ 1956  nano php.ini 
+ 1957  sudo systemctl restart httpd
+ 1958  sudo systemctl restart apache2
+ 1959  cd
+ 1960  cd /etc/php/8.3/
+ 1961  ls
+ 1962  cd apache2/
+ 1963  ls
+ 1964  nano php.ini
+ 1965  sudo systemctl restart apache2
+ 1966  cd 
+ 1967  cd /var/www/pdf
+ 1968  ls
+ 1969  cd pdfration/
+ 1970  ls
+ 1971  git pull origin main
+ 1972  cd
+ 1973  cd /var/www
+ 1974  ls
+ 1975  cd pd
+ 1976  cd pdf
+ 1977  cd pdfration/
+ 1978  git pull origin main
+ 1979  ls
+ 1980  cd
+ 1981  ls
+ 1982  l
+ 1983  ls
+ 1984  cd /var/www/
+ 1985  ls
+ 1986  cd pdf
+ 1987  ls
+ 1988  cd pdfration/
+ 1989  ls
+ 1990  git pull origin main
+ 1991  cd
+ 1992  cd 
+ 1993  cd /var/www/
+ 1994  ls
+ 1995  cd pdf
+ 1996  ls
+ 1997  cd pdfration/
+ 1998  ls
+ 1999  git pull origin main
+ 2000  cd
+ 2001  cd /var/www
+ 2002  ls
+ 2003  cd pdf
+ 2004  ls
+ 2005  cd /etc/
+ 2006  ls
+ 2007  cd /apache2
+ 2008  cd apache2
+ 2009  ls
+ 2010  cd sites-available/
+ 2011  ls
+ 2012  sudo nano bharatcschub.online.conf
+ 2013  cd /var/www/
+ 2014  ls
+ 2015  cd /etc/apache2/sites-available/
+ 2016  ls
+ 2017  nano bharatcschub.online.conf
+ 2018  ls
+ 2019  sudo a2ensite bharatcschub.online.conf
+ 2020  sudo systemctl restart apache2
+ 2021  sudo certbot --apache -d bharatcschub.online.conf
+ 2022  ls
+ 2023  nano bharatcschub.online.conf 
+ 2024  sudo certbot --apache -d bharatcschub.online.conf
+ 2025  nano /var/log/letsencrypt/letsencrypt.log
+ 2026  sudo chmod 644 /var/log/letsencrypt/letsencrypt.log
+ 2027  sudo apt update
+ 2028  sudo apt install certbot
+ 2029  sudo certbot renew --dry-run
+ 2030  sudo certbot --apache -d bharatcschub.online.conf
+ 2031  dig bharatcschub.online
+ 2032  sudo certbot certonly --webroot -w /var/www/pdf/pdfration -d bharatcschub.online -v
+ 2033  ls
+ 2034  nano bharatcschub.online.conf 
+ 2035  ls
+ 2036  nano bharatcschub.online.conf 
+ 2037  ls
+ 2038  sudo certbot certonly --webroot -w /var/www/pdf/pdfration -d bharatcschub.online
+ 2039  sudo a2ensite bharatcschub.online.conf
+ 2040  sudo systemctl restart apache2
+ 2041  sudo certbot --apache -d bharatcschub.online.conf
+ 2042  cd /var/www/pdf/pdfration
+ 2043  ls
+ 2044  sudo nano /etc/apache2/sites-available/bharatcschub.online.conf
+ 2045  sudo a2ensite bharatcschub.online.conf
+ 2046  sudo systemctl reload apache2
+ 2047  sudo systemctl status apache2
+ 2048  sudo systemctl start apache2
+ 2049  sudo systemctl status apache2
+ 2050  sudo systemctl restart apache2
+ 2051  sudo apachectl configtest
+ 2052  dig bharatcschub.online
+ 2053  dig www.bharatcschub.online
+ 2054  sudo certbot --apache -d bharatcschub.online.conf
+ 2055  sudo certbot --apache -d bharatcschub.online -d www.bharatcschub.online
+ 2056  -v
+ 2057  sudo certbot --apache -d bharatcschub.online -d www.bharatcschub.online -v
+ 2058  sudo truncate -s 0 /var/log/letsencrypt/letsencrypt.log
+ 2059  nano /var/log/letsencrypt/letsencrypt.log
+ 2060  sudo certbot --apache -d bharatcschub.online -d www.bharatcschub.online -v
+ 2061  sudo certbot --apache -d bharatcschub.online
+ 2062  ls
+ 2063  ll
+ 2064  rm -rf vendor/
+ 2065  ls
+ 2066  nano .htaccess 
+ 2067  sudo systemctl restart apache2
+ 2068  sudo a2enmod rewrite
+ 2069  nano /etc/apache2/sites-available/
+ 2070  cd /etc/apache2/sites-available
+ 2071  ls
+ 2072  sudo nano /etc/apache2/sites-available/bharatcschub.online.conf
+ 2073  sudo apachectl configtest
+ 2074  sudo systemctl restart apache2
+ 2075  cd /var/www/pdf
+ 2076  ls
+ 2077  cd pdfration/
+ 2078  ls
+ 2079  rm composer.lock 
+ 2080  ls
+ 2081  rm composer.json
+ 2082  ls
+ 2083  git pull origin main
+ 2084  nano .htaccess
+ 2085  cd /var/www/pdf/pdfration/
+ 2086  ls
+ 2087  cd /etc/apache2/
+ 2088  ls
+ 2089  cd sites-available/
+ 2090  ls
+ 2091  nano bharatcschub.online.conf 
+ 2092  ls
+ 2093  history
