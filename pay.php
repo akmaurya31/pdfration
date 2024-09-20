@@ -71,8 +71,8 @@
   </p>
 
   <p class="text-lg text-center mt-4 mb-4 text-gray-700">
-    📸 <strong>Payment Transaction ID Screenshot:</strong> कृपया व्हाट्सएप पर हमें भेजें 
-    <a href="https://wa.me/7518869428" target="_blank" class="text-blue-500 hover:underline">7518869428</a>।
+    📸 <strong>Payment Transaction ID Screenshot:</strong> कृपया व्हाट्सएप पर हमें भेजें
+    <a href="https://wa.me/7518869428" target="_blank" class="text-blue-500 hover:underline">7518869428</a>
   </p>
 
   <p class="text-lg text-center mt-4 mb-4 text-gray-700">
