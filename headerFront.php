@@ -2,15 +2,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharat CSC Hub - Your Trusted Partner for Digital Services in Lucknow</title>
+    <meta name="description" content="Unlock a world of digital solutions with Bharat CS Chub! From website development and mobile apps to essential services like PAN, Aadhar, and ration card assistance in Lucknow. We make your digital experience seamless and efficient. 🚀" />
+    <meta name="keywords" content="CSS services, Lucknow CSC center, digital CSC services, website developer Lucknow, app developer Lucknow, software developer Lucknow, PAN card Lucknow, ration card Lucknow, Aadhar card Lucknow" />
     <script src="https://cdn.tailwindcss.com"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- <div class="container mx-auto mt-5 max-w-[1320px]"> -->
-<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 </head>
+
 <?php session_start(); ?>
-
-
     <nav class="bg-white border-gray-200 ">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
             <a href="index.php" class="flex items-center space-x-3 rtl:space-x-reverse">

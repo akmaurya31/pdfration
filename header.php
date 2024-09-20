@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharat CSC Hub - Your Trusted Partner for Digital Services in Lucknow</title>
+    <meta name="description" content="Unlock a world of digital solutions with Bharat CS Chub! From website development and mobile apps to essential services like PAN, Aadhar, and ration card assistance in Lucknow. We make your digital experience seamless and efficient. 🚀" />
+    <meta name="keywords" content="CSS services, Lucknow CSC center, digital CSC services, website developer Lucknow, app developer Lucknow, software developer Lucknow, PAN card Lucknow, ration card Lucknow, Aadhar card Lucknow" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+</head>
+
 <?php
 include('dbconn.php');
 
@@ -45,19 +60,7 @@ function getCurWallet($mysqli,$userId) {
 }
 
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
-<script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-
-</head>
 
 
 <body>
