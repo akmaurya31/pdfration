@@ -3,8 +3,8 @@ require_once("dbConnection.php");
 session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve username and password from the form
-    $username = $_POST["username"];
-    $password = $_POST["password"];
+    $username = trim($_POST["username"]);
+    $password = trim($_POST["password"]);
 
     // Perform validation (you might want to do more robust validation)
     if (!empty($username) && !empty($password)) {
@@ -30,14 +30,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($result->num_rows == 1) {
               $row = $result->fetch_assoc();
               // Store user details in session
-              $_SESSION['user_id'] = $row['user_id']; // Assuming 'user_id' is the primary key of your 'users' table
-              $_SESSION['idd'] = $row['id']; // Assuming 'user_id' is the primary key of your 'users' table
-              $_SESSION['username'] = $row['username'];
-              $_SESSION['email'] = $row['email'];
-              $_SESSION['contact_number'] = $row['contact_number'];
-              $_SESSION['is_login'] =true;
-              $_SESSION['role']=$row['role'];
-              $_SESSION['current_balance']=$row['current_balance'];
+              $_SESSION['user_id'] = trim($row['user_id']); // Assuming 'user_id' is the primary key of your 'users' table
+              $_SESSION['idd'] = trim($row['id']); // Assuming 'id' is another field in your 'users' table
+              $_SESSION['username'] = trim($row['username']);
+              $_SESSION['email'] = trim($row['email']);
+              $_SESSION['contact_number'] = trim($row['contact_number']);
+              $_SESSION['is_login'] = true;
+              $_SESSION['role'] = trim($row['role']);
+              $_SESSION['current_balance'] = trim($row['current_balance']);
               $stmt->close();
             // echo "User logged in successfully!";
 

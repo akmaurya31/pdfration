@@ -9,11 +9,11 @@
           <form action="addLogin" method="post" name="add">
             <div class="mb-4">
               <label for="username" class="block font-bold text-gray-700 mb-1">User ID :</label>
-              <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded" id="username" name="username" placeholder="Enter User ID">
+              <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded" id="username" name="username" placeholder="Enter User ID" onchange="trimInput(this)">
             </div>
             <div class="mb-4">
               <label for="password" class="block font-bold text-gray-700 mb-1">Password :</label>
-              <input type="password" class="w-full px-3 py-2 border border-gray-300 rounded" id="password" name="password" placeholder="Enter Password">
+              <input type="password" class="w-full px-3 py-2 border border-gray-300 rounded" id="password" name="password" placeholder="Enter Password" onchange="trimInput(this)">
             </div>
             <div class="mb-4 flex items-center">
               <input type="checkbox" class="h-4 w-4 text-blue-600 border-gray-300 rounded mr-2" id="remember">

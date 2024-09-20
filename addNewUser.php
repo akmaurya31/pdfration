@@ -1,10 +1,10 @@
 <?php
 require_once("headerFront.php");
 require_once("dbConnection.php");
-$name = $_POST['name'];
-$email = $_POST['email'];
-$contact_number = $_POST['contact_number'];
-$password = $_POST['password'];
+$name = trim(htmlspecialchars($_POST['name']));
+$email = trim(htmlspecialchars($_POST['email']));
+$contact_number = trim(htmlspecialchars($_POST['contact_number']));
+$password = trim(htmlspecialchars($_POST['password']));
 list($username, $domain) = explode("@", $email);
 $username1 = $username.rand(1, 9999);
 
