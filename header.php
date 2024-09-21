@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bharat CSC Hub - Your Trusted Partner for Digital Services in Lucknow</title>
-    <meta name="description" content="Unlock a world of digital solutions with Bharat CS Chub! From website development and mobile apps to essential services like PAN, Aadhar, and ration card assistance in Lucknow. We make your digital experience seamless and efficient. 🚀" />
-    <meta name="keywords" content="CSS services, Lucknow CSC center, digital CSC services, website developer Lucknow, app developer Lucknow, software developer Lucknow, PAN card Lucknow, ration card Lucknow, Aadhar card Lucknow" />
+
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bharat CSC Hub - Your Trusted Source for Digital & Government Services</title>
+  <meta name="description" content="Explore our top services! Click here to see everything we offer. Amrish Maurya says Bharat CSC Hub is the best spot for all government services. Need help with state or central government tasks? We're ready to assist you! Connect easily with our NFC cards and AI tools for business growth." />
+  <meta name="keywords" content="CSS services, Lucknow CSC center, digital CSC services, website developer Lucknow, app developer Lucknow, software developer Lucknow, PAN card Lucknow, ration card Lucknow, Aadhar card Lucknow" />
+  <meta name="robots" content="max-image-preview:large" />
+  <link rel="canonical" href="https://bharatcschub.online/" />
+  <meta name="generator" content="All in One SEO (AIOSEO) 4.7.1.1" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:site_name" content="Bharat CSC Hub - Your Trusted Source for Government Services" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Welcome to Bharat CSC Hub" />
+  <meta property="og:description" content="Unlock a world of digital solutions with Bharat CSC Hub From website development and mobile apps to essential services like PAN, Aadhar, and ration card assistance in Lucknow. We make your digital experience seamless and efficient. 🚀" />
+  <meta property="og:url" content="https://bharatcschub.online/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Welcome to Bharat CSC Hub" />
+  <meta name="twitter:description" content="Explore our top services! Click here to see everything we offer. Amrish Maurya says we’re the best for accessing government services. If you need assistance with state or central government tasks, we’re here to help!" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
