@@ -43,6 +43,10 @@
                     </li>
 
                     <li>
+                        <a href="formcsc.php" class="text-gray-900 p-2 rounded  hover:underline whitespace-nowrap border border-yellow-400 ">🚀 Enquiry</a>
+                    </li>
+
+                    <li>
                     <a type="button" href="festivaloffer.php" class="text-white bg-green-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center whitespace-nowrap">🎉Festival Offer</a>
                     </li>
                 </ul>
