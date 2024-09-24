@@ -76,7 +76,7 @@
 
 
 <script>
-        document.getElementById('contactForm').addEventListener('formcsc_submit', function(event) {
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent default form submission
 
             // Capture form data
@@ -93,7 +93,7 @@
             formData.append('message', message);
 
             // Send data to PHP script
-            fetch('submit.php', {
+            fetch('formcsc_submit', {
                 method: 'POST',
                 body: formData
             })
