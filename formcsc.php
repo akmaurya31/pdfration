@@ -7,7 +7,7 @@
 <div class="container m-auto p-1">
     <div class="flex flex-col lg:flex-row justify-center gap-4 p-1 items-start">
       <div class="flex justify-center items-center ">
-        <form class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full" id="contactForm" method="post">
+        <form class="bg-white p-4 rounded-lg shadow-lg max-w-md w-full" id="contactForm" method="post">
           <h2 class="text-2xl font-bold mb-6 text-gray-800 text-center">
             यदि आप हमसे जुड़ना चाहते हैं  
           </h2>
@@ -58,7 +58,7 @@
            
   <div class="container mx-auto p-6">
   <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">
-    हमसे जुड़ें और हमारी सेवाओं का लाभ उठाएं!
+  🧑 हमसे जुड़ें और हमारी सेवाओं का लाभ उठाएं!
   </h2>
   <p class="text-center text-gray-700 mb-4">
     आपकी जरूरतों को पूरा करने के लिए हमारे पास कई सेवाएं और पार्टनरशिप अवसर हैं। अगर आप हमारे साथ जुड़ना चाहते हैं, तो कृपया नीचे दी गई जानकारी साझा करें:
