@@ -6,8 +6,8 @@
 
 <div class="container m-auto p-1">
     <div class="flex flex-col lg:flex-row justify-center gap-4 p-1 items-start">
-      <div class="flex justify-center items-center ">
-        <form class="bg-white p-4 rounded-lg shadow-lg max-w-md w-full" id="contactForm" method="post">
+      <div class="flex justify-center items-center border-[2px] rounded-xl border-blue-500  ">
+        <form class="bg-white p-4 rounded-lg shadow-lg max-w-2xl w-full" id="contactForm" method="post">
           <h2 class="text-2xl font-bold mb-6 text-gray-800 text-center">
             यदि आप हमसे जुड़ना चाहते हैं  
           </h2>
@@ -47,14 +47,14 @@
           <!-- Submit Button -->
           <div class="text-center">
             <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
-              Send Message
+            🚀 Send Message
             </button>
           </div>
         </form>
       </div>
   
 
-  <div class="w-full max-w-2xl bg-white p-0 rounded-lg shadow-lg border border-gray-300">
+  <div class="w-full max-w-4xl bg-white p-0 rounded-lg shadow-lg border border-yellow-500">
            
   <div class="container mx-auto p-6">
   <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">
@@ -67,7 +67,7 @@
   <ul class="list-disc pl-5 mb-6">
     <li class="text-gray-700 mt-2"> 
       <strong>आधार, पैन या वोटर कार्ड की जानकारी:</strong> 
-      आधार, पैन या वोटर कार्ड से जुड़ी जानकारी के लिए फॉर्म भरें और हमें मैसेज भेजें। 📜📱
+      आधार, पैन , वोटर कार्ड या राशन कार्ड प्रिंट पोर्टल से जुड़ी जानकारी के लिए फॉर्म भरें और हमें मैसेज भेजें। 📜📱
     </li>
     <li class="text-gray-700 mt-2">
       <strong>घूमने की योजना:</strong> अगर आप कहीं घूमने की योजना बना रहे हैं, हमें बताएं। 🧳📅
