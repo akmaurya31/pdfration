@@ -108,7 +108,7 @@
                   </p>
                   <p class="text-gray-800 font-semibold">धन्यवाद! 😊</p>
 
-                  <div class="flex flex-col items-center justify-center  p-2">
+                <div class="flex flex-col items-center justify-center  p-2">
                     <a href="https://bharatcschub.online/formcsc" class="text-white bg-green-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center">
                     <span class="mr-2">👉</span> 
                     <span>हमसे जुड़े</span>

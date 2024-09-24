@@ -29,9 +29,17 @@
             <h4 class="text-lg font-semibold text-gray-800 mb-2">संपर्क करें:</h4>
             <p class="text-gray-700 mb-2">📞 <strong>7518869428</strong></p>
             <h4 class="text-lg font-semibold text-gray-800 mb-2">हमारी वेबसाइट:</h4>
-            <p class="text-gray-700 mb-2"><a href="https://pdf.luxyaragroup.io" class="text-blue-600 hover:underline">pdf.luxayaragroup.io</a></p>
+            <p class="text-gray-700 mb-2"><a href="https://bharatcschub.online/formcsc" class="text-blue-600 hover:underline">bharatcschub.online</a></p>
             <h4 class="text-lg font-semibold text-gray-800 mb-2">पता:</h4>
             <p class="text-gray-700">Amrish Digital Center, 295/5 Balda Shahgnaj Chowk, Lucknow</p>
+        </div>
+
+
+        <div class="flex flex-col items-center justify-center  p-2">
+                    <a href="https://bharatcschub.online/formcsc" class="text-white bg-green-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center">
+                    <span class="mr-2">👉</span> 
+                    <span>Contact Now</span>
+                    </a>
         </div>
     </div>
 </div>
