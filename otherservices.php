@@ -17,7 +17,17 @@
                <p>
                   कुछ मामलों में यह तरीका सफल हो सकता है, लेकिन कई बार इसमें विफलता भी देखने को मिलती है। इसलिए, आधार UCL पोर्टल का उपयोग करने का कोई विशेष लाभ नहीं लगता है। आपके लिए सबसे अच्छा रहेगा कि आप सीधे किसी आधार कार्यालय या पोस्ट ऑफिस में जाकर अपनी सेवाएँ प्राप्त करें। 🌟📩
                </p>
+
+               <div class="flex flex-col items-center justify-center  p-2">
+                    <a href="https://bharatcschub.online/formcsc" class="text-white bg-blue-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center">
+                    <span class="mr-2">👉</span> 
+                    <span>हमसे जुड़े</span>
+                    </a>
+                </div>
+
+
             </div>
+                 
          </div>
          <div class=" rounded-lg ">
             <div class="bg-gray-100 max-w-md mx-auto my-4 p-4 rounded-lg shadow-lg">
@@ -35,7 +45,7 @@
                      <h4 class="text-lg font-semibold text-gray-800 mb-2">संपर्क करें:</h4>
                      <p class="text-gray-700 mb-2">📞 <strong>7518869428</strong></p>
                      <h4 class="text-lg font-semibold text-gray-800 mb-2">हमारी वेबसाइट:</h4>
-                     <p class="text-gray-700 mb-2"><a href="https://pdf.luxyaragroup.io" class="text-blue-600 hover:underline">pdf.luxayaragroup.io</a></p>
+                     <p class="text-gray-700 mb-2"><a href="https://bharatcschub.online/formcsc" class="text-blue-600 hover:underline">Bharatcschub.online</a></p>
                      <h4 class="text-lg font-semibold text-gray-800 mb-2">पता:</h4>
                      <p class="text-gray-700">Amrish Digital Center, 295/5 Balda Shahgnaj Chowk, Lucknow</p>
                   </div>
@@ -56,6 +66,12 @@
                 <span class="text-black mt-2 text-center">आधार संख्या 438781703039 को आधार (नामांकन और अपडेट) विनियम, 2016 के विनियमन 27 के तहत रद्द कर दिया गया है।</span>
                 </div>
 
+                <div class="flex flex-col items-center justify-center  p-2">
+                    <a href="https://bharatcschub.online/formcsc" class="text-white bg-blue-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center">
+                    <span class="mr-2">👉</span> 
+                    <span>हमसे जुड़े</span>
+                    </a>
+                </div>
 
             </div>
          </div>
@@ -91,6 +107,14 @@
                      💬 आवश्यकता हो तो हमें संपर्क करें: हमारी सेवाओं का लाभ उठाने के लिए संपर्क करें और हम आपकी मदद के लिए यहाँ हैं।
                   </p>
                   <p class="text-gray-800 font-semibold">धन्यवाद! 😊</p>
+
+                  <div class="flex flex-col items-center justify-center  p-2">
+                    <a href="https://bharatcschub.online/formcsc" class="text-white bg-green-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center">
+                    <span class="mr-2">👉</span> 
+                    <span>हमसे जुड़े</span>
+                    </a>
+                </div>
+
                </div>
             </div>
          </div>
@@ -112,12 +136,24 @@
                <p class="text-lg font-semibold mt-4">हमारे पास कई ऐसी फैमिलीज और लोग हैं...</p>
                <p class="text-gray-700">जो घूमना तो चाहते हैं, लेकिन अकेलेपन की वजह से उन्हें मौका नहीं मिल पाता। अगर आप हमारे ग्रुप के साथ यात्रा करेंगे, तो न केवल आपका खर्च कम होगा, बल्कि आप नए अनुभव और कहानियाँ भी साझा कर सकेंगे। 🌟</p>
                <p class="text-gray-700 mt-2">रुकने के दौरान, साथी यात्रियों के अनुभव सुनना और अपने अनुभव बताना, यात्रा को और भी मजेदार और खास बना देगा। 💬 साथ ही, आपके खर्चे भी कम होंगे, जिससे यात्रा का आनंद दोगुना हो जाएगा।</p>
+               <div class="flex flex-col items-center justify-center  p-2">
+                    <a href="https://bharatcschub.online/formcsc" class="text-white bg-blue-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center">
+                    <span class="mr-2">👉</span> 
+                    <span>हमसे जुड़े</span>
+                    </a>
+                </div>
             </div>
          </div>
          <div class=" rounded-lg bg-green-500">
             <div class="bg-green-100 border border-green-400 text-green-800 px-6 py-4 rounded-lg shadow-md">
                <p class="text-xl font-bold mb-2">हम फ्लैट और प्लॉट खरीदने व बेचने में भी आपकी मदद करते हैं 🏠।</p>
-               <p class="text-gray-700">अगर आप संपत्ति से जुड़ी किसी भी प्रकार की खरीद या बिक्री की सोच रहे हैं, तो हमसे संपर्क करें।</p>
+               <p class="text-gray-700">अगर आप संपत्ति से जुड़ी किसी भी प्रकार की खरीद या बिक्री की सोच रहे हैं, तो  </p>
+               <div class="flex flex-col items-center justify-center  p-2">
+                    <a href="https://bharatcschub.online/formcsc" class="text-white bg-red-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center">
+                    <span class="mr-2">👉</span> 
+                    <span>हमसे संपर्क करें।</span>
+                    </a>
+                </div>
             </div>
          </div>
          <div class="  rounded-lg bg-green-500">
@@ -136,6 +172,12 @@
                      <strong>यह सुविधा विशेष रूप से CSC सेंटर संचालकों और साइबर कैफे व्यवसायियों के लिए है</strong>, जो अपने ग्राहकों को त्वरित और विश्वसनीय पैन कार्ड सेवाएं प्रदान करना चाहते हैं।
                   </p>
                </div>
+               <div class="flex flex-col items-center justify-center  p-2">
+                    <a href="https://bharatcschub.online/formcsc" class="text-white bg-blue-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center">
+                    <span class="mr-2">👉</span> 
+                    <span>हमसे जुड़े</span>
+                    </a>
+                </div>
             </div>
          </div>
       </div>
