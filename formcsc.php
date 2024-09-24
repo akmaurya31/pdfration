@@ -75,50 +75,36 @@
 </div>
 
 
- 
-
 <script>
-    // Form submission handler
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-      event.preventDefault();  // Prevent default form submission
+        document.getElementById('contactForm').addEventListener('formcsc_submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
 
-      // Capture form data
-      var name = document.getElementById('name').value;
-      var email = document.getElementById('email').value;
-      var mobile = document.getElementById('mobile').value;
-      var message = document.getElementById('message').value;
+            // Capture form data
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var mobile = document.getElementById('mobile').value;
+            var message = document.getElementById('message').value;
 
-      // Payload for sending
-      var payload = {
-        "name": name,
-        "email": email,
-        "mobile": mobile,
-        "message": message
-      };
-      console.log(payload);
+            // Prepare data for PHP script
+            var formData = new FormData();
+            formData.append('name', name);
+            formData.append('email', email);
+            formData.append('mobile', mobile);
+            formData.append('message', message);
 
-      // URL of the Google Apps Script Web App
-      var url = "https://script.google.com/macros/s/AKfycbz82Ro-zNZss0rPJvA4RqEAK7cneDu0Z4OIN-j7YpXRsWeNjvPHB-41PIpE300S53dL/exec";
-
-      // Send data via POST request
-      fetch(url, {
-        method: 'POST',
-        body: JSON.stringify(payload),
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })
-      .then(response => response.json())
-      .then(data => {
-        console.log('Success:', data);
-        alert('Form submitted successfully!');
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-        alert('Form submission failed!');
-      });
-    });
-  </script>
-
-
-<!-- https://script.google.com/macros/s/AKfycbwaCNKxyfIonIC7-XbYV63Ha1fi8I7YvqNRlIDaB0DynIWjY-3q6eV_HcqYrzqVODUT/exec?Name=Aviash&Email=akm@gmail.com&Phone=9283948223&tmessage=Haldo hai mai koau -->
+            // Send data to PHP script
+            fetch('submit.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log('Success:', data);
+                alert('Form submitted successfully!');
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('Form submission failed!');
+            });
+        });
+    </script>
