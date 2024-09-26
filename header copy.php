@@ -7,8 +7,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-
-
 </head>
 
 <?php
@@ -134,6 +132,5 @@ function getCurWallet($mysqli,$userId) {
   </div>
   </div>
 </nav>
-<div class="max-w-screen-xl flex flex-wrap items-center justify-center pt-20 mx-auto">
-<?php include('secondmenu.php'); ?>
-</div>
+ 
+     
