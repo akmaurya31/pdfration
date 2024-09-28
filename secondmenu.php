@@ -1,17 +1,70 @@
 
 <style>
-         @keyframes marquee {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+         .marquee-wrapper{
+  background:#2F394C;
+  text-align:center;
+}
+.marquee-wrapper .container{
+  overflow:hidden;
+}
+.marquee-inner span{
+  float:left;
+  width:50%;
+}
+.marquee-wrapper .marquee-block{
+  --total-marquee-items:5;
+  height: 150px;
+  width: calc(250px * (var(--total-marquee-items)));
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  margin: 20px auto;
+  background:#1B2531;
+  padding: 30px 0;
+}
+.marquee-inner{
+  display: block;
+  width: 200%;
+  position: absolute;
+}
+.marquee-inner p{
+  font-weight: 800;
+  font-size: 30px;
+  font-family: cursive;
+}
+.marquee-inner.to-left{
+  animation: marqueeLeft 25s linear infinite;
+}
+.marquee-inner.to-right{
+  animation: marqueeRight 25s linear infinite;
+}
+.marquee-item{
+  width: 230px;
+  height: auto;
+  display: inline-block;
+  margin: 0 10px;
+  float: left;
+  transition: all .2s ease-out;
+  background:#00cc00;
+}
+@keyframes marqueeLeft{
+  0% {
+    left: 0;
   }
+  100% {
+    left: -100%;
+  }
+}
+@keyframes marqueeRight{
+  0% { 
+    left: -100%; 
+  }
+  100% {
+   left: 0; 
+  }
+}
+</style>
 
-  .marquee {
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: marquee 10s linear infinite;
-  }
-    </style>
 
 <div class="max-w-screen-xl px-4 py-3 mx-auto overflow-x-auto ">
             <div class="flex items-center my-2">
@@ -44,11 +97,25 @@
         </div>
 
 
-        <div class="overflow-hidden w-full bg-blue-600 p-4 shadow-2xl rounded-2xl">
-        <div class="marquee text-white text-2xl">
-            भारत की नंबर 1 वेबसाइट से जुड़ें और अपने बिजनेस को ऑनलाइन करें! 🚀 &nbsp;&nbsp; 
-            अब तक 2800 जन सेवा केंद्र, 3200 व्यवसायी और 1600 मैन्युफैक्चरर्स इसका उपयोग कर रहे हैं। 🏢
-            &nbsp;&nbsp; 
-            बहुत ही कम खर्च में अपने बिजनेस को ऑनलाइन और डिजिटल बनाएं! 💻✨
-        </div>
-    </div>
+
+        <div class="flex flex-col items-center p-8 bg-gray-100">
+  <h1 class="text-3xl font-extrabold text-center mb-6 animate-bounce text-blue-600 bg-yellow-200 p-4 rounded-lg shadow-lg">
+    भारत की नंबर - 1 वेबसाइट में आपका स्वागत है! 🌟
+  </h1>
+  <p class="text-2xl font-semibold text-center mb-4 text-green-600">
+    2800+ <span class="font-extrabold text-black">जन सेवा केंद्र</span> और 5000+ <span class="font-extrabold text-black">छोटे-बड़े व्यवसाय</span> हमारे साथ हैं। 🚀
+  </p>
+  
+  <p class="text-2xl font-semibold text-center mb-8 text-purple-600">
+    <span class="font-extrabold">जुड़ें</span> और अपने अनुभव को बेहतर बनाएं! 💼✨
+  </p>
+  
+  <p class="text-lg text-center text-gray-700 mb-4">
+    अगर आपने <strong class="text-blue-500">भारत CSC हब</strong> वेबसाइट पर रजिस्ट्रेशन किया है, तो कृपया <strong class="text-red-500">कॉल न करें। 📞</strong>
+    हमारी टीम <strong class="font-bold">2-3 घंटे</strong> में आपसे संपर्क करेगी! ⏳ सिर्फ <strong class="text-green-500">व्हाट्सएप</strong> का उपयोग करें। धन्यवाद! 🙏✨
+  </p>
+</div>
+
+
+
+ 
