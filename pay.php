@@ -84,7 +84,7 @@
     Amrish Digital CSC Center<br>
     295/5, Asharfabad Chowk,<br>
     Lucknow - 226003<br>
-    📞 <a href="https://wa.me/7518869428" class="text-blue-500 hover:underline">7518869428</a>
+    📞 <a href="https://wa.me/7518869428" class="text-blue-500 hover:underline">7518869428 Don't just call, text me on WhatsApp too</a>
   </p>
 </div>
 </div>

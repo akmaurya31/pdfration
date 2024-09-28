@@ -168,7 +168,7 @@
                   </p>
                   <div class="bg-gray-200 p-4 rounded-lg">
                      <h4 class="text-lg font-semibold text-gray-800 mb-2">संपर्क करें:</h4>
-                     <p class="text-gray-700 mb-2">📞 <strong>7518869428</strong></p>
+                     <p class="text-gray-700 mb-2">📞 <strong>7518869428</strong> Don't just call, text me on WhatsApp too</p>
                      <h4 class="text-lg font-semibold text-gray-800 mb-2">हमारी वेबसाइट:</h4>
                      <p class="text-gray-700 mb-2"><a href="https://bharatcschub.online/formcsc" class="text-blue-600 hover:underline">Bharatcschub.online</a></p>
                      <h4 class="text-lg font-semibold text-gray-800 mb-2">पता:</h4>
@@ -425,7 +425,12 @@
     <!-- Health Services -->
     <section class="animate-border bg-white shadow-lg rounded-lg p-6 mb-8 hover:shadow-xl transform hover:scale-105 transition duration-500">
       <h2 class="text-2xl font-semibold text-orange-600 mb-4">🏥 स्वास्थ्य सेवाएँ</h2>
+
+      <img src="./images/baharatcschub2.jpeg" class="rounded-xl " />
     </section>
+
+
+
 
     <!-- Telecom Services -->
     <section class="animate-border bg-white shadow-lg rounded-lg p-6 mb-8 hover:shadow-xl transform hover:scale-105 transition duration-500">
@@ -480,6 +485,7 @@
     <!-- Construction Workers -->
     <section class="animate-border bg-white shadow-lg rounded-lg p-6 mb-8 hover:shadow-xl transform hover:scale-105 transition duration-500">
       <h2 class="text-2xl font-semibold text-purple-700 mb-4">🏗️ कंस्ट्रक्शन और बिल्डिंग वर्कर</h2>
+      <img src="./images/baharatcschub1.jpeg" class="rounded-xl " />
     </section>
 
     <!-- Retailers and Sellers -->
@@ -520,6 +526,8 @@
     <!-- Sweet Maker -->
     <section class="animate-border bg-white shadow-lg rounded-lg p-6 mb-8 hover:shadow-xl transform hover:scale-105 transition duration-500">
       <h2 class="text-2xl font-semibold text-purple-600 mb-4">🍬 हलवाई (Sweet Maker)</h2>
+
+      <img src="./images/baharatcschub.jpeg" class="rounded-xl " />
     </section>
 
   </div>
@@ -1038,25 +1046,19 @@
     </ul>
   </div>
 </div>
-
-
-
-
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
    </div>
 </div>
+
+<script>
+        // Disable right-click
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        // Disable text selection
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+    </script>
 <?php include("footer.php");?>

@@ -94,16 +94,16 @@
 
 <!-- Contact Information -->
 <div class="text-center p-4">
-  <h1 class="text-xl font-bold mt-6">Amrish Digital CSC Center - 📞 7518869428</h1>
-  <h2 class="text-lg mt-2">📍 Address: 295/5, Deen Dayal Road, Asharfabad, Lucknow, Uttar Pradesh 226003</h2>
+  <h1 class="text-xl font-bold mt-6">Amrish Digital CSC Center - 📞 7518869428 Don't just call, text me on WhatsApp too</h1>
+  <!-- <h2 class="text-lg mt-2">📍 Address: 295/5, Deen Dayal Road, Asharfabad, Lucknow, Uttar Pradesh 226003</h2> -->
 
   <h3 class="mt-4 text-gray-700">
     अगर आप अपना यूजरनेम या पासवर्ड भूल गए हैं, तो चिंता मत करें! 😊<br>
     कृपया हमें तुरंत WhatsApp करें: 📱 
     <a href="https://wa.me/917518869428" target="_blank" class="text-blue-600 hover:underline">
       +91 7518869428 📞
-    </a>
-    हम आपकी मदद के लिए यहाँ हैं! 🙌
+    </a>  
+    Don't just call, text me on WhatsApp too हम आपकी मदद के लिए यहाँ हैं! 🙌
   </h3>
 </div>
 

@@ -27,11 +27,13 @@
         </p>
         <div class="bg-gray-200 p-4 rounded-lg">
             <h4 class="text-lg font-semibold text-gray-800 mb-2">संपर्क करें:</h4>
-            <p class="text-gray-700 mb-2">📞 <strong>7518869428</strong></p>
+            <p class="text-gray-700 mb-2">📞 <strong>7518869428 (Don't just call, text me on WhatsApp too)</strong></p>
+            
             <h4 class="text-lg font-semibold text-gray-800 mb-2">हमारी वेबसाइट:</h4>
             <p class="text-gray-700 mb-2"><a href="https://bharatcschub.online/formcsc" class="text-blue-600 hover:underline">bharatcschub.online</a></p>
             <h4 class="text-lg font-semibold text-gray-800 mb-2">पता:</h4>
-            <p class="text-gray-700">Amrish Digital Center, 295/5 Balda Shahgnaj Chowk, Lucknow</p>
+            <!-- <p class="text-gray-700">Amrish Digital Center, 295/5 Balda Shahgnaj Chowk, Lucknow</p> -->
+            <img src="./images/baharatcschub1.jpeg" class="rounded-xl " />
         </div>
 
 

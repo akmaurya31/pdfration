@@ -11,7 +11,7 @@
             कैसे जुड़ें:
         </h3>
         <ul class="list-disc list-inside text-gray-700 mb-4">
-            <li>📍 <strong>आयें और मिलें:</strong> हमारे ऑफिस पर आ सकते हैं।</li>
+            <!-- <li>📍 <strong>आयें और मिलें:</strong> हमारे ऑफिस पर आ सकते हैं।</li> -->
             <li>📞 <strong>संपर्क करें:</strong> अपने व्यवसाय, प्रोडक्ट्स, और सर्विसेस के बारे में बताएं और हमें अपना नंबर भेजें।</li>
         </ul>
         <h3 class="text-xl font-semibold text-gray-800 mb-2">
@@ -26,12 +26,12 @@
             हम आपके साथ बैठक के लिए पूरी तरह से तैयार हैं। आपके व्यवसाय को समझने और पार्टनरशिप के अवसरों पर चर्चा करने के लिए हम उत्सुक हैं। 😊
         </p>
         <div class="bg-gray-200 p-4 rounded-lg">
+            
             <h4 class="text-lg font-semibold text-gray-800 mb-2">संपर्क करें:</h4>
-            <p class="text-gray-700 mb-2">📞 <strong>7518869428</strong></p>
+            <p class="text-gray-700 mb-2">📞 <strong>7518869428 Don't just call, text me on WhatsApp too</strong></p>
             <h4 class="text-lg font-semibold text-gray-800 mb-2">हमारी वेबसाइट:</h4>
             <p class="text-gray-700 mb-2"><a href="https://bharatcschub.online/formcsc" class="text-blue-600 hover:underline">https://bharatcschub.online/formcsc</a></p>
-            <h4 class="text-lg font-semibold text-gray-800 mb-2">पता:</h4>
-            <p class="text-gray-700">Amrish Digital Center, 295/5 Balda Shahgnaj Chowk, Lucknow</p>
+                <img src="./images/baharatcschub.jpeg" class="rounded-xl " />
         </div>
 
         <div class="flex flex-col items-center justify-center  p-2">

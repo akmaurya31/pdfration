@@ -98,19 +98,15 @@
 
 
 
-        <div class="flex flex-col items-center p-8 bg-gray-100">
-  <h1 class="text-3xl font-extrabold text-center mb-6 animate-bounce text-blue-600 bg-yellow-200 p-4 rounded-lg shadow-lg">
+        <div class="flex flex-col items-center p-8 bg-blue-100">
+  <h1 class="text-2xl font-extrabold text-center mb-1 animate-bounce text-red-300 bg-green-800 p-2 rounded-lg shadow-lg">
     भारत की नंबर - 1 वेबसाइट में आपका स्वागत है! 🌟
   </h1>
-  <p class="text-2xl font-semibold text-center mb-4 text-green-600">
-    2800+ <span class="font-extrabold text-black">जन सेवा केंद्र</span> और 5000+ <span class="font-extrabold text-black">छोटे-बड़े व्यवसाय</span> हमारे साथ हैं। 🚀
+  <p class="text-2xl font-semibold text-center mb-2 text-green-600">
+    2800+ <span class="font-extrabold text-black">जन सेवा केंद्र</span> और 5000+ <span class="font-extrabold text-black">छोटे-बड़े व्यवसायी</span> हमारे साथ हैं। 🚀
   </p>
   
-  <p class="text-2xl font-semibold text-center mb-8 text-purple-600">
-    <span class="font-extrabold">जुड़ें</span> और अपने अनुभव को बेहतर बनाएं! 💼✨
-  </p>
-  
-  <p class="text-lg text-center text-gray-700 mb-4">
+  <p class="text-lg text-center text-gray-700">
     अगर आपने <strong class="text-blue-500">भारत CSC हब</strong> वेबसाइट पर रजिस्ट्रेशन किया है, तो कृपया <strong class="text-red-500">कॉल न करें। 📞</strong>
     हमारी टीम <strong class="font-bold">2-3 घंटे</strong> में आपसे संपर्क करेगी! ⏳ सिर्फ <strong class="text-green-500">व्हाट्सएप</strong> का उपयोग करें। धन्यवाद! 🙏✨
   </p>
