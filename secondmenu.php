@@ -98,12 +98,12 @@
 
 
 
-        <div class="flex flex-col items-center p-8 bg-blue-100">
+        <div class="flex flex-col items-center p-6 bg-blue-100">
   <h1 class="text-2xl font-extrabold text-center mb-1 animate-bounce text-red-300 bg-green-800 p-2 rounded-lg shadow-lg">
     भारत की नंबर - 1 वेबसाइट में आपका स्वागत है! 🌟
   </h1>
   <p class="text-2xl font-semibold text-center mb-2 text-green-600">
-    2800+ <span class="font-extrabold text-black">जन सेवा केंद्र</span> और 5000+ <span class="font-extrabold text-black">छोटे-बड़े व्यवसायी</span> हमारे साथ हैं। 🚀
+    4200+ <span class="font-extrabold text-black">जन सेवा केंद्र</span> और 6000+ <span class="font-extrabold text-black">छोटे-बड़े व्यवसायी</span> हमारे साथ हैं। 🚀
   </p>
   
   <p class="text-lg text-center text-gray-700">
