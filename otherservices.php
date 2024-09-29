@@ -56,7 +56,7 @@
 
 
       <div class="max-w-4xl mx-auto py-8 px-4">
-    <h1 class="text-4xl font-bold text-center mb-10 text-blue-900">🎉 भारत डिजिटल सीएससी हब पोर्टल सेवाएँ 🎉</h1>
+    <h1 class="text-2xl font-bold text-center mb-10 text-blue-900">🎉 भारत डिजिटल सीएससी हब पोर्टल सेवाएँ 🎉</h1>
 
     <!-- खाना बनाने वाले (Cook/Chef) -->
     <section class="animate-border bg-white shadow-lg rounded-lg p-6 mb-8 hover:shadow-xl transform hover:scale-105 transition duration-500">

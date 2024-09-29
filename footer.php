@@ -6,19 +6,24 @@
     <!-- Address 1: Aman Kushwaha -->
     <div class="bg-gray-800 p-4 rounded-lg shadow-md text-center w-full md:w-1/4">
         <p class="text-xl font-semibold">Aman Kushwaha<br> H/24, Ground Floor, <br> Sarvodaya Nagar, Indira Nagar, <br> Lucknow, Uttar Pradesh - 226016</p>
-        <p class="mt-2 text-sm">📞 9450274918</p>
+        <p class="mt-2 text-sm">📞  +91 9450274918</p>
+        <p class="mt-2 text-sm">📞 +91 9454966752</p>
+
     </div>
 
     <!-- Address 2: Software Company -->
     <div class="bg-gray-800 p-4 rounded-lg shadow-md text-center w-full md:w-1/4">
         <p class="text-xl font-semibold"> Avinash Kumar <br> D53, 3rd Floor, C Block, <br> Sector 2, Noida, <br> Uttar Pradesh - 201301</p>
-        <p class="mt-2 text-sm">📞 8800388752</p>
+        <p class="mt-2 text-sm">📞  +91 8800388752</p>
+        <p class="mt-2 text-sm">📞 +91 9454966752</p>
+
     </div>
 
     <!-- Address 3: Chandra Mohan -->
     <div class="bg-gray-800 p-4 rounded-lg shadow-md text-center w-full md:w-1/4">
         <p class="text-xl font-semibold"> Mohd. Nafees <br> 1st & 2nd Floor, Naval Kishore Rd, <br> Hazratganj, Lucknow, <br> Uttar Pradesh - 226001</p>
         <p class="mt-2 text-sm">📞 +91 9454966752</p>
+        <p class="mt-2 text-sm">📞 +91 8800388752</p>
     </div>
 
     <div class="bg-gray-800 p-4 rounded-lg shadow-md text-center w-full md:w-1/4">
@@ -52,7 +57,6 @@
             <div class="mb-4 md:mb-0 text-center">
                 <h5 class="text-lg font-semibold mb-2">Shop With Us</h5>
                 <a href="otherservices" target="_blank" class="flex flex-col text-blue-400 hover:text-blue-300 inline-flex items-center">
-                    eCommerce Website <br/>
                     <img src="./images/baharatcschub.jpeg" class="rounded-xl w-[180px] "   />
                 </a>
             </div>
@@ -60,16 +64,15 @@
             <div class="mb-4 md:mb-0 text-center">
                 <h5 class="text-lg font-semibold mb-2">Enquiry Us</h5>
                 <a href="formcsc" target="_blank" class="flex flex-col text-blue-400 hover:text-blue-300 inline-flex items-center">
-                    eCommerce Website <br/>
                     <img src="./images/baharatcschub3.jpeg" class="rounded-xl w-[180px] "   />
                 </a>
             </div>
 
 
             <div class="mb-4 md:mb-0 text-center">
-                <h5 class="text-lg font-semibold mb-2">Shop With Us</h5>
+                <h5 class="text-lg font-semibold mb-2">Festival offer</h5>
                 <a href="otherservices" target="_blank" class="flex flex-col text-blue-400 hover:text-blue-300 inline-flex items-center">
-                    eCommerce Website <br/>
+                 
                     <img src="./images/baharatcschub1.jpeg" class="rounded-xl w-[180px] "   />
                 </a>
             </div>
