@@ -4,7 +4,7 @@
 <h1 class="text-center text-2xl font-bold my-4 "> 🚀Bharat CSC Hub Online Services and Opportunities</h1>
 <div class="container m-auto p-1">
     <div class="flex flex-col lg:flex-row justify-center gap-4 p-1 items-start ">
-      <div class="flex justify-center items-center border-[2px] rounded-xl border-blue-500 ml-[35px] w-[35%] ">
+      <div class="flex justify-center items-center border-[2px] rounded-xl border-blue-500 ml-[35px] w-full  lg:w-[35%] ">
         <form class="bg-white p-4 rounded-lg shadow-lg  w-full " id="contactForm" method="post">
           <h2 class="text-2xl font-bold mb-6 text-gray-800 text-center">
            अन्य सेवाओं के लिए रजिस्ट्रेशन फॉर्म
@@ -52,7 +52,7 @@
       </div>
   
 
-  <div class="max-w-[65%]   bg-white p-0 rounded-lg shadow-lg border border-yellow-500 mr-[35px]">
+  <div class="w-full  lg:max-w-[65%]   bg-white p-0 rounded-lg shadow-lg border border-yellow-500 mr-[35px]">
            
   <div class="container mx-auto p-6">
   <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">
@@ -80,7 +80,7 @@
         </div>
       <strong>उत्पाद भेजना:</strong> यदि आप निर्माता हैं और अपने उत्पादों को भेजना चाहते हैं, तो हमें इसकी जानकारी दें। 📦🚛
       <div class="flex flex-col items-center justify-center  p-2">
-              <a href="https://bharatcschub.online/formcsc" class="text-white bg-green-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center">
+              <a href="https://bharatcschub.online/index" class="text-white bg-green-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center">
               <span class="mr-2">👉</span> 
               <span>Ration Card Print Portal</span>
               </a>

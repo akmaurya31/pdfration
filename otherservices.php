@@ -63,7 +63,7 @@
        
         <h5 class="text-2xl font-bold text-center mb-10 text-blue-900">🎉 सेवाएँ 🎉 
           <div class="flex flex-col items-center justify-center  p-2">
-              <a href="https://bharatcschub.online/formcsc" class="text-white bg-green-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center">
+              <a href="https://bharatcschub.online/index" class="text-white bg-green-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center">
               <span class="mr-2">👉</span> 
               <span>Ration Card Print Portal</span>
               </a>
