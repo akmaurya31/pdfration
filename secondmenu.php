@@ -70,7 +70,15 @@
             <div class="flex items-center my-2">
                 <ul class="flex flex-row font-medium mt-0 space-x-4 rtl:space-x-reverse text-sm">
                     <li>
-                        <a href="formcsc.php"  class="text-gray-900 p-2 rounded bg-[#232343] hover:underline whitespace-nowrap border border-green-400  text-white ">🚀 Enquiry(हमसे जुड़े)</a>
+                        <!-- <a href="formcsc.php"  class="text-gray-900 p-2 rounded bg-[#232343] hover:underline whitespace-nowrap border border-green-400  text-white ">🚀 Enquiry(हमसे जुड़े)</a> -->
+
+                        <div class="flex flex-col items-center justify-center  p-2">
+                    <a href="https://bharatcschub.online/formcsc" class="text-white bg-blue-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center">
+                    <span class="mr-2">👉</span> 
+                    <span>हमसे जुड़े</span>
+                    </a>
+                </div>
+
                     </li>
 
                     <li>
