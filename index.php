@@ -9,7 +9,7 @@
   <!-- Signup Form -->
   <div class="w-full max-w-md bg-white border border-gray-300 rounded-lg shadow-lg p-6">
     <form action="addNewUser" method="post" name="add">
-      <h4 class="text-center text-red-600 font-bold text-lg mb-4">📝 User Signup Form</h4>
+      <h4 class="text-center text-red-600 font-bold text-lg mb-4">📝 Ration Card Print Portal Form</h4>
       
       <div class="mb-4">
         <label for="name" class="block font-semibold text-gray-700 mb-1">Name :</label>
