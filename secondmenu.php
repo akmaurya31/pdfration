@@ -69,25 +69,27 @@
 <div class="max-w-screen-xl px-4 py-3 mx-auto overflow-x-auto ">
             <div class="flex items-center my-2">
                 <ul class="flex flex-row font-medium mt-0 space-x-4 rtl:space-x-reverse text-sm">
-                    
+                    <li>
+                        <a href="formcsc.php" class="text-gray-900 p-2 rounded  hover:underline whitespace-nowrap border border-green-400 ">🚀 Enquiry(हमसे जुड़े)</a>
+                    </li>
+
                     <li>
                         <a href="otherservices.php" class="text-gray-900 p-2 rounded hover:underline whitespace-nowrap border border-blue-400 ">🛠️OtherSerivces</a>
                     </li>
 
-                    <li>
+                  
+                    <!-- <li>
                         <a href="https://mart.bharatcschub.online" target="_blank" class="text-gray-900 p-2 rounded  hover:underline whitespace-nowrap border border-pink-400 bg-[#232343] text-white  hover:bg-blue-800 ">🌐 Hub</a>
-                    </li>
+                    </li> -->
 
                     <li>
-                        <a href="partnership.php" class="text-gray-900 p-2 rounded  hover:underline whitespace-nowrap border border-red-400 ">🤝Partnership</a>
+                        <a href="partnership.php" class="text-gray-900 p-2 rounded  hover:underline whitespace-nowrap border border-red-400 ">🤝Partnershi zp</a>
                     </li>
                     <li>
                         <a href="personalmeet.php" class="text-gray-900 p-2 rounded  hover:underline whitespace-nowrap border border-yellow-400 ">🗣️ PersonalMeet</a>
                     </li>
 
-                    <li>
-                        <a href="formcsc.php" class="text-gray-900 p-2 rounded  hover:underline whitespace-nowrap border border-green-400 ">🚀 Enquiry</a>
-                    </li>
+                  
 
                    
 
