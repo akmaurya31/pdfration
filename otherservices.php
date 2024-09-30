@@ -60,7 +60,57 @@
 
     <!-- खाना बनाने वाले (Cook/Chef) -->
     <section class="animate-border bg-white shadow-lg rounded-lg p-6 mb-8 hover:shadow-xl transform hover:scale-105 transition duration-500">
-      <h2 class="text-2xl font-semibold text-yellow-600 mb-4">👨‍🍳 1. खाना बनाने वाले (Cook/Chef)</h2>
+       
+        <h5 class="text-2xl font-bold text-center mb-10 text-blue-900">🎉 सेवाएँ 🎉 
+          <div class="flex flex-col items-center justify-center  p-2">
+              <a href="https://bharatcschub.online/formcsc" class="text-white bg-green-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center">
+              <span class="mr-2">👉</span> 
+              <span>Ration Card Print Portal</span>
+              </a>
+          </div>
+        </h5>
+
+
+        <div class="container mx-auto p-6">
+        <!-- Heading Section -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-red-600 mb-4">📢 क्या आप जानते हैं? 📢</h1>
+            <p class="text-xl text-gray-700">राशन कार्ड डायरी अब हर जन सेवा केंद्र, CSC सेंटर, VLE संचालक, और साइबर कैफे पर बनाई जा रही है! ✨</p>
+        </div>
+
+        <!-- Main Content Section -->
+        <div class="bg-white shadow-lg rounded-lg p-6">
+            <h2 class="text-3xl font-semibold text-blue-500 mb-4">बिना OTP के राशन कार्ड डायरी बनवाएं</h2>
+            <p class="text-gray-600 mb-6">
+                अब आप भी बिना OTP के राशन कार्ड डायरी बना सकते हैं। अगर आपकी परची फट जाती है या खराब हो जाती है, तो आपको नया राशन कार्ड या <strong>डायरी वाला कार्ड</strong> बनवाने की प्रक्रिया शुरू करनी होगी।
+            </p>
+
+            <!-- Features Section -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Feature 1 -->
+                <div class="bg-blue-100 p-4 rounded-lg">
+                    <h3 class="text-2xl font-semibold text-blue-600">📘 डायरी वाला राशन कार्ड</h3>
+                    <p class="text-gray-700 mt-2">
+                        डायरी कार्ड सामान्य परची वाले कार्ड से अधिक मजबूत होता है और लंबे समय तक सुरक्षित रहता है।
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-green-100 p-4 rounded-lg">
+                    <h3 class="text-2xl font-semibold text-green-600">🛡️ टिकाऊ और सुरक्षित</h3>
+                    <p class="text-gray-700 mt-2">
+                        यह आपको परची फटने या खोने की समस्या से बचा सकता है, जिससे आपका राशन कार्ड हमेशा सुरक्षित रहेगा।
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        
+    
+       <h2 class="text-2xl font-semibold text-yellow-600 mb-4">👨‍🍳 1. खाना बनाने वाले (Cook/Chef)</h2>
+
       <ul class="list-disc list-inside space-y-2 text-gray-700">
         <li>🏡 घरेलू कुक (घर में खाना बनाने वाले)</li>
         <li>🍽️ प्रोफेशनल शेफ (रेस्टोरेंट और होटलों के लिए)</li>
@@ -405,16 +455,24 @@
       
 
       <div class="max-w-4xl mx-auto py-8 px-4">
-    <h1 class="text-4xl font-bold text-center mb-10 text-blue-900">🎉 सेवाएँ 🎉</h1>
+    <h5 class="text-2xl font-bold text-center mb-10 text-blue-900">🎉 सेवाएँ 🎉 
+      
+                 
+              
+              </h5>
+
 
     <!-- Banking and Financial Services -->
     <section class="animate-border bg-white shadow-lg rounded-lg p-6 mb-8 hover:shadow-xl transform hover:scale-105 transition duration-500">
       <h2 class="text-2xl font-semibold text-green-600 mb-4">🏦 बैंकिंग और वित्तीय सेवाएँ</h2>
+      <img src="./images/rrr1.jpeg" class="rounded-xl " />
+
     </section>
 
     <!-- Digital Services -->
     <section class="animate-border bg-white shadow-lg rounded-lg p-6 mb-8 hover:shadow-xl transform hover:scale-105 transition duration-500">
       <h2 class="text-2xl font-semibold text-red-600 mb-4">💻 डिजिटल सेवाएँ</h2>
+      <img src="./images/rrr2.jpeg" class="rounded-xl " />
     </section>
 
     <!-- Education and Training -->
