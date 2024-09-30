@@ -79,6 +79,12 @@
           <img src="./images/rrr1.jpeg"  class="rounded-xl  border border-black w-[55%]  " />
         </div>
       <strong>उत्पाद भेजना:</strong> यदि आप निर्माता हैं और अपने उत्पादों को भेजना चाहते हैं, तो हमें इसकी जानकारी दें। 📦🚛
+      <div class="flex flex-col items-center justify-center  p-2">
+              <a href="https://bharatcschub.online/formcsc" class="text-white bg-green-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center">
+              <span class="mr-2">👉</span> 
+              <span>Ration Card Print Portal</span>
+              </a>
+          </div>
     </li>
     <li class="text-gray-700 mt-2">
       <strong>वेबसाइट बनवाना:</strong> आपके उत्पाद की वेबसाइट बनवाने के लिए हमसे संपर्क करें। 💻🌐
