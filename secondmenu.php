@@ -83,7 +83,7 @@
                     </li> -->
 
                     <li>
-                        <a href="partnership.php" class="text-gray-900 p-2 rounded  hover:underline whitespace-nowrap border border-red-400 ">🤝Partnershi zp</a>
+                        <a href="partnership.php" class="text-gray-900 p-2 rounded  hover:underline whitespace-nowrap border border-red-400 ">🤝Partnership</a>
                     </li>
                     <li>
                         <a href="personalmeet.php" class="text-gray-900 p-2 rounded  hover:underline whitespace-nowrap border border-yellow-400 ">🗣️ PersonalMeet</a>
