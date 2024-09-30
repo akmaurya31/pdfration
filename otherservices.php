@@ -74,7 +74,7 @@
         <div class="container mx-auto p-6">
         <!-- Heading Section -->
         <div class="text-center mb-8">
-            <h1 class="text-4xl font-bold text-red-600 mb-4">📢 क्या आप जानते हैं? 📢</h1>
+            <h1 class="text-2xl font-bold text-red-600 mb-4">📢 क्या आप जानते हैं? 📢</h1>
             <p class="text-xl text-gray-700">राशन कार्ड डायरी अब हर जन सेवा केंद्र, CSC सेंटर, VLE संचालक, और साइबर कैफे पर बनाई जा रही है! ✨</p>
         </div>
 
@@ -86,7 +86,7 @@
             </p>
 
             <!-- Features Section -->
-            <div class="grid grid-cols-1 md:grid-cols-1 gap-2">
+            <div class="flex flex-col gap-2">
                 <!-- Feature 1 -->
                 <div class="bg-blue-100 p-4 rounded-lg">
                     <h3 class="text-2xl font-semibold text-blue-600">📘 डायरी वाला राशन कार्ड</h3>
