@@ -11,7 +11,7 @@
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
             <a href="index.php" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="images/logo1.jpeg" class="h-10" alt="Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap ">CSC</span>
+                <span class="self-center text-2xl font-semibold whitespace-nowrap ">🏠 Home</span>
             </a>
             <div class="flex items-center space-x-6 rtl:space-x-reverse">
                 <a href="tel:7518869428" class="text-sm  text-gray-500  hover:underline"> 📞 (91)7518869428</a>

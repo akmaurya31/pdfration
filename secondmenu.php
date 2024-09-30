@@ -75,7 +75,7 @@
                         <!-- <div class="flex flex-col items-center justify-center  p-2"> -->
                     <a href="https://bharatcschub.online/formcsc" class="text-white -mt-2  p-2 bg-blue-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center">
                     <span class="mr-2">👉</span> 
-                    <span>हमसे जुड़े</span>
+                    <span class="whitespace-nowrap">हमसे जुड़े</span>
                     </a>
                 <!-- </div> -->
 
