@@ -82,7 +82,7 @@
                     </li>
 
                     <li>
-                        <a href="otherservices.php" class="text-gray-900 p-2 rounded hover:underline whitespace-nowrap border border-blue-400 ">🛠️OtherSerivces</a>
+                        <a href="otherservices.php" class="text-gray-900 p-2 rounded hover:underline whitespace-nowrap border border-blue-400 ">🛠️OtherServices</a>
                     </li>
 
                   

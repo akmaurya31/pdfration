@@ -2,14 +2,12 @@
 
 
 <h1 class="text-center text-2xl font-bold my-4 "> 🚀Bharat CSC Hub Online Services and Opportunities</h1>
-
-
 <div class="container m-auto p-1">
-    <div class="flex flex-col lg:flex-row justify-center gap-4 p-1 items-start">
-      <div class="flex justify-center items-center border-[2px] rounded-xl border-blue-500  ">
-        <form class="bg-white p-4 rounded-lg shadow-lg max-w-2xl w-full" id="contactForm" method="post">
+    <div class="flex flex-col lg:flex-row justify-center gap-4 p-1 items-start ">
+      <div class="flex justify-center items-center border-[2px] rounded-xl border-blue-500 ml-[35px] w-[35%] ">
+        <form class="bg-white p-4 rounded-lg shadow-lg  w-full " id="contactForm" method="post">
           <h2 class="text-2xl font-bold mb-6 text-gray-800 text-center">
-            यदि आप हमसे जुड़ना चाहते हैं  
+           अन्य सेवाओं के लिए रजिस्ट्रेशन फॉर्म
           </h2>
 
           <!-- Name Field -->
@@ -54,7 +52,7 @@
       </div>
   
 
-  <div class="w-full max-w-4xl bg-white p-0 rounded-lg shadow-lg border border-yellow-500">
+  <div class="max-w-[65%]   bg-white p-0 rounded-lg shadow-lg border border-yellow-500 mr-[35px]">
            
   <div class="container mx-auto p-6">
   <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">
