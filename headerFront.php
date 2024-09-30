@@ -3,7 +3,7 @@
 <html>
 <head>
     <?php include('meta.php');?>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./output.css" rel="stylesheet" />
 </head>
 
 <?php session_start(); ?>

@@ -4,3 +4,4 @@ vendor/
 pdfvendor.php
 pdfvendor.php
 composer.lock
+node_modules
