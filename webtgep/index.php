@@ -10,10 +10,7 @@
     <link rel="stylesheet" href="style.css"> 
     <link rel="stylesheet" href="aa1.css"> 
     <link rel="stylesheet" href="output.css"> 
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"  rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+     
 
 
     <!--[if IE 6]>
@@ -83,11 +80,9 @@
                 </div> 
 
 
-                <a href="signup.php"   class="w-[470px] focus:outline-none text-black text-2xl font-bold bg-orange-300 hover:bg-orange-700 focus:ring-4 focus:ring-yellow-300 rounded-full px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900 border-2 border-[#fff] animate-bounce-custom hover:animate-none transition-all duration-300 ease-in-out">
+                <button type="button" class="w-[470px] focus:outline-none text-black text-2xl font-bold bg-orange-300 hover:bg-orange-700 focus:ring-4 focus:ring-yellow-300 rounded-full px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900 border-2 border-[#fff] animate-bounce-custom hover:animate-none transition-all duration-300 ease-in-out" onclick="window.location.href='signup.php'">
                     👉🏿 Register for Master Class
-    </a>
-
-
+                </button>
             </div></div>
             </div>
             </div>
@@ -134,7 +129,7 @@
                       </div>
                       <p class="text-13 text-center mb-7">Everything About International Vyapaar</p>
 
-                      <button type="button"  data-modal-target="authentication-modal" data-modal-toggle="authentication-modal"  class="w-[570px] focus:outline-none text-white text-2xl font-bold bg-orange-500 hover:bg-orange-700 focus:ring-4 focus:ring-yellow-300 rounded-full px-5 py-2.5 mb-2 dark:focus:ring-yellow-900 border-2 border-[#fff]">
+                      <button type="button" class="w-[570px] focus:outline-none text-white text-2xl font-bold bg-orange-500 hover:bg-orange-700 focus:ring-4 focus:ring-yellow-300 rounded-full px-5 py-2.5 mb-2 dark:focus:ring-yellow-900 border-2 border-[#fff]">
                        
                         <img class="triangle-3-copy-2 ml-20" src="images/triangle_3_copy_2.png" alt="" width="75" height="35"> Join Now
 
@@ -362,7 +357,7 @@
                         </div>
                     </div>
                     </div>
-                    <button type="button"  data-modal-target="authentication-modal" data-modal-toggle="authentication-modal"  class="w-[570px] mt-10 focus:outline-none text-white text-2xl font-bold bg-orange-500 hover:bg-orange-700 focus:ring-4 focus:ring-yellow-300 rounded-full px-5 py-2.5 mb-2 dark:focus:ring-yellow-900 border-2 border-[#fff]">
+                    <button type="button" class="w-[570px] mt-10 focus:outline-none text-white text-2xl font-bold bg-orange-500 hover:bg-orange-700 focus:ring-4 focus:ring-yellow-300 rounded-full px-5 py-2.5 mb-2 dark:focus:ring-yellow-900 border-2 border-[#fff]">
                         <img class="triangle-3-copy-2 ml-20" src="images/triangle_3_copy_2.png" alt="" width="75" height="35"> Join Now
                       </button>
                   </div>
@@ -447,7 +442,7 @@
 
         <footer class="footer my-4 mx-auto relative w-[1664px]">
             <div class="bottom-timer mx-auto relative">
-                <a href="#"  data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" >
+                <a href="#">
                     <div class="mx-auto min-h-[71px] rounded-[35.66px] bg-gradient-to-r from-[#f80404] to-[#ff6000] w-[667px]">
                         <div class="max-w-[667px] text-center">
                             <p class="text-[47.77px] font-bold leading-[71px] text-center uppercase">Grab the Special Offer</p>
@@ -510,10 +505,6 @@
     // Initialize the timer display
     updateTimer();
 </script>
-
-
-
- 
- 
+  
   </body>
 </html>
