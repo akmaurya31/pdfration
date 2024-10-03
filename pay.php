@@ -101,7 +101,7 @@
   tabindex="-1"
   aria-labelledby="exampleModalLabel"
   aria-hidden="true">
-  <div class="relative flex items-center justify-center min-h-screen p-4">
+  <div class="relative flex items-center justify-center min-h-screen p-4 h-[50%]">
     <div class="relative w-full max-w-lg transform overflow-hidden rounded-lg bg-white shadow-xl transition-all">
       <!-- Modal Header -->
       <div class="flex items-center justify-between p-4 border-b border-gray-300">

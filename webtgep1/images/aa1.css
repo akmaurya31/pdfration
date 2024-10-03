@@ -31,8 +31,6 @@ body {
   line-height: 1;
   color: black;
   background: white;
-  overflow-x: hidden;
- 
 }
 
 ol, ul {
@@ -133,7 +131,7 @@ html {
 }
 
 body {
-  /* min-width: 1948px; */
+  min-width: 1648px;
   color: #ffffff;
   font-family: Poppins, sans-serif;
   font-size: 1.736111rem; /* 27.78px/16px = 1.73625rem */
@@ -158,11 +156,10 @@ body {
 header {
   margin: 0 auto;
   position: relative;
-  background: #141119 center 0;
 }
 
 .banner {
-  /* height: 1080px; */
+  height: 1080px;
   margin: 0 auto;
   overflow: hidden;
   padding: 38px 0 256px;
@@ -171,14 +168,10 @@ header {
   background-size: cover;
 }
 
-.l-unconstrained{
-  background: #141119 center 0;
-}
-
 .l-constrained-2 {
   margin: 0 auto;
   position: relative;
-  /* width: 1648px; */
+  width: 1648px;
   z-index: 0;
 }
 
@@ -275,10 +268,8 @@ header {
 }
 
 .main-content-wrapper {
-    /* margin: 35px auto 0; */
+    margin: 35px auto 0;
     position: relative;
-    background: #141119 center 0;
-
 }
 
 .unconstrained {
@@ -372,7 +363,7 @@ header {
 }
 
 .text-9 {
-    /* margin: 44px 0 0; */
+    margin: 44px 0 0;
     font-size: 2.798866rem; /* 44.78px / 16px = 2.79875rem */
     font-weight: bold;
     text-align: center;
@@ -422,7 +413,7 @@ header {
     margin: 78px 0 0;
     padding: 34px 0 74px;
     position: relative;
-    background: #eadbcf;
+    background: #15eaea;
   }
   
   .master-class {
@@ -856,24 +847,15 @@ header {
   .triangle-3-copy-2 {
     float: left;
   }
-
-
-  .col-10a {
-    min-height: 1766px; 
-    overflow: hidden;
-    padding: 35px 0 0;
-    width: 100%; /* 1920px / 1920px = 100% */
-     
-  }
   
   .col-10 {
-    min-height: 35px; 
+    min-height: 1766px;
     overflow: hidden;
     padding: 35px 0 0;
     position: relative;
     width: 100%; /* 1920px / 1920px = 100% */
     background: url(images/triangle_1.png) no-repeat center 0;
-    /* background-size: cover; */
+    background-size: cover;
   }
   
 
@@ -892,8 +874,7 @@ header {
   }
   
   .row-16 {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 135px auto 0;
     position: relative;
     width: 1104px;
   }
@@ -984,13 +965,5 @@ header {
   
   .text-41 {
     /* Additional styling goes here */
-    margin: -50px 0 0;
-    position: relative;
-    z-index: 122;
-    font-size: 1.909722rem; /* 30.56px / 16px = 1.91rem */
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    line-height: 38.88889px;
-    text-align: center;
   }
   
