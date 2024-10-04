@@ -13,6 +13,7 @@
 
 <?php
 include('dbconn.php');
+session_start();
 
 // Open a new connection to the MySQL server
 $mysqlii = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName); 
@@ -99,7 +100,11 @@ function getCurWallet($mysqli,$userId) {
         <a href="pay.php" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0   ">  💰PayNow</a>
       </li>
 
-
+      <?php if($_SESSION['role']=='admin') { ?>
+      <li>
+        <a href="userList.php" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0   ">  📋User List</a>
+      </li>
+      <?php } ?>
      
 
        
