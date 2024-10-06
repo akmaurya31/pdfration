@@ -88,11 +88,16 @@
             </div>
             </div>
             
-                <div class="mx-auto max-h-[766px] relative  mt-[-130px] py-[380px] px-0 border-[10px] border-white bg-no-repeat  " style="background-image: url('images/rectangle_3.jpg'); width: 1128px; max-height: 766px; height: 100%; box-sizing: border-box; border-style: solid;">
-                    <div class="relative bg-[#00000095] mt-[150px]">   <p class="text-[3.038194rem] font-medium text-center ">अगर आपके Product में है दम, तो आपको</p>
+            <!-- <div class="mx-auto max-h-[766px] relative  mt-[-130px] py-[380px] px-0 border-[10px] border-white bg-no-repeat  " style="background-image: url('images/rectangle_3.jpg'); width: 1128px; max-height: 766px; height: 100%; box-sizing: border-box; border-style: solid;">
+                    <div class="relative bg-[#00000095] mt-[150px]"> 
+                          <p class="text-[3.038194rem] font-medium text-center ">अगर आपके Product में है दम, तो आपको</p>
                         <img class="block mx-auto mt-3 animate-bounce-left-right" src="images/international_brand.png" alt="International Brand" width="638" height="53" title="International Brand">
                 <p class="mt-6 text-[3.038194rem] font-medium text-center">बना कर रहेंगे हम</p>
-            </div>
+            </div> -->
+
+            <img src="./images/vyp.jpeg" class="w-full h-[30%]" />
+
+
         </div>
             
         </header>

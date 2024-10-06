@@ -12,12 +12,38 @@
     }
   </style>
  
-
-
-<body class="bg-gray-100 font-sans mx-auto w-[1325px]">
-
+<?php 
   
+  
+  $ro=getCurWallet($mysqlii,$_SESSION['idd']);
+  $roinc=0;
+  if(isset($ro->current_balance) && $ro->current_balance>0){
+    $roinc=$ro->current_balance;
+  }
+ 
+  if($roinc<=0){
 
+      echo '<div class="flex flex-col w-[1025px]" >
+      <div class="bg-red-100 border   border-red-400 mt-5 text-red-700 px-4 py-3 rounded relative mx-auto" role="alert">
+      <strong class="font-bold">!!</strong>
+      <span class="block sm:inline">Please Contact to administrator.</span>
+  </div><div>';
+
+  echo '<div class="flex justify-center mt-4 space-x-2">
+      <a href="pay.php" class="inline-flex items-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          <span>🔄</span>
+          <span class="ml-2">PayNow</span>
+      </a>
+      <a href="#" class="inline-flex items-center bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+          <span>🔑</span>
+          <span class="ml-2">Contact to Admin</span>
+      </a>
+  </div>';
+    die("...");
+
+  }
+?>
+<body class="bg-gray-100 font-sans mx-auto w-[1325px]">
   <!-- Video Cards Section -->
   <section class="py-12 container mx-auto px-4">
     <div class="grid gap-8 lg:grid-cols-2">

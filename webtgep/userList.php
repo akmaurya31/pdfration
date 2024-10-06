@@ -70,7 +70,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
                                 data-modal-target="myModal" data-modal-toggle="myModal">ProfileEdit</button>
 
                                 <button class="rechargeedit bg-purple-500 text-white py-1 px-2 rounded" data-toggle="modal" data-target="#myModal_recharge" data-userid="<?php echo $row['id']; ?>"
-                                data-modal-target="myModal_recharge" data-modal-toggle="myModal_recharge">Recharge</button>
+                                data-modal-target="myModal_recharge" data-modal-toggle="myModal_recharge">Paid</button>
                             </td>
                         </tr>
                 <?php

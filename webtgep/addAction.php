@@ -5,7 +5,7 @@
     <title>Add Data</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<img src="./images/1725885536324.jpeg" class="w-full h-[30%]" />
+<img src="./images/sign.jpeg" class="w-full h-[30%]" />
 
 <body>
 <?php

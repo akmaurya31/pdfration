@@ -63,7 +63,9 @@ function getCurWallet($mysqli,$userId) {
 
 <body>
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
-    <?php $dd='bg-white';
+    <?php 
+    
+    $dd='bg-white';
     
     if($_SESSION['role']=='admin'){ $dd='bg-red-500'; }  ?>
 
@@ -109,16 +111,11 @@ function getCurWallet($mysqli,$userId) {
 
       <?php 
       //$current_balance = isset($_SESSION['current_balance']) ? $_SESSION['current_balance'] : '0';
-      
-
           $ro=getCurWallet($mysqlii,$_SESSION['idd']);
           $roinc=0;
           if(isset($ro->current_balance) && $ro->current_balance>0){
              $roinc=$ro->current_balance;
           }
-      
-
-      
       ?>
 
       <li>
