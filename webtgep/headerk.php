@@ -1,20 +1,18 @@
+<?php
+include('dbconn.php');
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
-    <?php include('meta.php');?>
+<?php //include('meta.php');?>
     <link href="./output.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-
-
 </head>
-
 <?php
-include('dbconn.php');
-session_start();
-
 // Open a new connection to the MySQL server
 $mysqlii = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName); 
 
