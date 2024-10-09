@@ -1,10 +1,10 @@
 <!doctype html>
 <html>
   <head>
-    <title>Your site's title should be here</title>
+    <title>Everything About International Vyapaar</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Your site's description should be here">
-    <meta name="keywords" content="Your site's keywords should be here">
+    <meta name="description" content="Everything About International Vyapaar | TPEG International LLC Dubai | TPEG founded by Dr. Manav Ahuja">
+    <meta name="keywords" content="TPEG,Product Consultation,International Vyapaar,TPEG International LLC Dubai">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <link rel="stylesheet" href="style.css"> 
@@ -134,7 +134,7 @@
                       </div>
                       <p class="text-13 text-center mb-7">Everything About International Vyapaar</p>
 
-                      <button type="button" class="w-[570px] focus:outline-none text-white text-2xl font-bold bg-orange-500 hover:bg-orange-700 focus:ring-4 focus:ring-yellow-300 rounded-full px-5 py-2.5 mb-2 dark:focus:ring-yellow-900 border-2 border-[#fff]">
+                      <button type="button" class="w-[570px] focus:outline-none text-white text-2xl font-bold bg-orange-500 hover:bg-orange-700 focus:ring-4 focus:ring-yellow-300 rounded-full px-5 py-2.5 mb-2 dark:focus:ring-yellow-900 border-2 border-[#fff]"  onclick="window.location.href='signup.php'">
                        
                         <img class="triangle-3-copy-2 ml-20" src="images/triangle_3_copy_2.png" alt="" width="75" height="35"> Join Now
 
@@ -362,7 +362,7 @@
                         </div>
                     </div>
                     </div>
-                    <button type="button" class="w-[570px] mt-10 focus:outline-none text-white text-2xl font-bold bg-orange-500 hover:bg-orange-700 focus:ring-4 focus:ring-yellow-300 rounded-full px-5 py-2.5 mb-2 dark:focus:ring-yellow-900 border-2 border-[#fff]">
+                    <button type="button" class="w-[570px] mt-10 focus:outline-none text-white text-2xl font-bold bg-orange-500 hover:bg-orange-700 focus:ring-4 focus:ring-yellow-300 rounded-full px-5 py-2.5 mb-2 dark:focus:ring-yellow-900 border-2 border-[#fff]"  onclick="window.location.href='signup.php'">
                         <img class="triangle-3-copy-2 ml-20" src="images/triangle_3_copy_2.png" alt="" width="75" height="35"> Join Now
                       </button>
                   </div>
@@ -447,7 +447,7 @@
 
         <footer class="footer my-4 mx-auto relative w-[1664px]">
             <div class="bottom-timer mx-auto relative">
-                <a href="#">
+                <a href="signup.php">
                     <div class="mx-auto min-h-[71px] rounded-[35.66px] bg-gradient-to-r from-[#f80404] to-[#ff6000] w-[667px]">
                         <div class="max-w-[667px] text-center">
                             <p class="text-[47.77px] font-bold leading-[71px] text-center uppercase">Grab the Special Offer</p>

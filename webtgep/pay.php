@@ -5,17 +5,28 @@
             <img src="./images/1727852895931.jpeg" class="h-[250px] rounded-lg shadow-lg" alt="International Business Expansion Summit" />
         </div> -->
         <div class="bg-white border border-red-500 rounded-lg shadow-lg p-6 text-center mb-8 w-[65%] mx-auto">
-            <h2 class="text-2xl text-red-600 font-semibold mb-3">
-                International Business Expansion Summit
+            <h2 class="text-2xl text-blue-600 font-semibold mb-3">
+                  Join Master Class
             </h2>
 
+            <h2 class="text-2xl text-blue-600 font-semibold mb-3">
+            Iss Baar International Vyapaar - Digital 
+            </h2>
+            
+
             <h3 class="text-2xl text-red-600 font-semibold mb-3">
-                Master Class @ Rs. 499.00
+             Rs. 499/- Only 
+              
+            </h3>
+
+            <h3 class="text-xl text-green-600 font-semibold mb-3">
+             
+              (for Indian Businessmen)
             </h3>
 
             <hr class="w-1/4 border-red-500 mx-auto mb-4">
             <form action="./stripe/public/checkout" method="POST">
-                <button type="submit" id="checkout-button" class="bg-red-500 text-white rounded-full px-4 py-2 mt-4 hover:bg-blue-600">
+                <button type="submit" id="checkout-button" class="bg-blue-500 text-white rounded-full px-4 py-2 mt-4 hover:bg-blue-600">
                     Pay Now
                 </button>
 
@@ -55,7 +66,7 @@
       <!-- Modal Body -->
       <div class="p-4">
         <!-- Your image or content here -->
-        <img src="images/payment.jpeg" class="w-[75%] h-[50%]" alt="Payment Screenshot" />
+        <img src="images/payment.jpg" class="w-[75%] h-[50%]" alt="Payment Screenshot" />
       </div>
 
       <!-- Modal Footer -->

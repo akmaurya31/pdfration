@@ -1,10 +1,10 @@
 <!doctype html>
 <html>
   <head>
-    <title>Your site's title should be here</title>
+  <title>Everything About International Vyapaar</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Your site's description should be here">
-    <meta name="keywords" content="Your site's keywords should be here">
+    <meta name="description" content="Everything About International Vyapaar | TPEG International LLC Dubai | TPEG founded by Dr. Manav Ahuja">
+    <meta name="keywords" content="TPEG,Product Consultation,International Vyapaar,TPEG International LLC Dubai">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <link rel="stylesheet" href="style.css"> 

@@ -13,7 +13,11 @@
      <span class="font-extrabold text-black">अगर आपके </span> Product<span class="font-extrabold text-black"> में है दम, तो आपको</span> International Brand बना कर रहेंगे हम 🚀
   </p> -->
   
-  <img src="./images/vyp.jpeg" class="w-full h-[30%]  rounded-2xl" />
+  <div class="max-w-4xl mx-auto p-4">
+  <img src="./images/vyp.jpeg" class="w-full h-auto max-h-[30vh] sm:max-h-[50vh] lg:max-h-[60vh] rounded-2xl object-cover" alt="Responsive Image" />
+</div>
+
+
  
 </div></div>
 

@@ -33,6 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               $_SESSION['idd'] = trim($row['id']); // Assuming 'id' is another field in your 'users' table
               $_SESSION['email'] = trim($row['email']);
               $_SESSION['mobile'] = trim($row['mobile']);
+              $_SESSION['name'] = trim($row['name']);
               $_SESSION['city'] = trim($row['city']);
               $_SESSION['state'] = trim($row['state']);
               $_SESSION['yourbusiness'] = trim($row['yourbusiness']);

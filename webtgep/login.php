@@ -15,8 +15,10 @@
     <!-- Form header -->
     <div class="text-center mb-6">
       <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">
-        🔑 Sign in to our platform
+        🔑 Sign In IBIV - Digital
       </h3>
+
+     
     </div>
 
     <!-- Form body -->
@@ -35,7 +37,7 @@
         </div>
 
         <!-- Remember Me and Forgot Password -->
-        <div class="flex justify-between items-center mb-4">
+        <div class="  justify-between items-center mb-4 hidden">
           <div class="flex items-center">
             <input id="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600" />
             <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>

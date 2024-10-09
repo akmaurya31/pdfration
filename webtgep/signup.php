@@ -10,7 +10,7 @@
 <body class="bg-gray-100 flex justify-center items-center h-screen">
   <!-- Container for the form -->
   <div class="container mx-auto mt-5 max-w-[500px] p-6 bg-white rounded-lg shadow-lg">
-    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white text-center mb-6">📝 Sign Up for Our Platform</h3>
+    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white text-center mb-6">📝 Sign Up  IBIV - Digital</h3>
 
     <form class="space-y-4" action="addAction" method="post" name="add">
       <!-- Name Field -->
