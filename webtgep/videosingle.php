@@ -57,8 +57,69 @@ echo '<div class="flex justify-center mt-4 space-x-2">
 
 }
 
+ 
+require 'vendor/autoload.php';
 
+use Aws\S3\S3Client;
+use Aws\Exception\AwsException;
+
+// AWS_ACCESS_KEY_ID="AKIAVRUVUXHFXPCKVFE5"
+// AWS_SECRET_ACCESS_KEY="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"
+// AWS_REGION="us-west-1"
+// S3_BUCKET_NAME="publicluxs3"
+// BACEKND_URL = "https://be.luxyaragroup.io"
+
+// Set up the S3 client with your credentials
+$s3Client = new S3Client([
+    'version' => 'latest',
+    'region' => 'us-west-1', // Change region if different
+    'credentials' => [
+        'key' => 'AKIAVRUVUXHFXPCKVFE5',    // Replace with your AWS access key
+        'secret' => 'SU7eRTohUMxL5yB18CMy9tpd9R2zxMYXV1TmXaNk', // Replace with your AWS secret key
+    ],
+]);
+
+$bucket = 'publicluxs3';
+$key = 'manav/24-09-26IBIVVideo3-Governmentrulescomplnces.mp4.mp4';
+
+// https://publicluxs3.s3.us-west-1.amazonaws.com/manav/24-09-26IBIVVideo3-Governmentrulescomplnces.mp4.mp4
+// https://publicluxs3.s3.us-west-1.amazonaws.com/manav/24-09-26IBIVVideo3-Governmentrulescomplnces.mp4.mp4?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVRUVUXHFXPCKVFE5%2F20241010%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20241010T010121Z&X-Amz-SignedHeaders=host&X-Amz-Expires=1200&X-Amz-Signature=eb332e01c8af7c14ece31fcdd6bf0642783d3e7ea8788aa177f580e9c08858f3
+
+try {
+    // Generate a pre-signed URL to access the file
+    $cmd = $s3Client->getCommand('GetObject', [
+        'Bucket' => $bucket,
+        'Key' => $key
+    ]);
+
+    $request = $s3Client->createPresignedRequest($cmd, '+20 minutes');
+
+    // Get the actual presigned URL
+    $presignedUrl = (string) $request->getUri();
+
+     $presignedUrl ="https://publicluxs3.s3.us-west-1.amazonaws.com/manav/24-09-26IBIVVideo3-Governmentrulescomplnces.mp4.mp4";
+
+    // Output HTML to embed video
+
+//     <video id="myVideo" width="640" height="360" oncontextmenu="return false;" controlslist="nodownload" preload="none">
+//     <source src="{$presignedUrl}" type="video/mp4">
+//     Your browser does not support the video tag.
+// </video>
+
+//  oncontextmenu='return false;' controlslist='nodownload' preload='none'
+
+    // echo "<video width='640' height='360' controls  oncontextmenu='return false;'  controlslist='nodownload'>
+    //         <source src='{$presignedUrl}' type='video/mp4'>
+    //         Your browser does not support the video tag.
+    //       </video>";
+
+} catch (AwsException $e) {
+    // Output error message if something went wrong
+    echo "Error: " . $e->getMessage();
+}
 ?>
+
+
 
  
   <style>
@@ -97,7 +158,7 @@ echo '<div class="flex justify-center mt-4 space-x-2">
        <!-- <h1 class="text-xl">  <?php echo $international_vyapaar_topics[$id]['title']; ?></h1> -->
       <div class="bg-white shadow-lg rounded-lg overflow-hidden mb-8">
         <video id="mainVideo" class=" h-[500px]" controls>
-          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+          <source src="<?php echo $presignedUrl ?>" type="video/mp4"  oncontextmenu="return false;" controlslist="nodownload">
           Your browser does not support the video tag.
         </video>
         <div class="p-4 highlight">
@@ -145,6 +206,17 @@ echo '<div class="flex justify-center mt-4 space-x-2">
       video.src = src;
       video.play();
     }
+
+    document.addEventListener("keydown", function(e) {
+    if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
+        e.preventDefault();
+    }
+});
+
+document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+});
+
   </script>
 
 </body>

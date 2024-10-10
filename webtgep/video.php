@@ -86,7 +86,7 @@
               <p class="text-xs text-gray-500">Duration: 45 mins</p>
             </div>
           </div>
-          <a href="videosingle?id=1" class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition duration-300">View Now</a>
+          <a href="videosingle?id=2" class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition duration-300">View Now</a>
         </div>
       </div>
 
@@ -107,7 +107,7 @@
               <p class="text-xs text-gray-500">Duration: 45 mins</p>
             </div>
           </div>
-          <a href="videosingle?id=1" class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition duration-300">View Now</a>
+          <a href="videosingle?id=3" class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition duration-300">View Now</a>
         </div>
       </div>
 
@@ -128,7 +128,7 @@
               <p class="text-xs text-gray-500">Duration: 45 mins</p>
             </div>
           </div>
-          <a href="videosingle?id=1" class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition duration-300">View Now</a>
+          <a href="videosingle?id=4" class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition duration-300">View Now</a>
         </div>
       </div>
     </div>
@@ -152,7 +152,7 @@
               <p class="text-xs text-gray-500">Duration: 45 mins</p>
             </div>
           </div>
-          <a href="videosingle?id=1" class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition duration-300">View Now</a>
+          <a href="videosingle?id=5" class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition duration-300">View Now</a>
         </div>
       </div>
     </div>
