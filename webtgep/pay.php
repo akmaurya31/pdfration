@@ -38,6 +38,25 @@
   </div>
 </div>
 
+<div class="bg-gray-100 border border-2px p-6 rounded-lg shadow-lg max-w-4xl mx-auto mt-8">
+  <h2 class="text-2xl font-bold text-gray-800 mb-4">Dear Participant,</h2>
+  <p class="text-lg text-gray-700 mb-4">
+    Once you make the payment through UPI, please send the payment screenshot to our WhatsApp number:
+  </p>
+
+  <!-- Highlighted WhatsApp Number -->
+  <p class="text-lg font-semibold text-green-600 mb-4">
+    WhatsApp Number: <a href="https://wa.me/918810010069" class="underline">+91- 88100 10069</a>
+  </p>
+
+  <p class="text-lg text-gray-700 mb-4">
+    We will send the login details to watch the IBIV – Digital Master Class within 12 hours.
+  </p>
+
+  <p class="text-lg font-medium text-gray-800">Thanks!</p>
+</div>
+
+
 
 
 
