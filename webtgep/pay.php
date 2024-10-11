@@ -1,30 +1,29 @@
 <?php require_once("headerk.php"); ?>
 <div class="container w-[80%] mx-auto py-12">
-    <div class="flex flex-row mx-auto px-4 py-8 gap-4">
-        <!-- <div class="w-[35%]">
-            <img src="./images/1727852895931.jpeg" class="h-[250px] rounded-lg shadow-lg" alt="International Business Expansion Summit" />
-        </div> -->
-        <div class="bg-white border border-red-500 rounded-lg shadow-lg p-6 text-center mb-8 w-[65%] mx-auto">
-            <h2 class="text-2xl text-blue-600 font-semibold mb-3">
-                  Join Master Class
-            </h2>
+    
 
-            <h2 class="text-2xl text-blue-600 font-semibold mb-3">
-            Iss Baar International Vyapaar - Digital 
-            </h2>
-            
 
-            <h3 class="text-2xl text-red-600 font-semibold mb-3">
-             Rs. 499/- Only 
-              
-            </h3>
 
-            <h3 class="text-xl text-green-600 font-semibold mb-3">
-             
-              (for Indian Businessmen)
-            </h3>
+<div class="flex flex-col md:flex-row bg-white p-6 border border-gray-300 rounded-lg shadow-lg max-w-4xl mx-auto gap-4 ">
+  <!-- Left side (Image) -->
+  <div class="md:w-1/2 flex justify-center items-center">
+    <img src="./images/payleft.jpeg" alt="Dr. Manav Ahuja" class="rounded-lg max-w-[150px]" style="width: 330px;">
+  </div>
 
-            <hr class="w-1/4 border-red-500 mx-auto mb-4">
+  <!-- Right side (Text) -->
+  <div class="md:w-1/2 md:pl-8 mt-6 md:mt-0 ml-2">
+    <h2 class="text-2xl font-bold text-gray-800 mb-2">Join Master Class on</h2>
+    <h3 class="text-xl font-semibold text-blue-600 mb-2">Iss Baar International Vyapaar - Digital</h3>
+    <p class="text-lg font-medium text-red-500 mb-2">Rs. 499/- only</p>
+    <p class="text-lg text-gray-700 mb-2">For Indian Businessmen and Businesswomen</p>
+    <p class="text-lg font-semibold text-gray-800 mb-4">Learn - Earn - Grow</p>
+    
+    <!-- Instructor Info -->
+    <p class="text-lg text-gray-700 mb-2">With <strong>Dr. Manav Ahuja</strong></p>
+    <p class="text-gray-500">Founder, CEO - TPEG International LLC, Dubai</p>
+
+    <!-- CTA Button -->
+    <hr class="w-1/4 border-red-500 mx-auto mt-4 ">
             <form action="./stripe/public/checkout" method="POST">
                 <button type="submit" id="checkout-button" class="bg-blue-500 text-white rounded-full px-4 py-2 mt-4 hover:bg-blue-600">
                     Pay Now
@@ -34,9 +33,12 @@
                     Via UPI QR
                 </button>
             </form>
-        </div>
-    </div>
+
+    <!-- <a href="#" class="inline-block mt-6 bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700 transition">Join Now</a> -->
+  </div>
 </div>
+
+
 
 
 <div
@@ -85,6 +87,8 @@
       </div>
     </div>
   </div>
+</div>
+
 </div>
 
 <?php require_once("footer.php");?>

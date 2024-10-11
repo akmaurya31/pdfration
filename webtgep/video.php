@@ -50,12 +50,14 @@
       <!-- Video Card 1 -->
       <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition duration-500">
         <div class="relative">
+        <a href="videosingle?id=1" target="_blank"> 
           <img class="w-full  " src="./images/1a.jpeg" alt="Video Thumbnail">
           <div class="  bottom-0 left-0 bg-slate-900 w-full p-4 text-white">
             <h2 class="text-xl font-bold">Topic #1: Why To Do International Vyapaar </h2>
             <p class="mt-2 text-sm">Learn the benefits of expanding your business globally, including access to larger markets, increased profits, and opportunities to grow your brand internationally.
             🚀💼</p>
           </div>
+        </a>
         </div>
         <div class="p-4">
           <div class="flex items-center mb-4">
@@ -72,11 +74,13 @@
       <!-- Video Card 2 -->
       <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition duration-500">
         <div class="relative">
-          <img class="w-full   object-cover" src="./images/2a.jpeg" alt="Video Thumbnail">
-          <div class="  bottom-0 left-0 bg-slate-900 w-full p-4 text-white">
-            <h2 class="text-xl font-bold">Topic #2: How To Do International Vyapaar </h2>
-            <p class="mt-2 text-sm">Get step-by-step guidance on establishing your international business, from finding buyers to setting up supply chains and handling logistics efficiently.🚀💼</p>
-          </div>
+          <a href="videosingle?id=2" target="_blank"> 
+            <img class="w-full   object-cover" src="./images/2a.jpeg" alt="Video Thumbnail">
+            <div class="  bottom-0 left-0 bg-slate-900 w-full p-4 text-white">
+              <h2 class="text-xl font-bold">Topic #2: How To Do International Vyapaar </h2>
+              <p class="mt-2 text-sm">Get step-by-step guidance on establishing your international business, from finding buyers to setting up supply chains and handling logistics efficiently.🚀💼</p>
+            </div>
+          </a>
         </div>
         <div class="p-4">
           <div class="flex items-center mb-4">
@@ -93,11 +97,13 @@
       <!-- Video Card 3 -->
       <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition duration-500">
         <div class="relative">
-          <img class="w-full   object-cover" src="./images/3a.jpeg" alt="Video Thumbnail">
-          <div class="  bottom-0 left-0 bg-slate-900 w-full p-4 text-white">
-            <h2 class="text-xl font-bold">Topic #3: International Vyapaar - Government Rules and Compliances </h2>
-            <p class="mt-2 text-sm">Understand the essential export-import regulations, compliance requirements, and legal frameworks to ensure smooth international trading.🚀💼</p>
-          </div>
+          <a href="videosingle?id=3" target="_blank">  
+            <img class="w-full   object-cover" src="./images/3a.jpeg" alt="Video Thumbnail">
+            <div class="  bottom-0 left-0 bg-slate-900 w-full p-4 text-white">
+              <h2 class="text-xl font-bold">Topic #3: International Vyapaar - Government Rules and Compliances </h2>
+              <p class="mt-2 text-sm">Understand the essential export-import regulations, compliance requirements, and legal frameworks to ensure smooth international trading.🚀💼</p>
+            </div>
+          </a>
         </div>
         <div class="p-4">
           <div class="flex items-center mb-4">
@@ -114,11 +120,13 @@
       <!-- Video Card 4 -->
       <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition duration-500">
         <div class="relative">
+        <a href="videosingle?id=4" target="_blank">  
           <img class="w-full   object-cover" src="./images/4a.jpeg" alt="Video Thumbnail">
           <div class="  bottom-0 left-0 bg-slate-900 w-full p-4 text-white">
             <h2 class="text-xl font-bold">Topic #4: How TPEG Helps You in Doing International Vyapaar </h2>
             <p class="mt-2 text-sm">Explore how TPEG provides tailored support for Indian SMEs through buyer connections, market access, and end-to-end trade solutions.🚀💼</p>
           </div>
+        </a>
         </div>
         <div class="p-4">
           <div class="flex items-center mb-4">
@@ -138,11 +146,13 @@
     <!-- Video Card 4 -->
     <div class="bg-white mt-10 rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition duration-500">
         <div class="relative">
-          <img class="w-full   object-cover" src="./images/5a.jpeg" alt="Video Thumbnail">
-          <div class="  bottom-0 left-0 bg-slate-900 w-full p-4 text-white">
-            <h2 class="text-xl font-bold">Topic #5: How to Start International Vyapaar in Dubai – UAE </h2>
-            <p class="mt-2 text-sm">Unlock the potential of Dubai as a global business hub, and learn the specific steps to establish your presence in the UAE’s thriving international trade market.🚀💼</p>
-          </div>
+          <a href="videosingle?id=5" target="_blank">  
+            <img class="w-full   object-cover" src="./images/5a.jpeg" alt="Video Thumbnail">
+            <div class="  bottom-0 left-0 bg-slate-900 w-full p-4 text-white">
+              <h2 class="text-xl font-bold">Topic #5: How to Start International Vyapaar in Dubai – UAE </h2>
+              <p class="mt-2 text-sm">Unlock the potential of Dubai as a global business hub, and learn the specific steps to establish your presence in the UAE’s thriving international trade market.🚀💼</p>
+            </div>
+          </a>
         </div>
         <div class="p-4">
           <div class="flex items-center mb-4">
