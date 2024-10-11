@@ -5,23 +5,28 @@ $id = $_REQUEST['id'];
 $international_vyapaar_topics = [
     1 => [
         "title" => "Why To Do International Vyapaar",
-        "description" => "Learn the benefits of expanding your business globally, including access to larger markets, increased profits, and opportunities to grow your brand internationally."
+        "description" => "Learn the benefits of expanding your business globally, including access to larger markets, increased profits, and opportunities to grow your brand internationally.",
+        "link"=>"https://publictpeg.s3.ap-south-1.amazonaws.com/ibiv/241006IBIVVideo1WhytodoInternationalBusiness.mp4"
     ],
     2 => [
         "title" => "How To Do International Vyapaar",
-        "description" => "Get step-by-step guidance on establishing your international business, from finding buyers to setting up supply chains and handling logistics efficiently."
+        "description" => "Get step-by-step guidance on establishing your international business, from finding buyers to setting up supply chains and handling logistics efficiently.",
+         "link"=>"https://publictpeg.s3.ap-south-1.amazonaws.com/ibiv/241006IBIVVideo2HowtodoInternationalBusiness.mp4" 
     ],
     3 => [
         "title" => "International Vyapaar - Government Rules and Compliances",
-        "description" => "Understand the essential export-import regulations, compliance requirements, and legal frameworks to ensure smooth international trading."
+        "description" => "Understand the essential export-import regulations, compliance requirements, and legal frameworks to ensure smooth international trading.",
+        "link"=>"https://publictpeg.s3.ap-south-1.amazonaws.com/ibiv/24-09-26IBIVVideo3-Governmentrulescomplnces.mp4.mp4"
     ],
     4 => [
         "title" => "How TPEG Helps You in Doing International Vyapaar",
-        "description" => "Explore how TPEG provides tailored support for Indian SMEs through buyer connections, market access, and end-to-end trade solutions."
+        "description" => "Explore how TPEG provides tailored support for Indian SMEs through buyer connections, market access, and end-to-end trade solutions.",
+        "link"=>"https://publictpeg.s3.ap-south-1.amazonaws.com/ibiv/241006IBIVVideo5HowtoStartInternationalvyapaarindubaiuae.mp4"
     ],
     5 => [
         "title" => "How to Start International Vyapaar in Dubai – UAE",
-        "description" => "Unlock the potential of Dubai as a global business hub, and learn the specific steps to establish your presence in the UAE’s thriving international trade market."
+        "description" => "Unlock the potential of Dubai as a global business hub, and learn the specific steps to establish your presence in the UAE’s thriving international trade market.",
+        "link"=>"https://publictpeg.s3.ap-south-1.amazonaws.com/ibiv/241006IBIVVideo5HowtoStartInternationalvyapaarindubaiuae.mp4"
     ]
 ];
 
@@ -70,17 +75,33 @@ use Aws\Exception\AwsException;
 // BACEKND_URL = "https://be.luxyaragroup.io"
 
 // Set up the S3 client with your credentials
+// $s3Client = new S3Client([
+//     'version' => 'latest',
+//     'region' => 'us-west-1', // Change region if different
+//     'credentials' => [
+//         'key' => 'AKIAVRUVUXHFXPCKVFE5',    // Replace with your AWS access key
+//         'secret' => 'SU7eRTohUMxL5yB18CMy9tpd9R2zxMYXV1TmXaNk', // Replace with your AWS secret key
+//     ],
+// ]);
+
+
 $s3Client = new S3Client([
-    'version' => 'latest',
-    'region' => 'us-west-1', // Change region if different
-    'credentials' => [
-        'key' => 'AKIAVRUVUXHFXPCKVFE5',    // Replace with your AWS access key
-        'secret' => 'SU7eRTohUMxL5yB18CMy9tpd9R2zxMYXV1TmXaNk', // Replace with your AWS secret key
-    ],
+  'version' => 'latest',
+  'region' => 'ap-south-1', // Change region if different
+  'credentials' => [
+      'key' => 'AKIASVLKCUHG33LZRNZZ',    // Replace with your AWS access key
+      'secret' => 'DOMh/y9zEucmLxxU8DAHR3v3Yw7/GfiaL94ggR6t', // Replace with your AWS secret key
+  ],
 ]);
 
-$bucket = 'publicluxs3';
-$key = 'manav/24-09-26IBIVVideo3-Governmentrulescomplnces.mp4.mp4';
+
+// $bucket = 'publicluxs3';
+// $key = 'manav/24-09-26IBIVVideo3-Governmentrulescomplnces.mp4.mp4';
+
+
+$bucket = 'publictpeg';
+$key = 'ibiv/24-09-26IBIVVideo3-Governmentrulescomplnces.mp4.mp4';
+
 
 // https://publicluxs3.s3.us-west-1.amazonaws.com/manav/24-09-26IBIVVideo3-Governmentrulescomplnces.mp4.mp4
 // https://publicluxs3.s3.us-west-1.amazonaws.com/manav/24-09-26IBIVVideo3-Governmentrulescomplnces.mp4.mp4?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVRUVUXHFXPCKVFE5%2F20241010%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20241010T010121Z&X-Amz-SignedHeaders=host&X-Amz-Expires=1200&X-Amz-Signature=eb332e01c8af7c14ece31fcdd6bf0642783d3e7ea8788aa177f580e9c08858f3
@@ -97,7 +118,9 @@ try {
     // Get the actual presigned URL
     $presignedUrl = (string) $request->getUri();
 
-     $presignedUrl ="https://publicluxs3.s3.us-west-1.amazonaws.com/manav/24-09-26IBIVVideo3-Governmentrulescomplnces.mp4.mp4";
+    // $presignedUrl ="https://publicluxs3.s3.us-west-1.amazonaws.com/manav/24-09-26IBIVVideo3-Governmentrulescomplnces.mp4.mp4";
+    // $presignedUrl ="https://publictpeg.s3.ap-south-1.amazonaws.com/ibiv/24-09-26IBIVVideo3-Governmentrulescomplnces.mp4.mp4";
+    $presignedUrl =$international_vyapaar_topics[$id]['link'];
 
     // Output HTML to embed video
 
