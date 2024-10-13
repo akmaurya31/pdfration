@@ -54,7 +54,8 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
                         <tr>
                             <td class="px-6 py-4 font-bold"><?php echo $row['id']; ?></td>
                             <td class="px-6 py-4 font-bold"><?php echo $row['name']; ?>
-                            <br /><?php echo $row['email']; ?></td>
+                            <br /><?php echo $row['email']; ?>
+                            <br /><?php echo $row['dpincode']; ?> </td>
                             <td class="px-6 py-4 font-bold"><?php echo $row['address']; ?></td>
                             <td class="px-6 py-4 font-bold text-green-700"><?php echo $row['contact_number']; ?><br/><?php echo $row['password']; ?></td>
                             <td class="px-6 py-4 font-bold text-color-red"><?php echo $row['pay']; ?></td>
