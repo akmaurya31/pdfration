@@ -45,14 +45,15 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
                 // Modify query for search functionality
                 $sql = "SELECT * FROM users WHERE name LIKE '%$search%' OR email LIKE '%$search%'  OR contact_number LIKE '%$search%'  ORDER BY id DESC LIMIT $users_per_page OFFSET $offset";
                 $result = $mysqli->query($sql);
-
+                    $sn=0;
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
+                        $sn++;
                         $rs = getCurWallet($mysqli, $row['id']);
                         $rscurr = isset($rs->current_balance) && $rs->current_balance > 0 ? $rs->current_balance : 0;
                 ?>
                         <tr>
-                            <td class="px-6 py-4 font-bold"><?php echo $row['id']; ?></td>
+                            <td class="px-6 py-4 font-bold"><?php echo $sn; ?></td>
                             <td class="px-6 py-4 font-bold"><?php echo $row['name']; ?>
                             <br /><?php echo $row['email']; ?>
                             <br /><?php echo $row['dpincode']; ?> </td>
