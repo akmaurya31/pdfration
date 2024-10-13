@@ -5,6 +5,7 @@ $name = trim(htmlspecialchars($_POST['name']));
 $email = trim(htmlspecialchars($_POST['email']));
 $contact_number = trim(htmlspecialchars($_POST['contact_number']));
 $password = trim(htmlspecialchars($_POST['password']));
+$dpincode = trim(htmlspecialchars($_POST['dpincode']));
 list($username, $domain) = explode("@", $email);
 $username1 = $username.rand(1, 9999);
 
@@ -34,9 +35,9 @@ if (!empty($name) && !empty($email) && !empty($contact_number) && !empty($passwo
             </div>';
     } else {
         // Insert the new user into the database
-        $sql = "INSERT INTO users (name, email, contact_number, password, username) VALUES (?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO users (name, email, contact_number, password, username,dpincode) VALUES (?, ?, ?, ?, ?, ?)";
         $stmt = $mysqli->prepare($sql);
-        $stmt->bind_param("sssss", $name, $email, $contact_number, $password, $username1);
+        $stmt->bind_param("sssss", $name, $email, $contact_number, $password, $username1,$dpincode);
 
         if ($stmt->execute()) {
             echo '<div class="bg-green-100 border border-green-400  max-w-[1325px] mt-5 mx-auto text-green-700 px-4 py-3 rounded relative" role="alert">
