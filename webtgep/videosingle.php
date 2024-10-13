@@ -21,7 +21,7 @@ $international_vyapaar_topics = [
     4 => [
         "title" => "How TPEG Helps You in Doing International Vyapaar",
         "description" => "Explore how TPEG provides tailored support for Indian SMEs through buyer connections, market access, and end-to-end trade solutions.",
-        "link"=>"https://publictpeg.s3.ap-south-1.amazonaws.com/ibiv/241006IBIVVideo5HowtoStartInternationalvyapaarindubaiuae.mp4"
+        "link"=>"https://publictpeg.s3.ap-south-1.amazonaws.com/ibiv/241006IBIVVideo4HowTPEGHELPSyouindoinginternationalvyapaar.mp4"
     ],
     5 => [
         "title" => "How to Start International Vyapaar in Dubai – UAE",
