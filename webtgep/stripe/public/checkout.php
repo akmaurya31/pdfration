@@ -6,7 +6,8 @@ require_once '../secrets.php';
 \Stripe\Stripe::setApiKey($stripeSecretKey);
 header('Content-Type: application/json');
 
-$YOUR_DOMAIN = 'http://localhost';
+// $YOUR_DOMAIN = 'http://localhost';
+$YOUR_DOMAIN = 'https://tpeg-ibiv.com';
 
 $checkout_session = \Stripe\Checkout\Session::create([
   'line_items' => [[

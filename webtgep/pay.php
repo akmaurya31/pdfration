@@ -24,7 +24,8 @@
 
     <!-- CTA Button -->
     <hr class="w-1/4 border-red-500 mx-auto mt-4 ">
-            <form action="./stripe/public/checkout" method="POST">
+            <!-- <form action="./stripe/public/checkout" method="POST"> -->
+             <form action="https://buy.stripe.com/8wMcPm1FUdbf7vy7sB" method="get"> 
                 <button type="submit" id="checkout-button" class="bg-blue-500 text-white rounded-full px-4 py-2 mt-4 hover:bg-blue-600">
                     Pay Now
                 </button>
@@ -38,22 +39,23 @@
   </div>
 </div>
 
+
 <div class="bg-gray-100 border border-2px p-6 rounded-lg shadow-lg max-w-4xl mx-auto mt-8">
   <h2 class="text-2xl font-bold text-gray-800 mb-4">Dear Participant,</h2>
   <p class="text-lg text-gray-700 mb-4">
-    Once you make the payment through UPI, please send the payment screenshot to our WhatsApp number:
-  </p>
+  Once You make the Payment through UPI – Please send the payment Screenshot to  
+   
 
   <!-- Highlighted WhatsApp Number -->
-  <p class="text-lg font-semibold text-green-600 mb-4">
-    WhatsApp Number: <a href="https://wa.me/918810010069" class="underline">+91- 88100 10069</a>
-  </p>
+  <span class="text-lg font-semibold text-green-600 mb-4">
+    WhatsApp Number: <a href="https://wa.me/919999027340" class="underline">+91- 9999027340</a>
+  </span>
 
-  <p class="text-lg text-gray-700 mb-4">
-    We will send the login details to watch the IBIV – Digital Master Class within 12 hours.
-  </p>
+  <span class="text-lg text-gray-700 mb-4">
+  and We will send the Login Details to Watch IBIV – Digital Master Class within 12 hours. 
+  </span>
 
-  <p class="text-lg font-medium text-gray-800">Thanks!</p>
+  <span class="text-lg font-medium text-gray-800">Thanks!</span> </p>
 </div>
 
 
