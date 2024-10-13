@@ -22,10 +22,10 @@ $search = isset($_GET['search']) ? $mysqli->real_escape_string($_GET['search']) 
 if (!empty($search)) {
     if ($_SESSION['role'] == 'admin') {
         $sql = "SELECT COUNT(*) FROM ration_req WHERE 
-                (name LIKE '%$search%' OR ration LIKE '%$search%' OR user_id IN (SELECT id FROM users WHERE contact_number LIKE '%$search%'))";
+                (name LIKE '%$search%' OR ration LIKE '%$search%' OR user_id IN (SELECT id FROM users WHERE contact_number LIKE '%$search%')) ORDER BY id ASC";
     } else {
         $sql = "SELECT COUNT(*) FROM ration_req WHERE user_id='" . $_SESSION['idd'] . "' AND 
-                (name LIKE '%$search%' OR ration LIKE '%$search%')";
+                (name LIKE '%$search%' OR ration LIKE '%$search%') ORDER BY id ASC";
     }
 } else {
     // Original query without search
