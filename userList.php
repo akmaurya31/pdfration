@@ -43,7 +43,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
                 $search = isset($_GET['search']) ? $mysqli->real_escape_string($_GET['search']) : '';
 
                 // Modify query for search functionality
-                $sql = "SELECT * FROM users WHERE name LIKE '%$search%' OR email LIKE '%$search%'  OR contact_number LIKE '%$search%' LIMIT $users_per_page OFFSET $offset";
+                $sql = "SELECT * FROM users WHERE name LIKE '%$search%' OR email LIKE '%$search%'  OR contact_number LIKE '%$search%'  ORDER BY id DESC LIMIT $users_per_page OFFSET $offset";
                 $result = $mysqli->query($sql);
 
                 if ($result->num_rows > 0) {
