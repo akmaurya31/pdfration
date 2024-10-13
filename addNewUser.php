@@ -35,11 +35,9 @@ if (!empty($name) && !empty($email) && !empty($contact_number) && !empty($passwo
             </div>';
     } else {
         // Insert the new user into the database
-        $sql = "INSERT INTO users (name, email, contact_number, password, username,dpincode) VALUES (?, ?, ?, ?, ?, ?)";
-        $stmt = $mysqli->prepare($sql);
-        $stmt->bind_param("sssss", $name, $email, $contact_number, $password, $username1,$dpincode);
-
-        if ($stmt->execute()) {
+        $sql = "INSERT INTO users (name, email, contact_number, password, username, dpincode) 
+        VALUES ('$name', '$email', '$contact_number', '$password', '$username1', '$dpincode')";
+        if ($mysqli->query($sql) === TRUE) {
             echo '<div class="bg-green-100 border border-green-400  max-w-[1325px] mt-5 mx-auto text-green-700 px-4 py-3 rounded relative" role="alert">
             <strong class="font-bold">Success! 🎉</strong>
             <span class="block sm:inline">User registered successfully! अगर आप भूल गए हैं अपना User ID या Password तो हमें संपर्क करें, WhatsApp पर भेजें। 7518869428</span>
