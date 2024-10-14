@@ -17,6 +17,11 @@
                         <a href="otherservices.php" class="text-gray-900 p-2 rounded hover:underline whitespace-nowrap border border-blue-400 ">🛠️OtherServices</a>
                     </li>
 
+                    <li>
+                        <a href="job.php" class="text-gray-900 p-2 rounded hover:underline whitespace-nowrap border border-blue-400 ">🏷️Job नौकरी </a>
+                    </li>
+
+
                   
                     <!-- <li>
                         <a href="https://mart.bharatcschub.online" target="_blank" class="text-gray-900 p-2 rounded  hover:underline whitespace-nowrap border border-pink-400 bg-[#232343] text-white  hover:bg-blue-800 ">🌐 Hub</a>

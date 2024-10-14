@@ -1,7 +1,19 @@
 <?php include('headerFront.php'); ?>
 
 
-<h1 class="text-center text-2xl font-bold my-4 "> 🛒Ration Card Print Portal</h1>
+
+
+<div class="flex flex-col items-center justify-center  gap-6 p-4">
+  <div class="text-center">
+    <h1 class="text-2xl font-bold my-4"> 🛒 Ration Card Print Portal </h1>
+
+    <a href="job.php" class="text-white bg-red-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center">
+      <span class="mr-2 text-2xl">👉</span>
+      <span class="text-2xl"><b>नौकरी / Job – Click Here 🖱️</b></span>
+    </a>
+  </div>
+</div>
+
 
 
 
@@ -27,7 +39,7 @@
       </div>
 
       <div class="mb-4">
-        <label for="dpincode" class="block font-semibold text-gray-700 mb-1">District / Pincode: :</label>
+        <label for="dpincode" class="block font-semibold text-gray-700 mb-1">District / Pincode :</label>
         <input type="text" name="dpincode" required class="w-full px-3 py-2 border rounded" id="dpincode" placeholder="Enter District or pincode">
       </div>
 
