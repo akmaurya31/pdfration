@@ -1,14 +1,12 @@
 <?php include('headerFront.php'); ?>
 
 
-<h1 class="text-center text-2xl font-bold my-4 "> यदि आपने भारत CSC हब पोर्टल पर नौकरी के लिए पंजीकरण किया है, तो हम आपका धन्यवाद करते हैं! <br/>🙏 कृपया अपना रिज़्यूमे हमारे आधिकारिक व्हाट्सएप नंबर 9454966752 पर भेजें।</h1>
-
-
+<h1 class="text-center text-2xl font-bold my-4 "> 🚀Bharat CSC Hub : Job Portal</h1>
 
 <div class="flex flex-col lg:flex-row justify-center gap-6 p-4">
   <!-- Signup Form -->
   <div class="w-full max-w-md bg-white border border-gray-300 rounded-lg shadow-lg p-6">
-    <form action="addJob" method="post" name="add">
+    <form action="addJob" method="post" name="add"  method="post">
       <h4 class="text-center text-red-600 font-bold text-lg mb-4">📝 Register here to apply for the job </h4>
       
       <div class="mb-4">
@@ -58,6 +56,11 @@
         <a href="login.php" class="text-blue-600 hover:underline">🔐 Login</a>
       </div> -->
     </form>
+    <a href="index.php" class="text-blue-400 hover:text-blue-300 inline-flex items-center">
+        <div class="shine rounded-xl overflow-hidden relative">
+            <img src="./images/baharatcschub.jpeg" class="rounded-xl mt-4 transition duration-300 ease-in-out transform hover:scale-105" />
+        </div>
+    </a>
   </div>
 
   <!-- Services Section -->
@@ -134,21 +137,47 @@
 </div>
 
 <!-- Contact Information -->
-<div class="text-center p-4">
-  <h1 class="text-xl font-bold mt-6">Amrish Digital CSC Center - 📞 7518869428 Don't just call, text me on WhatsApp too</h1>
-  <!-- <h2 class="text-lg mt-2">📍 Address: 295/5, Deen Dayal Road, Asharfabad, Lucknow, Uttar Pradesh 226003</h2> -->
-
-  <h3 class="mt-4 text-gray-700">
-    अगर आप अपना यूजरनेम या पासवर्ड भूल गए हैं, तो चिंता मत करें! 😊<br>
-    कृपया हमें तुरंत WhatsApp करें: 📱 
-    <a href="https://wa.me/917518869428" target="_blank" class="text-blue-600 hover:underline">
-      +91 7518869428 📞
-    </a>  
-    Don't just call, text me on WhatsApp too हम आपकी मदद के लिए यहाँ हैं! 🙌
-  </h3>
+<h1 class="text-center text-2xl font-bold my-4 "> यदि आपने भारत CSC हब पोर्टल पर नौकरी के लिए पंजीकरण किया है, तो हम आपका धन्यवाद करते हैं! <br/>🙏 कृपया अपना रिज़्यूमे हमारे आधिकारिक व्हाट्सएप नंबर 9454966752 पर भेजें।</h1>
 </div>
 
 
-</div>
+
+<script>
+        document.getElementById('jobForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Capture form data
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var mobile = document.getElementById('contact_number').value;
+            var qualification = document.getElementById('qualification').value;
+            var nexprience = document.getElementById('nexprience').value;
+            var dpincode = document.getElementById('dpincode').value;
+
+            // Prepare data for PHP script
+            var formData = new FormData();
+            formData.append('name', name);
+            formData.append('email', email);
+            formData.append('mobile', mobile);
+            formData.append('qualification', qualification);
+            formData.append('nexprience', nexprience);
+            formData.append('dpincode', dpincode);
+
+            // Send data to PHP script
+            fetch('formjob_submit', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log('Success:', data);
+                alert('Form submitted successfully!');
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('Form submission failed!');
+            });
+        });
+    </script>
 
 <?php include('footer.php'); ?>

@@ -47,9 +47,15 @@
             <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
             🚀 Send Message
             </button>
+            <a href="formcsc.php" target="_blank" class="flex flex-col text-blue-400 hover:text-blue-300 inline-flex items-center">
+      <img src="./images/baharatcschub.jpeg" class="rounded-xl mt-4 "   />
+    </a>
           </div>
         </form>
+      
       </div>
+ 
+
   
 
   <div class="w-full  lg:max-w-[65%]   bg-white p-0 rounded-lg shadow-lg border border-yellow-500 mr-[35px]">
@@ -195,3 +201,4 @@
             });
         });
     </script>
+    <?php include("footer.php");?>

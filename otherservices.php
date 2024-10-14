@@ -469,13 +469,7 @@
       
 
       <div class="max-w-4xl mx-auto py-8 px-4">
-    
-    <div class="flex justify-center">
-  <a href="job.php" class="text-white m-4 bg-red-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center blink-bg">
-    <span class="mr-2 text-2xl">👉</span>
-    <span class="text-2xl"><b>नौकरी / Job – Click Here 🖱️</b></span>
-  </a>
-</div>
+   
 
 
     <!-- Banking and Financial Services -->

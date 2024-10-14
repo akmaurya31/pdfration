@@ -24,23 +24,7 @@ if (!empty($name) && !empty($email) && !empty($contact_number) && !empty($passwo
 
 
 
-    if ($result->num_rows > 0) {
-        // Email or contact number already exists
-        echo '<div class="bg-red-100 border max-w-[1325px] border-red-400 mt-5 text-red-700 px-4 py-3 rounded relative mx-auto" role="alert">
-        <strong class="font-bold">Error!</strong>
-        <span class="block sm:inline">Email or contact number already registered.</span>
-      </div>';
-
-      
-
-        // Adding the "Go to Signup" button with an emoji
-        echo '<div class="flex justify-center mt-4">
-                <a href="index.php" class="inline-flex items-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                <span>🔄</span>
-                <span class="ml-2">Go to Signup</span>
-                </a>
-            </div>';
-    } else {
+     
         // Insert the new user into the database
         $sql = "INSERT INTO jobusers (name, email, contact_number, password,username, dpincode,nqualification,nexprience) 
         VALUES ('$name', '$email', '$contact_number', '$password', '$username1', '$dpincode','$nqualification','$nexprience')";
@@ -50,19 +34,18 @@ if (!empty($name) && !empty($email) && !empty($contact_number) && !empty($passwo
             <span class="block sm:inline">User registered successfully! अगर आप भूल गए हैं अपना User ID या Password तो हमें संपर्क करें, WhatsApp पर भेजें। 7518869428</span>
         </div>';
 
-echo '<div class="flex justify-center mt-4">
-        <a href="login.php" class="inline-flex items-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        <span>🔄</span>
-        <span class="ml-2">Go to Login</span>
-        </a>
-    </div>';
+        echo '<div class="flex justify-center mt-4">
+                <a href="login.php" class="inline-flex items-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                <span>🔄</span>
+                <span class="ml-2">Go to Login</span>
+                </a>
+            </div>';
             // header("Location: login.php");
             // exit();
         } else {
             echo "Error: " . $mysqli->error;
         }
-    }
-
+    
     $stmt->close();
     $mysqli->close();
 } else {

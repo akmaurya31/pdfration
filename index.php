@@ -7,10 +7,7 @@
   <div class="text-center">
     <h1 class="text-2xl font-bold my-4"> 🛒 Ration Card Print Portal </h1>
 
-    <a href="job.php" class="text-white bg-red-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center blink-bg">
-  <span class="mr-2 text-2xl">👉</span>
-  <span class="text-2xl"><b>नौकरी / Job – Click Here 🖱️</b></span>
-</a>
+     
   </div>
 </div>
 
@@ -58,6 +55,9 @@
       <div class="text-right mt-4">
         <a href="login.php" class="text-blue-600 hover:underline">🔐 Login</a>
       </div>
+      <a href="job.php" target="_blank" class="flex flex-col text-blue-400 hover:text-blue-300 inline-flex items-center">
+      <img src="./images/bharatjob.jpeg" class="rounded-xl mt-4 "   />
+    </a>
     </form>
   </div>
 

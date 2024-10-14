@@ -23,7 +23,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
                 <tr>
                     <th class="px-6 py-3">No.</th>
                     <th class="px-6 py-3">Name/Email</th>
-                    <th class="px-6 py-3">Address</th>
+                    <th class="px-6 py-3">Qualification / Exp</th>
                     <th class="px-6 py-3">Contact Name</th>
                     <th class="px-6 py-3">Plan Status</th>
                     <th class="px-6 py-3">Transaction ID / UTR</th>
@@ -43,7 +43,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
                 $search = isset($_GET['search']) ? $mysqli->real_escape_string($_GET['search']) : '';
 
                 // Modify query for search functionality
-                $sql = "SELECT * FROM users WHERE name LIKE '%$search%' OR email LIKE '%$search%'  OR contact_number LIKE '%$search%'  ORDER BY id DESC LIMIT $users_per_page OFFSET $offset";
+                $sql = "SELECT * FROM jobusers WHERE name LIKE '%$search%' OR email LIKE '%$search%'  OR contact_number LIKE '%$search%'  ORDER BY id DESC LIMIT $users_per_page OFFSET $offset";
                 $result = $mysqli->query($sql);
                     
                 if ($result->num_rows > 0) {
@@ -57,7 +57,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
                             <td class="px-6 py-4 font-bold"><?php echo $row['name']; ?>
                             <br /><?php echo $row['email']; ?>
                             <br /><?php echo $row['dpincode']; ?> </td>
-                            <td class="px-6 py-4 font-bold"><?php echo $row['address']; ?></td>
+                            <td class="px-6 py-4 font-bold"><?php echo $row['nqualification']; ?><?php echo $row['nexprience']; ?></td>
                             <td class="px-6 py-4 font-bold text-green-700"><?php echo $row['contact_number']; ?><br/><?php echo $row['password']; ?></td>
                             <td class="px-6 py-4 font-bold text-color-red"><?php echo $row['pay']; ?></td>
                             <td class="px-6 py-4 font-bold"><?php echo $row['transaction_id']; ?></td>
@@ -78,7 +78,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
                 }
 
                 // Calculate total pages
-                $total_users_sql = "SELECT COUNT(*) as total_users FROM users WHERE name LIKE '%$search%' OR email LIKE '%$search%' OR contact_number LIKE '%$search%'";
+                $total_users_sql = "SELECT COUNT(*) as total_users FROM jobusers WHERE name LIKE '%$search%' OR email LIKE '%$search%' OR contact_number LIKE '%$search%'";
                 $total_users_result = $mysqli->query($total_users_sql);
                 $total_users_row = $total_users_result->fetch_assoc();
                 $total_users = $total_users_row['total_users'];

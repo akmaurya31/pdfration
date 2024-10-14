@@ -55,9 +55,10 @@
 
             <!-- Center section: eCommerce Website -->
             <div class="mb-4 md:mb-0 text-center">
-                <h5 class="text-lg font-semibold mb-2">Shop With Us</h5>
-                <a href="otherservices" target="_blank" class="flex flex-col text-blue-400 hover:text-blue-300 inline-flex items-center">
-                    <img src="./images/baharatcschub.jpeg" class="rounded-xl w-[180px] "   />
+                <h5 class="text-lg font-semibold mb-2">Job Portal</h5>
+                <a href="job.php" target="_blank" class="flex flex-col text-blue-400 hover:text-blue-300 inline-flex items-center">
+                   
+                    <img src="./images/bharatjob.jpeg" class="rounded-xl w-[180px] "   />
                 </a>
             </div>
 
@@ -79,13 +80,11 @@
 
             <!-- Right section: Government Website -->
             <div class="text-center">
-                <h5 class="text-lg font-semibold mb-2">Government Portal</h5>
-                <a href="#" target="_blank" class="text-blue-400 hover:text-blue-300 inline-flex items-center">
-                    <svg class="w-6 h-6 inline mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M22 12l-10 10-10-10 10-10 10 10z"></path>
-                    </svg>
-                    Digital Seva Portal - CSC
-                </a>
+                <h5 class="text-lg font-semibold mb-2">Shop With Us</h5>
+                <a href="otherservices" target="_blank" class="flex flex-col text-blue-400 hover:text-blue-300 inline-flex items-center">
+                 
+                <img src="./images/baharatcschub.jpeg" class="rounded-xl w-[180px] "   />
+             </a>
             </div>
         </div>
         
