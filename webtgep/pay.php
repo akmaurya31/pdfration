@@ -14,7 +14,7 @@
   <div class="md:w-1/2 md:pl-8 mt-6 md:mt-0 ml-2">
     <h2 class="text-2xl font-bold text-gray-800 mb-2">Join Master Class on</h2>
     <h3 class="text-xl font-semibold text-blue-600 mb-2">Iss Baar International Vyapaar - Digital</h3>
-    <p class="text-lg font-medium text-red-500 mb-2">Rs. 499/- only</p>
+    <p class="text-lg font-medium text-red-500 mb-2">Rs. 490/- only</p>
     <p class="text-lg text-gray-700 mb-2">For Indian Businessmen and Businesswomen</p>
     <p class="text-lg font-semibold text-gray-800 mb-4">Learn - Earn - Grow</p>
     
