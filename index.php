@@ -7,10 +7,10 @@
   <div class="text-center">
     <h1 class="text-2xl font-bold my-4"> 🛒 Ration Card Print Portal </h1>
 
-    <a href="job.php" class="text-white bg-red-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center">
-      <span class="mr-2 text-2xl">👉</span>
-      <span class="text-2xl"><b>नौकरी / Job – Click Here 🖱️</b></span>
-    </a>
+    <a href="job.php" class="text-white bg-red-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center blink-bg">
+  <span class="mr-2 text-2xl">👉</span>
+  <span class="text-2xl"><b>नौकरी / Job – Click Here 🖱️</b></span>
+</a>
   </div>
 </div>
 

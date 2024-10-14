@@ -9,7 +9,7 @@
   <!-- Signup Form -->
   <div class="w-full max-w-md bg-white border border-gray-300 rounded-lg shadow-lg p-6">
     <form action="addJob" method="post" name="add">
-      <h4 class="text-center text-red-600 font-bold text-lg mb-4">📝 Job Form</h4>
+      <h4 class="text-center text-red-600 font-bold text-lg mb-4">📝 Register here to apply for the job </h4>
       
       <div class="mb-4">
         <label for="name" class="block font-semibold text-gray-700 mb-1">Candidate Name :</label>
@@ -52,7 +52,7 @@
         <input type="text" name="dpincode" required class="w-full px-3 py-2 border rounded" id="dpincode" placeholder="Enter District or pincode">
       </div>
 
-      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">📝 Signup</button>
+      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">📝 Submit</button>
       
       <!-- <div class="text-right mt-4">
         <a href="login.php" class="text-blue-600 hover:underline">🔐 Login</a>
@@ -121,10 +121,10 @@
 
 
   <div class="flex flex-col items-center justify-center  p-2">
-                    <a href="index" class="text-white bg-blue-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center">
-                    <span class="text-2xl mr-2">👉</span> 
-                    <span class="text-2xl">Bharat CSC Hub – Click Here 🖱️</span>
-                    </a>
+  <a href="job.php" class="text-white bg-red-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center blink-bg">
+  <span class="mr-2 text-2xl">👉</span>
+  <span class="text-2xl"><b>नौकरी / Job – Click Here 🖱️</b></span>
+</a>
                 </div>
   </li>
 </ul>

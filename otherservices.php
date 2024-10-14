@@ -56,12 +56,12 @@
 
 
       <div class="max-w-4xl mx-auto py-8 px-4">
-    <h1 class="text-2xl font-bold text-center mb-10 text-blue-900">🎉 भारत डिजिटल सीएससी हब पोर्टल सेवाएँ 🎉</h1>
+    <h1 class="text-2xl font-bold text-center mb-10 text-blue-900"> भारत डिजिटल सीएससी हब पोर्टल सेवाएँ</h1>
 
     <!-- खाना बनाने वाले (Cook/Chef) -->
     <section class="animate-border bg-white shadow-lg rounded-lg p-6 mb-8 hover:shadow-xl transform hover:scale-105 transition duration-500">
        
-        <h5 class="text-2xl font-bold text-center mb-10 text-blue-900">🎉 सेवाएँ 🎉 
+        <h5 class="text-2xl font-bold text-center mb-10 text-blue-900">  
           <div class="flex flex-col items-center justify-center  p-2">
               <a href="https://bharatcschub.online/index" class="text-white bg-green-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center">
               <span class="mr-2">👉</span> 
@@ -69,6 +69,13 @@
               </a>
           </div>
         </h5>
+
+        <!-- <div class="flex justify-center">
+  <a href="job.php" class="text-white m-4 bg-red-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center blink-bg">
+    <span class="mr-2 text-2xl">👉</span>
+    <span class="text-2xl"><b>Ration Card Print Portal – Click Here 🖱️</b></span>
+  </a>
+</div> -->
 
 
         <div class="container mx-auto p-6">
@@ -114,7 +121,7 @@
       <ul class="list-disc list-inside space-y-2 text-gray-700">
         <li>🏡 घरेलू कुक (घर में खाना बनाने वाले)</li>
         <li>🍽️ प्रोफेशनल शेफ (रेस्टोरेंट और होटलों के लिए)</li>
-        <li>🎉 प्राइवेट कुक (घर में या पार्टी के लिए बुक किया जाने वाला कुक)</li>
+        <li> प्राइवेट कुक (घर में या पार्टी के लिए बुक किया जाने वाला कुक)</li>
         <li>🍔 फास्ट फूड कुक (बर्गर, पिज्जा, चाइनीज, आदि)</li>
         <li>🍝 कॉन्टिनेंटल शेफ (इटालियन, मैक्सिकन, थाई फूड)</li>
         <li>🍛 इंडियन कुक (दाल, चावल, सब्जी, रोटी, आदि)</li>
@@ -145,7 +152,7 @@
         <li>💐 फूलों से सजावट (Floral Decorator)</li>
         <li>🎵 लाइट और साउंड डेकोरेशन (DJ सेटअप, पार्टी लाइट्स)</li>
         <li>🎤 स्टेज और बैकड्रॉप डेकोरेशन</li>
-        <li>🎉 बलून और थीम डेकोरेशन</li>
+        <li> बलून और थीम डेकोरेशन</li>
         <li>🍽️ टेबल सेटअप और डाइनिंग डेकोरेशन</li>
         <li>📸 प्रॉप्स और फोटोग्राफी बैकड्रॉप्स</li>
         <li>🎶 मेहंदी और संगीत सजावट</li>
@@ -271,6 +278,13 @@
 
   <!-- Government Services -->
   <h2 class="text-xl font-bold mt-6">🏛️ सरकारी सेवाएँ</h2>
+  <div class="flex justify-center">
+  <a href="job.php" class="text-white m-4 bg-red-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center blink-bg">
+    <span class="mr-2 text-2xl">👉</span>
+    <span class="text-2xl"><b>नौकरी / Job – Click Here 🖱️</b></span>
+  </a>
+</div>
+
   <ul class="list-disc list-inside ml-4">
     <li>📱 उमंग ऐप: सभी सरकारी सेवाएँ एक ही प्लेटफार्म पर</li>
     <li>💼 प्रधानमंत्री जन-धन योजना: बैंकिंग सेवाओं तक पहुँच</li>
@@ -455,11 +469,13 @@
       
 
       <div class="max-w-4xl mx-auto py-8 px-4">
-    <h5 class="text-2xl font-bold text-center mb-10 text-blue-900">🎉 सेवाएँ 🎉 
-      
-                 
-              
-              </h5>
+    
+    <div class="flex justify-center">
+  <a href="job.php" class="text-white m-4 bg-red-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center blink-bg">
+    <span class="mr-2 text-2xl">👉</span>
+    <span class="text-2xl"><b>नौकरी / Job – Click Here 🖱️</b></span>
+  </a>
+</div>
 
 
     <!-- Banking and Financial Services -->
@@ -522,7 +538,7 @@
 
     <!-- Social and Entertainment Services -->
     <section class="animate-border bg-white shadow-lg rounded-lg p-6 mb-8 hover:shadow-xl transform hover:scale-105 transition duration-500">
-      <h2 class="text-2xl font-semibold text-orange-700 mb-4">🎉 सामाजिक और मनोरंजन सेवाएँ</h2>
+      <h2 class="text-2xl font-semibold text-orange-700 mb-4"> सामाजिक और मनोरंजन सेवाएँ</h2>
     </section>
 
     <!-- Electronics Related Jobs -->
@@ -578,7 +594,7 @@
 
     <!-- Decoration Services -->
     <section class="animate-border bg-white shadow-lg rounded-lg p-6 mb-8 hover:shadow-xl transform hover:scale-105 transition duration-500">
-      <h2 class="text-2xl font-semibold text-green-600 mb-4">🎉 पार्टी और फंक्शन सजावट करने वाले (Decoration Services for Party/Function)</h2>
+      <h2 class="text-2xl font-semibold text-green-600 mb-4"> पार्टी और फंक्शन सजावट करने वाले (Decoration Services for Party/Function)</h2>
     </section>
 
     <!-- Sweet Maker -->
@@ -635,7 +651,7 @@
          </div>
          <div class=" rounded-lg bg-blue-500">
             <div class="bg-yellow-100 border border-yellow-400 text-yellow-900 px-6 py-4 rounded-lg shadow-md">
-               <p class="text-xl font-bold mb-2">हम आपके सभी खास मौकों को यादगार बनाने के लिए प्रोफेशनल फोटोग्राफी और वीडियोग्राफी सेवाएं प्रदान करते हैं। 🎉</p>
+               <p class="text-xl font-bold mb-2">हम आपके सभी खास मौकों को यादगार बनाने के लिए प्रोफेशनल फोटोग्राफी और वीडियोग्राफी सेवाएं प्रदान करते हैं। </p>
                <p class="text-gray-800">चाहे वह बर्थडे पार्टी 🎂 हो, किसी फंक्शन 🎊 की शूटिंग हो, या शादी 👫 की खास यादों को कैद करना हो, हमारी टीम आपके हर पल को खूबसूरती से कैद करेगी।</p>
             </div>
          </div>
@@ -643,6 +659,12 @@
   <!-- Professional Jobs -->
   <div class="bg-blue-50 p-4 rounded-lg mb-6">
     <h2 class="text-xl font-bold text-blue-900 mb-4">1. पेशेवर नौकरियाँ 👩‍⚕️👨‍💻</h2>
+    <div class="flex justify-center">
+  <a href="job.php" class="text-white m-4 bg-red-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center blink-bg">
+    <span class="mr-2 text-2xl">👉</span>
+    <span class="text-2xl"><b>नौकरी / Job – Click Here 🖱️</b></span>
+  </a>
+</div>
     <ul class="list-disc list-inside space-y-2">
       <li>डॉक्टर (General Practitioner, Specialist, Surgeon) 🩺</li>
       <li>इंजीनियर (सिविल, मैकेनिकल, इलेक्ट्रिकल, सॉफ्टवेयर इंजीनियर) 👷‍♂️</li>
@@ -662,6 +684,7 @@
   <!-- Business -->
   <div class="bg-green-50 p-4 rounded-lg mb-6">
     <h2 class="text-xl font-bold text-green-900 mb-4">2. व्यवसाय/बिज़नेस 🏪</h2>
+  
     <ul class="list-disc list-inside space-y-2">
       <li>दुकानदार (General Store, किराना दुकान) 🛒</li>
       <li>रेस्टोरेंट/ढाबा (Food Business, Catering) 🍽️</li>
@@ -728,7 +751,7 @@
 
 
       <div class="p-4 ">
-  <h1 class="text-3xl font-bold text-center mb-6">🎉Franchise Opportunities in India</h1>
+  <h1 class="text-3xl font-bold text-center mb-6">Franchise Opportunities in India</h1>
   
   <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6">
     <!-- Retail Franchise -->
@@ -1044,6 +1067,12 @@
   <!-- Professional Jobs -->
   <div class="bg-gray-100 p-4 rounded-lg mb-6">
     <h2 class="text-xl font-bold mb-4">1. पेशेवर नौकरियाँ 👩‍⚕️👨‍💻</h2>
+    <div class="flex justify-center">
+  <a href="job.php" class="text-white m-4 bg-red-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center blink-bg">
+    <span class="mr-2 text-2xl">👉</span>
+    <span class="text-2xl"><b>नौकरी / Job – Click Here 🖱️</b></span>
+  </a>
+</div>
     <ul class="list-disc list-inside space-y-2">
       <li>डॉक्टर (General Practitioner, Specialist) 🩺</li>
       <li>इंजीनियर (सिविल, सॉफ्टवेयर) 👷‍♂️</li>

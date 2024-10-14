@@ -122,9 +122,17 @@
     <li class="text-gray-700 mt-2">
       <strong>फ्रीलांस सर्विसेज प्रोवाइडर:</strong> अगर आप किसी विशेष सेवा के लिए फ्रीलांसर हैं, तो हमसे जुड़ें और अपनी सेवाओं को हमारे प्लेटफॉर्म पर प्रदर्शित करें। 💼🖥️
     </li>
+
+    <li><a href="job.php" class="text-white bg-red-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center blink-bg">
+  <span class="mr-2 text-2xl">👉</span>
+  <span class="text-2xl"><b>नौकरी / Job – Click Here 🖱️</b></span>
+</a></li>
   </ul>
+  
 
   <div class="bg-gray-100 p-6 rounded-lg shadow-lg mb-6">
+
+  
     <h3 class="text-xl font-bold text-gray-800 mb-2">विशेष सेवाएं:</h3>
     <p class="text-gray-700">NGO, Coaching, Video Studio, Photography और E-commerce से जुड़े लोगों के लिए विशेष अवसर:</p>
     <ul class="list-disc pl-5 mt-4">

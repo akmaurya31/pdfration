@@ -6,6 +6,18 @@
     <link href="./output.css" rel="stylesheet" />
 </head>
 
+<style>
+  .blink-bg {
+    animation: background-blink 1s infinite;
+  }
+
+  @keyframes background-blink {
+    0% { background-color: #ef4444; } /* red-500 */
+    50% { background-color: #3b82f6; } /* blue-500 */
+    100% { background-color: #ef4444; } /* red-500 */
+  }
+</style>
+
 <?php session_start(); ?>
     <nav class="bg-white border-gray-200 ">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">

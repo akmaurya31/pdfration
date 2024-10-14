@@ -62,6 +62,19 @@ function getCurWallet($mysqli,$userId) {
 
 
 <body>
+
+<style>
+  .blink-bg {
+    animation: background-blink 1s infinite;
+  }
+
+  @keyframes background-blink {
+    0% { background-color: #ef4444; } /* red-500 */
+    50% { background-color: #3b82f6; } /* blue-500 */
+    100% { background-color: #ef4444; } /* red-500 */
+  }
+</style>
+
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
     <?php 
     

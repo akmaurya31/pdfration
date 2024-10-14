@@ -1,4 +1,6 @@
 <?php require_once("header.php"); ?>
+
+
  
 <div class="container max-w-[1200px] mx-auto py-12">
     <h2 class="text-3xl text-blue-600 font-bold text-center mb-8">🌟 Ration Card Print Portal Recharge Plans 🌟 </h2>
@@ -89,7 +91,18 @@
 </div>
 </div>
 
+<div class="flex flex-col items-center justify-center  gap-6 p-4">
+  <div class="text-center">
+  <h1 class="text-center text-2xl font-semibold mb-8">
+  रिचार्ज करने के बाद <a href="https://wa.me/7518869428" class="text-blue-500 underline" target="_blank">7518869428</a> पर स्क्रीनशॉट व्हाट्सएप पर भेजें! 📲 <span class="text-red-500 font-bold">भूलें नहीं!</span>
+</h1>
 
+<a href="job.php" class="text-white bg-red-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center blink-bg">
+  <span class="mr-2 text-2xl">👉</span>
+  <span class="text-2xl"><b>नौकरी / Job – Click Here 🖱️</b></span>
+</a>
+  </div>
+</div>
 
 
  
@@ -152,8 +165,6 @@
   </button>
 </div> -->
 
-<h1 class="text-center text-2xl font-semibold mt-8">
-  रिचार्ज करने के बाद <a href="https://wa.me/7518869428" class="text-blue-500 underline" target="_blank">7518869428</a> पर स्क्रीनशॉट व्हाट्सएप पर भेजें! 📲 <span class="text-red-500 font-bold">भूलें नहीं!</span>
-</h1>
+
 
 <?php require_once("footer.php");?>
