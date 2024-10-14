@@ -24,8 +24,8 @@
 
     <!-- CTA Button -->
     <hr class="w-1/4 border-red-500 mx-auto mt-4 ">
-            <!-- <form action="./stripe/public/checkout" method="POST"> -->
-             <form action="https://buy.stripe.com/8wMcPm1FUdbf7vy7sB" method="get"> 
+            <form action="./stripe/public/checkout" method="POST">
+             <!-- <form action="https://buy.stripe.com/8wMcPm1FUdbf7vy7sB" method="get">  -->
                 <button type="submit" id="checkout-button" class="bg-blue-500 text-white rounded-full px-4 py-2 mt-4 hover:bg-blue-600">
                     Pay Now
                 </button>
