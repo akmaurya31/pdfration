@@ -36,4 +36,13 @@ if (isset($_GET['transaction_id'])) {
 }
 
 echo '</div>';
+
+$frl=$fullUrl."/pay.php";
+
+echo '<div class="flex items-center justify-center ">'; // Flex container for centering
+echo '<a href="'.$frl.'" class="flex items-center bg-[#462602] text-white font-bold py-2 px-4 rounded shadow hover:bg-[#333] transition duration-200">';
+echo '<span class="mr-2">🔙</span>';  
+echo 'Back';
+echo '</a>';
+echo '</div>';
 ?>
