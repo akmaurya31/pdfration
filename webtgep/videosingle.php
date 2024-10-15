@@ -153,12 +153,13 @@ try {
       100% { transform: translateY(0); }
     }
 
-    .floating {
+    .floating2 {
       animation: float 3s ease-in-out infinite;
     }
 
     .highlight {
-      background: linear-gradient(90deg, rgba(255,183,77,1) 0%, rgba(255,255,255,1) 50%, rgba(255,183,77,1) 100%);
+      /* background: linear-gradient(90deg, rgba(255,183,77,1) 0%, rgba(255,255,255,1) 50%, rgba(255,183,77,1) 100%); */
+      background: #f8ddc1;
       background-size: 200% 100%;
       animation: shine 3s linear infinite;
     }
@@ -189,7 +190,7 @@ try {
           Your browser does not support the video tag.
         </video>
         <div class="p-4 highlight">
-          <h2 class="text-2xl font-bold text-indigo-600 mb-2"><?php echo $international_vyapaar_topics[$id]['title']; ?></h2>
+          
           <p class="text-gray-700">
           <?php echo $international_vyapaar_topics[$id]['description']; ?>
           </p>
@@ -197,7 +198,7 @@ try {
       </div>
  
 <div class="bg-white shadow-lg rounded-lg p-6 highlight">
-  <h2 class="text-xl font-bold text-indigo-600 mb-4">Meet the Coach</h2>
+  <h2 class="text-xl font-bold text-[#662406] mb-4">Meet the Coach</h2>
   <div class="flex items-center">
     <img class="w-16 h-16 rounded-full border-4 border-indigo-500 floating" src="./images/1724738738665.jpeg" alt="Coach Photo">
     <div class="ml-4">
@@ -208,7 +209,7 @@ try {
   <p class="mt-4 text-gray-700">
     Dr. Manav Ahuja is the founder of TPEG International LLC, Dubai, guiding entrepreneurs across the UAE, GCC, and Asia.   
   </p>
-  <p class="mt-4 text-indigo-600 font-bold">Key Highlights:</p>
+  <p class="mt-4 text-[#662406] font-bold">Key Highlights:</p>
   <ul class="list-disc ml-6 text-gray-700">
     <li>Founder of TPEG International LLC, Dubai, guiding entrepreneurs across the UAE, GCC, and Asia.</li>
     <li>25+ years of expertise in business consulting, offering strategic solutions for growth and global expansion.</li>
