@@ -35,8 +35,8 @@ if (count($prices->data) > 0) {
       ],
       //'mode' => 'subscription',  // Subscription-based checkout
       'mode' => 'payment',  // This is for one-time payments
-      'success_url' => $YOUR_DOMAIN . '/tpeg/public/success.php',  // Success redirect URL
-      'cancel_url' => $YOUR_DOMAIN . '/tpeg/public/cancel.php',    // Cancel redirect URL
+      'success_url' => $YOUR_DOMAIN . '/stripe/public/success.php',  // Success redirect URL
+      'cancel_url' => $YOUR_DOMAIN . '/stripe/public/cancel.php',    // Cancel redirect URL
     ]);
 
     // Redirect the customer to the Checkout Session

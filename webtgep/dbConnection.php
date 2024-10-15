@@ -20,6 +20,15 @@ include('dbconn.php');
 // Open a new connection to the MySQL server
 $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName); 
 
+try {
+    $pdo = new PDO("mysql:host=$databaseHost;dbname=$databaseName", $databaseUsername, $databasePassword);
+    // Set the PDO error mode to exception
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    //echo "Connected successfully"; 
+} catch(PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
+}
+
 
 function getCurrentBal($mysqli,$user_id) {
     $current_balance = 0;
