@@ -340,26 +340,104 @@ header {
 }
 
 .mission {
-    height: 357px;
+    height: 289px;
     margin: 42px auto 0;
-    padding: 27px 85px 30px 104px;
+    padding: 10px 10px 10px 10px;
     position: relative;
-    width: 1076px;
+    width: 374px;
     border-radius: 55px;
     background: url(images/rectangle_4.png) no-repeat;
 }
 
-.layer-2 {
-    float: left;
-    margin: 0 51px 0 0;
+.col-5 {
+  
 }
 
-.col-5 {
+.layer-2 {
+  /* margin: 0 51px 0 0; */
+  width:35%;
+  float: inline-start;
+}
+
+.text-9 {
+  /* margin: 44px 0 0; */
+  float: left;
+  margin-left: 32px;
+  margin-top: 18px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+ 
+
+.text-10 {
+  /* margin: 4px 0 0; */
+  /* font-size: 2.798866rem; */
+  font-weight: bold;
+  text-align: center;
+}
+
+.text-11 {
+  /* margin: 6px 0 0; */
+  font-size: 31px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+
+@media (min-width: 768px) {
+  .mission {
+    height: auto; /* Adjust as necessary */
+   /* Make it full width for smaller screens */
+    width: 1075px;
+    padding: 15px; /* Adjust padding for mobile */
+    margin: 20px auto; /* Adjust margin */
+    background-size: cover; /* Resize the background image for mobile */
+  }
+  .col-5 {
     float: left;
     margin: 13px 0 0;
     position: relative;
     width: 489px;
+  }
+
+  .layer-2 {
+    width:35%;
+    float: left;
+      margin: 0 51px 0 0;
+  }
+
+  .text-9 {
+    /* margin: 44px 0 0; */
+    font-size: 2.798866rem; /* 44.78px / 16px = 2.79875rem */
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .text-10 {
+    margin: 4px 0 0;
+    font-size: 2.798866rem; /* 44.78px / 16px = 2.79875rem */
+    font-weight: bold;
+    text-align: center;
 }
+
+
+
+
+.text-11 {
+  margin: 6px 0 0;
+  font-size: 2.798866rem; /* 44.78px / 16px = 2.79875rem */
+  font-weight: bold;
+  text-align: center;
+}
+
+
+
+}
+
+
+
 
 .mission-2 {
     font-size: 2.798866rem; /* 44.78px / 16px = 2.79875rem */
@@ -371,26 +449,10 @@ header {
     margin: 9px auto 0;
 }
 
-.text-9 {
-    /* margin: 44px 0 0; */
-    font-size: 2.798866rem; /* 44.78px / 16px = 2.79875rem */
-    font-weight: bold;
-    text-align: center;
-}
 
-.text-10 {
-    margin: 4px 0 0;
-    font-size: 2.798866rem; /* 44.78px / 16px = 2.79875rem */
-    font-weight: bold;
-    text-align: center;
-}
 
-.text-11 {
-    margin: 6px 0 0;
-    font-size: 2.798866rem; /* 44.78px / 16px = 2.79875rem */
-    font-weight: bold;
-    text-align: center;
-}
+
+
 
 .button {
     display: table;

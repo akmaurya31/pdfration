@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="description" content="Everything About International Vyapaar | TPEG International LLC Dubai | TPEG founded by Dr. Manav Ahuja">
     <meta name="keywords" content="TPEG,Product Consultation,International Vyapaar,TPEG International LLC Dubai">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <link rel="stylesheet" href="style.css"> 
     <link rel="stylesheet" href="aa1.css"> 
     <link rel="stylesheet" href="output.css"> 
-     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
 
 
     <!--[if IE 6]>
@@ -39,10 +39,17 @@
 			$('.match-height > *').matchHeight();
 		})
 	</script>
+
   </head>
   <body class="h-screen m-0 bg-black">
   
-        
+  <?php 
+
+include('screen.php');
+include('set_view.php');
+
+?>
+
             <header class="relative">
 
             <!-- <div class="bg-cover bg-center relative" style="background-image: url('images/rectangle_2.png'); height: 853px;"> -->
@@ -105,18 +112,33 @@
        
        
         <section class="">
+                <?php 
+                    if($_SESSION['device_view']=='desktop'){ 
+                       $l1=' width="829" height="181"';
+                       $l2=' width="846" height="70"';
+                       $l3=' width="342" height="122"';
+                       $l4=' width="347" height="300"';
+                    }
+                    else{ 
+                        $l1=' width="829" height="181"';
+                        $l2=' width="846" height="70"';
+                        $l3=' width="342" height="122"';
+                        $l4=' width="347" height="300"';
+                     }
+                ?>
+
             <div class="l-unconstrained mb-10 bg-black">
                 <div class="l-constrained">
                   <div class="ibiv-log">
-                    <img class="pngtree-golden-light-spot_4402336-copy-5" src="images/pngtree_golden_light_spot.png" alt="" width="829" height="181">
+                    <img class="pngtree-golden-light-spot_4402336-copy-5" src="images/pngtree_golden_light_spot.png" alt="" <?php echo $l1;?> >
                     <div class="col">
-                      <img class="text-8" src="images/iss_baar_international_vy.png" alt="Iss Baar International Vyappar" width="846" height="70" title="Iss Baar International Vyappar">
-                      <img class="vector-smart-object-2" src="images/vector_smart_object_2.png" alt="" width="342" height="122">
+                      <img class="text-8" src="images/iss_baar_international_vy.png" alt="Iss Baar International Vyappar" <?php echo $l2;?> title="Iss Baar International Vyappar">
+                      <img class="vector-smart-object-2" src="images/vector_smart_object_2.png" <?php echo $l3;?> alt="" >
                     </div>
-                    <img class="pngtree-golden-light-spot_4402336-copy-6" src="images/pngtree_golden_light_spot_2.png" alt="" width="829" height="181">
+                    <img class="pngtree-golden-light-spot_4402336-copy-6" src="images/pngtree_golden_light_spot_2.png" alt=""<?php echo $l4;?> >
                   </div>
                   <div class="mission group">
-                    <img class="layer-2" src="images/layer_2.png" alt="" width="347" height="300">
+                    <img class="layer-2" src="images/layer_2.png" alt="">
                     <div class="col-5">
                       
                       <p class="mission-2">Mission</p> 
@@ -132,9 +154,9 @@
                       <div class="rectangle-6-holder text-center mb-2">
                           Join 90 Minutes Learning on
                       </div>
-                      <p class="text-13 text-center mb-7">Everything About International Vyapaar</p>
+                      <p class="text-13 text-center mb-7 p-[20px] md:p-[5px]">Everything About International Vyapaar</p>
 
-                      <button type="button" class="w-[570px] focus:outline-none text-white text-2xl font-bold bg-orange-500 hover:bg-orange-700 focus:ring-4 focus:ring-yellow-300 rounded-full px-5 py-2.5 mb-2 dark:focus:ring-yellow-900 border-2 border-[#fff]"  onclick="window.location.href='signup.php'">
+                      <button type="button" class="w-[250px] md:w-[570px] focus:outline-none text-white text-2xl font-bold bg-orange-500 hover:bg-orange-700 focus:ring-4 focus:ring-yellow-300 rounded-full px-5 py-2.5 mb-2 dark:focus:ring-yellow-900 border-2 border-[#fff]"  onclick="window.location.href='signup.php'">
                        
                         <img class="triangle-3-copy-2 ml-20" src="images/triangle_3_copy_2.png" alt="" width="75" height="35"> Join Now
 
@@ -157,136 +179,139 @@
                 </p>
                 <div class="h-[5px] mt-[30px] mx-auto bg-[#454545] w-[179px]"></div>
 
-                <div class="flex flex-row gap-8 justify-center w-[1138px] mx-auto">
-                    <div class="w-1/2">
+                <?php 
+                    if($_SESSION['device_view']=='desktop'){ 
+                        echo '<div class="flex flex-row gap-8 justify-center w-[1138px] mx-auto">';
+                    }
+                    else{ 
+                        echo '<div class="flex flex-col justify-center  mx-auto">';
+                     }
+                ?>
 
-                    <div class="mt-[62px] mx-auto relative ">
-                        <ul class="list-none">
-                            <li class="min-h-[92px] p-[6px_11px] relative rounded-[45.89px] bg-[#f36d46] flex items-center mb-[20px]">
-                                <div class="bpoint" style="border:5px #fff solid;">
-                                    1
-                                </div>
-                                <p class="text-2xl font-medium leading-[39.58333px]">
-                                    किस देश में आपकी Products की<br>ज्यादा Demand होगी
-                                </p>
-                            </li>
-                            <li class="min-h-[92px] p-[6px_11px] relative rounded-[45.89px] bg-[#e0842a] flex items-center mb-[20px]">
-                                <div class="bpoint" style="border:5px #fff solid;">
-                                    2
-                                </div>
-                                <p class="text-2xl font-medium mt-[10px]">
-                                    आपके माल की सेफ्टी कैसे होगी
-                                </p>
-                            </li>
-                            <li class="min-h-[92px] p-[8px_11px_4px] relative rounded-[45.89px] bg-[#f36d46] flex items-center mb-[20px]">
-                                <div class="bpoint" style="border:5px #fff solid;">
-                                    3
-                                </div>
-                                <p class="text-2xl font-medium">
-                                    आपकी हर पेमेंट Advance में Safe<br>और कैसे होगी
-                                </p>
-                            </li>
-                            <li class="min-h-[92px] p-[8px_11px_4px] relative rounded-[45.89px] bg-[#e0842a] flex items-center mb-[20px]">
-                                <div class="bpoint" style="border:5px #fff solid;">
-                                    4
-                                </div>
-                                <p class="text-2xl font-medium">
-                                    International Markets में Genuine<br>Buyers कैसे ढूंढे
-                                </p>
-                            </li>
-                            <li class="min-h-[92px] p-[8px_11px_4px] relative rounded-[45.89px] bg-[#f36d46] flex items-center mb-[20px]">
-                                <div class="bpoint" style="border:5px #fff solid;">
-                                    5
-                                </div>
-                                <p class="text-2xl font-medium">
-                                    अपने Products को सही Price<br>पर कैसे बेचें
-                                </p>
-                            </li>
-                            <li class="min-h-[92px] p-[8px_11px_4px] relative rounded-[45.89px] bg-[#e0842a] flex items-center mb-[20px]">
-                                <div class="bpoint" style="border:5px #fff solid;">
-                                    6
-                                </div>
-                                <p class="text-2xl font-medium">
-                                    Advance Payment लेने के क्या<br>तरीके होते हैं
-                                </p>
-                            </li>  
+                
+        
+                <?php if($_SESSION['device_view']=='desktop'){ echo '<div class="w-1/2">'; } else{ echo '<div class="w-[100%]">'; } ?>
+
+                    <!-- <div class="w-1/2"> -->
+                        <div class="mt-[62px] mx-auto relative ">
+                            <ul class="list-none">
+                                <li class="min-h-[92px] p-[6px_11px] relative rounded-[45.89px] bg-[#f36d46] flex items-center mb-[20px]">
+                                    <div class="bpoint" style="border:5px #fff solid;">
+                                        1
+                                    </div>
+                                    <p class="text-xl md:text-2xl font-medium leading-[27px] md:leading-[39px]">
+                                            किस देश में आपकी Products की<br>ज्यादा Demand होगी
+                                        </p>
+                                </li>
+                                <li class="min-h-[92px] p-[6px_11px] relative rounded-[45.89px] bg-[#e0842a] flex items-center mb-[20px]">
+                                    <div class="bpoint" style="border:5px #fff solid;">
+                                        2
+                                    </div>
+                                    <p class="text-xl md:text-2xl font-medium leading-[27px] md:leading-[39px]">
+                                        आपके माल की सेफ्टी कैसे होगी
+                                    </p>
+                                </li>
+                                <li class="min-h-[92px] p-[8px_11px_4px] relative rounded-[45.89px] bg-[#f36d46] flex items-center mb-[20px]">
+                                    <div class="bpoint" style="border:5px #fff solid;">
+                                        3
+                                    </div>
+                                    <p class="text-xl md:text-2xl font-medium leading-[27px] md:leading-[39px]">
+                                        आपकी हर पेमेंट Advance में Safe<br>और कैसे होगी
+                                    </p>
+                                </li>
+                                <li class="min-h-[92px] p-[8px_11px_4px] relative rounded-[45.89px] bg-[#e0842a] flex items-center mb-[20px]">
+                                    <div class="bpoint" style="border:5px #fff solid;">
+                                        4
+                                    </div>
+                                    <p class="text-xl md:text-2xl font-medium leading-[27px] md:leading-[39px]">
+                                        International Markets में Genuine<br>Buyers कैसे ढूंढे
+                                    </p>
+                                </li>
+                                <li class="min-h-[92px] p-[8px_11px_4px] relative rounded-[45.89px] bg-[#f36d46] flex items-center mb-[20px]">
+                                    <div class="bpoint" style="border:5px #fff solid;">
+                                        5
+                                    </div>
+                                    <p class="text-xl md:text-2xl font-medium leading-[27px] md:leading-[39px]">
+                                        अपने Products को सही Price<br>पर कैसे बेचें
+                                    </p>
+                                </li>
+                                <li class="min-h-[92px] p-[8px_11px_4px] relative rounded-[45.89px] bg-[#e0842a] flex items-center mb-[20px]">
+                                    <div class="bpoint" style="border:5px #fff solid;">
+                                        6
+                                    </div>
+                                    <p class="text-xl md:text-2xl font-medium leading-[27px] md:leading-[39px]">
+                                        Advance Payment लेने के क्या<br>तरीके होते हैं
+                                    </p>
+                                </li>  
+                                
+                                
                             
                             
-                        
-                        
-                        </ul>
-                    </div>
+                            </ul>
+                        </div>
+                    <!-- </div> -->
+                    <!-- <div class="w-1/2"> -->
+                    <?php if($_SESSION['device_view']=='desktop'){ echo '</div><div class="w-1/2"><div class="mt-[62px] mx-auto relative ">'; } else{ echo '</div><div class="w-[100%]"><div class=" mx-auto relative ">'; } ?>
 
 
-                    </div>
-                    <div class="w-1/2"><div class="mt-[62px] mx-auto relative ">
-                    <ul class="list-none">
 
+                     
+                      <ul class="list-none">
                         <li class="min-h-[92px] p-[8px_11px_4px] relative rounded-[45.89px] bg-[#f36d46] flex items-center mb-[20px]">
                             <div class="bpoint" style="border:5px #fff solid;">
                                 7
                             </div>
-                            <p class="text-2xl font-medium">
+                            <p class="text-xl md:text-2xl font-medium leading-[27px] md:leading-[39px]">
                                 Advance Payment लेने के क्या<br>तरीके होते हैं
                             </p>
                         </li> 
-
                         <li class="min-h-[92px] p-[8px_11px_4px] relative rounded-[45.89px] bg-[#e0842a] flex items-center mb-[20px]">
                             <div class="bpoint" style="border:5px #fff solid;">
                             8
                             </div>
-                            <p class="text-2xl font-medium">
+                            <p class="text-xl md:text-2xl font-medium leading-[27px] md:leading-[39px]">
                                 Product Shipment के सारे तरीके
                             </p>
                         </li>    
-
-
                         <li class="min-h-[92px] p-[8px_11px_4px] relative rounded-[45.89px] bg-[#f36d46] flex items-center mb-[20px]">
                             <div class="bpoint" style="border:5px #fff solid;">
                                 9
                             </div>
-                            <p class="text-2xl font-medium">
+                            <p class="text-xl md:text-2xl font-medium leading-[27px] md:leading-[39px]">
                                 Legal Penalties से कैसे safeguard<br>किया जा सकता है
                             </p>
                         </li> 
-
                         <li class="min-h-[92px] p-[8px_11px_4px] relative rounded-[45.89px] bg-[#e0842a] flex items-center mb-[20px]">
                             <div class="bpoint" style="border:5px #fff solid;">
                                 10
                             </div>
-                            <p class="text-2xl font-medium">
+                            <p class="text-xl md:text-2xl font-medium leading-[27px] md:leading-[39px]">
                                 International Buyers को Product<br>सैंपल कैसे भेजना होता है
                             </p>
                         </li> 
-
-
-
                         <li class="min-h-[92px] p-[8px_11px_4px] relative rounded-[45.89px] bg-[#f36d46] flex items-center mb-[20px]">
                             <div class="bpoint" style="border:5px #fff solid;">
                                 11
                             </div>
-                            <p class="text-2xl font-medium">
+                            <p class="text-xl md:text-2xl font-medium leading-[27px] md:leading-[39px]">
                                 कम Cost पर ऑनलाइन मार्केटिं<br>&nbsp;कैसे करना चाहिए
                             </p>
                         </li> 
-
-
                         <li class="min-h-[92px] p-[8px_11px_4px] relative rounded-[45.89px] bg-[#e0842a] flex items-center mb-[20px]">
                             <div class="bpoint" style="border:5px #fff solid;">
                                 12
                             </div>
-                            <p class="text-2xl font-medium ">
+                            <p class="text-xl md:text-2xl font-medium leading-[27px] md:leading-[39px] ">
                                 
                                 <img class="triangle-3-copy-2" src="images/triangle_3_copy_2.png" alt="" width="75" height="35">
                                 ….और भी बहुत कुछ
                             </p>
                         </li> 
+                     </ul>
+                <!-- </div> -->
+               
 
-
-                    
-                        
-                    </ul>
-                </div></div>
+            </div>
                 </div>
 
 
@@ -302,34 +327,46 @@
                         <p class="text-38">Benefits after Master Class Completion</p>
                     </div> 
                     <div class="down-arrow mx-auto"></div>
-                    <div class="group mx-auto relative mt-[65px] w-[1104px] flex flex-wrap gap-4">
-                    <div class="relative w-[536px] z-0 mb-[30px]"> <!-- First Row, First Column -->
-                        <img class="rectangle-4-copy-3 block mx-auto relative w-[455px] z-[118] rounded-[29px]" src="images/rectangle_4_copy_3.png" alt="">
-                        <img class="rectangle-4 block mx-auto -mt-[173px] relative z-[114] w-[534px] h-[239px]" src="images/rectangle_4_2.png" alt="">
+
+                    <?php 
+                    if($_SESSION['device_view']=='desktop'){ 
+                        echo '<div class="group mx-auto relative mt-[65px] w-[1104px] flex flex-wrap gap-4">';
+                    }
+                    else{ 
+                        echo '<div class="group mx-auto relative mt-[65px]  flex flex-col gap-4">';
+                     }
+                ?>
+                    
+                  <!-- <div class="group mx-auto relative mt-[65px] w-[100%] md:w-[1104px] flex flex-wrap md:flex-col  gap-4">  -->
+
+
+                    <div class="relative  w-[100%] md:w-[536px] z-0 mb-[30px]  "> <!-- First Row, First Column -->
+                        <img class="rectangle-4-copy-3 block mx-auto relative  w-[100%] md:w-[536px] z-[118] rounded-[29px]" src="images/rectangle_4_copy_3.png" alt="">
+                        <img class="rectangle-4 block mx-auto -mt-[173px] relative z-[114]   w-[100%] md:w-[536px] h-[239px]" src="images/rectangle_4_2.png" alt="">
                         <p class="relative z-[120] -mt-[25px] text-[1.909722rem] font-medium tracking-[0.02em] leading-[38.88889px] text-center">
                         आपके 2 &nbsp;Products के लिए Free<br>Research &amp; Survey TPEG टीम द्वारा
                         </p>
                     </div>
         
-                    <div class="relative w-[536px] z-0 mb-[30px]"> <!-- First Row, Second Column -->
-                        <img class="rectangle-4-copy-3 block mx-auto relative w-[455px] z-[118] rounded-[29px]" src="images/rectangle_4_copy.png" alt="">
-                        <img class="rectangle-4 block mx-auto -mt-[173px] relative z-[114] w-[534px] h-[239px]" src="images/rectangle_4_2.png" alt="">
+                    <div class="relative  w-[100%] md:w-[536px] z-0 mb-[30px]"> <!-- First Row, Second Column -->
+                        <img class="rectangle-4-copy-3 block mx-auto relative   w-[100%] md:w-[455px] z-[118] rounded-[29px]" src="images/rectangle_4_copy.png" alt="">
+                        <img class="rectangle-4 block mx-auto -mt-[173px] relative z-[114]   w-[100%] md:w-[536px] h-[239px]" src="images/rectangle_4_2.png" alt="">
                         <p class="relative z-[120] -mt-[25px] text-[1.909722rem] font-medium tracking-[0.02em] leading-[38.88889px] text-center">
                         एक फ्री Product Consultation<br>मीटिंग TPEG टीम के साथ
                         </p>            
                     </div>
-                    <div class="relative w-[536px] z-0 mb-[30px]"> <!-- Second Row, First Column -->
+                    <div class="relative  w-[100%] md:w-[536px] z-0 mb-[30px]"> <!-- Second Row, First Column -->
         
-                        <img class="rectangle-4-copy-3 block mx-auto relative w-[455px] z-[118] rounded-[29px]" src="images/rectangle_4_copy_2.png" alt="">
-                        <img class="rectangle-4 block mx-auto -mt-[173px] relative z-[114] w-[534px] h-[239px]" src="images/rectangle_4_2.png" alt="">
+                        <img class="rectangle-4-copy-3 block mx-auto relative   w-[100%] md:w-[455px] z-[118] rounded-[29px]" src="images/rectangle_4_copy_2.png" alt="">
+                        <img class="rectangle-4 block mx-auto -mt-[173px] relative z-[114]   w-[100%] md:w-[536px] h-[239px]" src="images/rectangle_4_2.png" alt="">
                         <p class="relative z-[120] -mt-[25px] text-[1.909722rem] font-medium tracking-[0.02em] leading-[38.88889px] text-center">
                         आप Eligible जाते हैं, हमारी<br>G2B- Guaranteed<br>Global Orders Service के लिए
                         </p>
                         
                     </div>
-                    <div class="relative w-[536px] z-0"> <!-- Second Row, Second Column -->
-                        <img class="rectangle-4-copy-3 block mx-auto relative w-[455px] z-[118] rounded-[29px]" src="images/rectangle_4_copy_2_2.png" alt="">
-                        <img class="rectangle-4 block mx-auto -mt-[173px] relative z-[114] w-[534px] h-[239px]" src="images/rectangle_4_2.png" alt="">
+                    <div class="relative  w-[100%] md:w-[536px] z-0"> <!-- Second Row, Second Column -->
+                        <img class="rectangle-4-copy-3 block mx-auto relative   w-[100%] md:w-[455px] z-[118] rounded-[29px]" src="images/rectangle_4_copy_2_2.png" alt="">
+                        <img class="rectangle-4 block mx-auto -mt-[173px] relative z-[114]   w-[100%] md:w-[536px] h-[239px]" src="images/rectangle_4_2.png" alt="">
                         <p class="relative z-[120] -mt-[25px] text-[1.909722rem] font-medium tracking-[0.02em] leading-[38.88889px] text-center">
                         International Buyers<br>ready हुए तो आपके Products<br>के लिए Instant Order
                         </p>
@@ -345,7 +382,7 @@
                             Participants Testimonials
                         </p>
                     <div class="shape-1-copy mb-4"></div>
-                    <div class="flex gap-4 items-center justify-center">
+                    <div class="flex flex-col md:flex-row gap-4 items-center justify-center">
                      <div class="flex float-left mt-6 px-5  justify-center ">
                         <div>
                             <iframe width="345"   src="https://www.youtube.com/embed/_See9F46ypo?si=_UCkd2vy8fJM6dXh&amp;start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -362,14 +399,15 @@
                         </div>
                     </div>
                     </div>
-                    <button type="button" class="w-[570px] mt-10 focus:outline-none text-white text-2xl font-bold bg-orange-500 hover:bg-orange-700 focus:ring-4 focus:ring-yellow-300 rounded-full px-5 py-2.5 mb-2 dark:focus:ring-yellow-900 border-2 border-[#fff]"  onclick="window.location.href='signup.php'">
+
+                    <button type="button" class="w-[350px] md:w-[570px] mt-10 focus:outline-none text-white text-2xl font-bold bg-orange-500 hover:bg-orange-700 focus:ring-4 focus:ring-yellow-300 rounded-full px-5 py-2.5 mb-2 dark:focus:ring-yellow-900 border-2 border-[#fff]"  onclick="window.location.href='signup.php'">
                         <img class="triangle-3-copy-2 ml-20" src="images/triangle_3_copy_2.png" alt="" width="75" height="35"> Join Now
                       </button>
                   </div>
         </div>
         </section>
         <section class="bg-black">  
-        <div class="flex flex-auto">
+        <div class="flex  flex-auto">
             <div class="mx-auto min-h-[711px] px-0 pt-[95px]     bg-[url('images/adjustments.jpg')] bg-no-repeat">
                 <p class="text-[2.604167rem] font-extrabold leading-[1.2] mx-[113px] my-0 ml-[786px]">
                     <span class="text-[3.472223rem] font-normal">About</span><br>
@@ -475,6 +513,29 @@
                 </div>
             </div>
         </footer>
+
+
+        <!-- JavaScript to handle carousel functionality -->
+<script>
+    const carouselItems = document.querySelectorAll('[data-carousel-item]');
+    let activeIndex = 1;
+
+    // Handle next click
+    document.querySelector('[data-carousel-next]').addEventListener('click', () => {
+        carouselItems[activeIndex].classList.add('hidden');
+        activeIndex = (activeIndex + 1) % carouselItems.length;
+        carouselItems[activeIndex].classList.remove('hidden');
+        carouselItems[activeIndex].classList.add('active');
+    });
+
+    // Handle previous click
+    document.querySelector('[data-carousel-prev]').addEventListener('click', () => {
+        carouselItems[activeIndex].classList.add('hidden');
+        activeIndex = (activeIndex - 1 + carouselItems.length) % carouselItems.length;
+        carouselItems[activeIndex].classList.remove('hidden');
+        carouselItems[activeIndex].classList.add('active');
+    });
+</script>
 
 <script>
     // Set the initial timer value to 15 minutes

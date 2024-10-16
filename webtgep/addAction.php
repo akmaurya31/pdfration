@@ -62,10 +62,12 @@ if (isset($_POST['submit'])) {
             $result = mysqli_query($mysqli, "INSERT INTO users (`name`, `mobile`, `email`,`password`,`city`,`state`,`yourbusiness`) VALUES ('$name', '$mobile', '$email','$password','$city','$state','$yourbusiness')");
             
             // Display success message
-            echo '<div class="bg-green-100 border max-w-[1325px] border-green-400 mt-5 text-green-700 px-4 py-3 rounded relative mx-auto" role="alert">
-                    <strong class="font-bold">Success!</strong>
-                    <span class="block sm:inline">Your account has been created successfully.</span>
-                </div>';
+            echo '<div class="flex justify-center items-center">
+                        <div class="bg-green-100 border max-w-[1325px] border-green-400 mt-5 text-green-700 px-4 py-3 rounded relative" role="alert">
+                            <strong class="font-bold text-2xl">Success!</strong>
+                            <span class="block sm:inline text-2xl">Your account has been created successfully.</span>
+                        </div>
+                    </div>';
 
             echo '<div class="flex justify-center mt-4 space-x-2">
                     <a href="login.php" class="inline-flex items-center bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">

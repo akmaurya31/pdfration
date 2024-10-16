@@ -1,7 +1,14 @@
 module.exports = {
-  content: ['*',  './styles.css'], // Include all your HTML files
+  content: ['*',  './styles.css',
+    './public/**/*.html',
+    './src/**/*.{js,jsx,ts,tsx}',
+    'node_modules/flowbite/**/*.js'  
+  ], // Include all your HTML files
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin') // Add Flowbite plugin
+  ],
 };
+ 
