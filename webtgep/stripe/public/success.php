@@ -5,6 +5,8 @@ require_once '../vendor/autoload.php';
 require_once '../secrets.php';
 include('../../dbConnection.php');
 
+session_start();
+
 echo '<img src="./images/sign.jpeg" class="block w-full " />';
 echo '<div class="flex items-center justify-center mt-5">'; // Flex container for centering
 
@@ -44,7 +46,7 @@ if ($session_id) {
                 WHERE 
                     mobile = '$mobile'";
 
-                    print_r($_SERVER);
+                    print_r($_SESSION);
 
             die("ASas");
 
