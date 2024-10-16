@@ -1,81 +1,75 @@
+<script src="https://cdn.tailwindcss.com"></script>
 <?php
 
 require_once '../vendor/autoload.php';
 require_once '../secrets.php';
 include('../../dbConnection.php');
 
+echo '<img src="./images/sign.jpeg" class="block w-full " />';
+echo '<div class="flex items-center justify-center mt-5">'; // Flex container for centering
+
 \Stripe\Stripe::setApiKey($stripeSecretKey); // Set your Stripe secret key
-
-// Retrieve the session ID from the query parameters
 $session_id = $_GET['session_id'] ?? null;
-//print_r($_SESSION);
-
 
 if ($session_id) {
     try {
-        // Retrieve the checkout session from Stripe using the session_id
+        // Retrieve the checkout session
         $checkout_session = \Stripe\Checkout\Session::retrieve($session_id);
-
-        // Get the payment intent ID (transaction ID)
         $payment_intent_id = $checkout_session->payment_intent;
 
-        // Retrieve the payment intent to get full payment details
+        // Retrieve the payment intent
         $payment_intent = \Stripe\PaymentIntent::retrieve($payment_intent_id);
-
-        // Extract relevant details
         $transaction_id = $payment_intent->id;
         $amount_received = $payment_intent->amount_received / 100;  // Convert from cents to dollars
         $currency = $payment_intent->currency;
         $status = $payment_intent->status;  // e.g., 'succeeded'
         
-        // Transaction ID: pi_3QAaV7J9aZcY4Vva1rhBAaMR
-        // Amount Paid: 490 INR
-        // Payment Status: succeeded
+        // Assuming mobile is stored in session
+        $mobile = $_SESSION['idd'];  
+        $current_balance = $amount_received; // Assuming current balance is same as amount received
+        $pay = $amount_received; 
+        $pstatus = 'succeeded';   
+        $pcurrency = $currency;
 
-        // users set 
-        // current_balance
-        // pay
-        // pstatus
-        // pcurrency
-        // transaction_id where =mobile=
-
-        $mobile =  $_SESSION['idd'];  //'9876543210';  // Mobile number of the user
-        $current_balance =$payment_intent->amount_received / 100;
-        $pay =$payment_intent->amount_received / 100;
-        $pstatus = 'succeeded';  // Payment status (succeeded, failed, pending)
-        $pcurrency =  $payment_intent->currency;
-        $transaction_id = $payment_intent->id;
-
+        // Construct the SQL update query without bind
         $sql = "UPDATE users 
-        SET 
-            current_balance = $current_balance, 
-            pay = $pay, 
-            pstatus = '$pstatus', 
-            pcurrency = '$pcurrency', 
-            transaction_id = '$transaction_id' 
-        WHERE 
-            mobile = '$mobile'";
+                SET 
+                    current_balance = $current_balance, 
+                    pay = $pay, 
+                    pstatus = '$pstatus', 
+                    pcurrency = '$pcurrency', 
+                    transaction_id = '$transaction_id' 
+                WHERE 
+                    mobile = '$mobile'";
 
-
+        // Execute the SQL query directly
         if ($pdo->exec($sql)) {
-            echo "User's payment information updated successfully!";
+            echo '<div class="bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded relative mb-4">';
+            echo '<strong class="font-bold">Success!</strong>';
+            echo '<span class="block sm:inline">User payment information updated successfully!</span>';
+            echo '</div>';
+            
+            echo '<div class="flex justify-center mt-5">';
+            echo '<button onclick="window.location.href=\'https://tpeg-ibiv.com/video.php\'" class="bg-blue-500 text-white font-bold py-2 px-4 rounded">';
+            echo 'Go to Video Page';
+            echo '</button>';
+            echo '</div>';
         } else {
-            echo "Error updating user's payment information.";
+            echo '<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4">';
+            echo '<strong class="font-bold">Error!</strong>';
+            echo '<span class="block sm:inline">Error updating user\'s payment information.</span>';
+            echo '</div>';
         }
-
-        // Display or process the transaction details
-        // echo "Transaction ID: " . $transaction_id . "<br>";
-        // echo "Amount Paid: " . $amount_received . " " . strtoupper($currency) . "<br>";
-        // echo "Payment Status: " . $status . "<br>";
-        
-
-        // Optionally, save the transaction details in your database
-        // You can insert the transaction details into your database here
-
     } catch (Exception $e) {
-        echo "Error retrieving payment details: " . $e->getMessage();
+        echo '<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4">';
+        echo '<strong class="font-bold">Error!</strong>';
+        echo '<span class="block sm:inline">Error retrieving payment details: ' . htmlspecialchars($e->getMessage()) . '</span>';
+        echo '</div>';
     }
 } else {
-    echo "Session ID not found!";
+    echo '<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4">';
+    echo '<strong class="font-bold">Error!</strong>';
+    echo '<span class="block sm:inline">Session ID not found!</span>';
+    echo '</div>';
 }
-
+?>
