@@ -61,10 +61,10 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
                             <br /><?php echo $row['email']; ?></td>
                             <td class="px-6 py-4 font-bold"><?php echo $row['city']; ?><?php echo $row['state']; ?></td>
                             <td class="px-6 py-4 font-bold text-green-700"><?php echo $row['mobile']; ?><br/><?php echo $row['password']; ?></td>
-                            <td class="px-6 py-4 font-bold text-color-red"><?php echo $row['pstatus']; ?></td>
+                            <td class="px-6 py-4 font-bold text-color-red"><?php if($row['pstatus']){ echo ucfirst($row['pstatus']); } ?></td>
                             <td class="px-6 py-4 font-bold"><?php echo $row['transaction_id']; ?></td>
                             <td class="px-6 py-4 font-bold"><?php echo $row['pay']; ?></td>
-                            <td class="px-6 py-4 font-bold"><?php echo $row['pay_date']; ?></td>
+                            <td class="px-6 py-4 font-bold"><?php echo $row['edate']; ?></td>
                             <td class="px-6 py-4 flex flex-col space-y-2">
                                 <button class="neditButton bg-green-500 text-white py-1 px-2 rounded" data-toggle="modal" data-target="#myModal" data-userid="<?php echo $row['id']; ?>" 
                                 data-modal-target="myModal" data-modal-toggle="myModal">ProfileEdit</button>

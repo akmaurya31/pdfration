@@ -1,5 +1,9 @@
+<script src="https://cdn.tailwindcss.com"></script>
 <?php
 require_once("dbConnection.php");
+echo '<img src="./images/sign.jpeg" class="block w-full " />';
+echo '<div class=" flex flex-col items-center justify-center mt-5">'; // Flex container for centering
+
 session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve username and password from the form
@@ -48,11 +52,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         } else {
             // User does not exist or password is incorrect
-            echo "Incorrect username or password.";
+            // Redirect to login.php after one second
+                    
+            echo '<div class="  bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4">';
+            echo '<strong class="font-bold">Failed!</strong>';
+            echo '<span class="block sm:inline">Incorrect username or password.</span>';
+            echo '</div>';
+            
+            //echo '<p class="block">You will be redirected to the login page in 1 second...</p>';
+            // Using flex to arrange items in a row
+            echo '<div class="flex flex-row items-center mt-4">'; 
+            // Here, 'items-center' aligns items vertically in the center, you can adjust as needed
+            echo '<button onclick="window.location.href=\'login.php\'" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2">Go Back</button>';
+           // echo '<span class="text-sm">You can also click the button to go back</span>'; // Additional message
+            echo '</div>'; // Close flex container
+            
+            echo '<script>
+                    function goBack() {
+                        window.history.back();
+                    }
+                    setTimeout(function() {
+                        window.location.href = "login.php";
+                    }, 1000); // Redirect after 1 second
+                  </script>';
         }
-
-        // Close the statement
-        $stmt->close();
 
         // Close the database connection
         $mysqli->close();

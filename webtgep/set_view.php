@@ -15,7 +15,8 @@ if (isset($_POST['view'])) {
 
 // Example of using the device view variable
 if (isset($_SESSION['device_view'])) {
-    echo "Current View: " . $_SESSION['device_view']; // Outputs the current view
+    // echo "Current View: " . $_SESSION['device_view']; 
+    // Outputs the current view
 }
 
 //print_r($_SESSION);

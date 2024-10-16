@@ -6,12 +6,12 @@
 
 <div class="flex flex-col md:flex-row bg-white p-6 border border-gray-300 rounded-lg shadow-lg max-w-4xl mx-auto gap-4 ">
   <!-- Left side (Image) -->
-  <div class="md:w-1/2 flex justify-center items-center">
+  <div class=" flex justify-center items-center">
     <img src="./images/payleft.jpeg" alt="Dr. Manav Ahuja" class="rounded-lg max-w-[150px]" style="width: 330px;">
   </div>
 
   <!-- Right side (Text) -->
-  <div class="md:w-1/2 md:pl-8 mt-6 md:mt-0 ml-2">
+  <div class=" md:pl-8 mt-6 md:mt-0 ml-2">
     <h2 class="text-2xl font-bold text-gray-800 mb-2">Join Master Class on</h2>
     <h3 class="text-xl font-semibold text-blue-600 mb-2">Iss Baar International Vyapaar - Digital</h3>
     <p class="text-lg font-medium text-red-500 mb-2">Rs. 490/- only</p>

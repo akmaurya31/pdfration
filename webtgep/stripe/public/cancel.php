@@ -3,7 +3,7 @@
 // Include database connection or ORM
 include('../../dbConnection.php');  // Replace with your actual DB connection code
 echo '<img src="./images/sign.jpeg" class="block w-full " />';
-echo '<div class="flex items-center justify-center mt-5">'; // Flex container for centering
+echo '<div class=" flex flex-col items-center justify-center mt-5">';
 // Log or process the cancellation, you may want to update the database as well
 if (isset($_GET['transaction_id'])) {
     $transaction_id = $_GET['transaction_id'];
