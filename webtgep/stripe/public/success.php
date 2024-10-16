@@ -44,7 +44,7 @@ if ($session_id) {
                 WHERE 
                     mobile = '$mobile'";
 
-                    print_r($sql);
+                    print_r($_SERVER);
 
             die("ASas");
 
