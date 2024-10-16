@@ -33,7 +33,7 @@ if ($session_id) {
 
       
 
-        // Construct the SQL update query without bind
+        // Construct the SQL update query without bind//
         echo $sql = "UPDATE users 
                 SET 
                     current_balance = $current_balance, 
