@@ -48,7 +48,7 @@ if ($session_id) {
             echo '<strong class="font-bold">Success!</strong>';
             echo '<span class="block sm:inline">User payment information updated successfully!</span>';
             echo '</div>';
-            
+
             echo '<div class="flex justify-center mt-5">';
             echo '<button onclick="window.location.href=\'https://tpeg-ibiv.com/video.php\'" class="bg-blue-500 text-white font-bold py-2 px-4 rounded">';
             echo 'Go to Video Page';
@@ -59,11 +59,22 @@ if ($session_id) {
             echo '<strong class="font-bold">Error!</strong>';
             echo '<span class="block sm:inline">Error updating user\'s payment information.</span>';
             echo '</div>';
+
+            echo '<div class="flex justify-center mt-5">';
+            echo '<button onclick="window.location.href=\'https://tpeg-ibiv.com/pay.php\'" class="bg-blue-500 text-white font-bold py-2 px-4 rounded">';
+            echo 'Go to Pay';
+            echo '</button>';
+            echo '</div>';
         }
     } catch (Exception $e) {
         echo '<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4">';
         echo '<strong class="font-bold">Error!</strong>';
         echo '<span class="block sm:inline">Error retrieving payment details: ' . htmlspecialchars($e->getMessage()) . '</span>';
+        echo '</div>';
+        echo '<div class="flex justify-center mt-5">';
+        echo '<button onclick="window.location.href=\'https://tpeg-ibiv.com/pay.php\'" class="bg-blue-500 text-white font-bold py-2 px-4 rounded">';
+        echo 'Go to Pay';
+        echo '</button>';
         echo '</div>';
     }
 } else {
@@ -71,5 +82,11 @@ if ($session_id) {
     echo '<strong class="font-bold">Error!</strong>';
     echo '<span class="block sm:inline">Session ID not found!</span>';
     echo '</div>';
+
+    echo '<button onclick="window.location.href=\'https://tpeg-ibiv.com/pay.php\'" class="bg-blue-500 text-white font-bold py-2 px-4 rounded">';
+    echo 'Go to Pay';
+    echo '</button>';
+    echo '</div>';
+    
 }
 ?>
