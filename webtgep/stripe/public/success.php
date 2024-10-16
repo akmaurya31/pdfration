@@ -27,7 +27,7 @@ if ($session_id) {
         $status = $payment_intent->status;  // e.g., 'succeeded'
         
         // Assuming mobile is stored in session
-        $mobile = $_SESSION['idd'];  
+        $idd = $_SESSION['idd'];  
         $current_balance = $amount_received; // Assuming current balance is same as amount received
         $pay = $amount_received; 
         $pstatus = 'succeeded';   
@@ -36,7 +36,7 @@ if ($session_id) {
       
 
         // Construct the SQL update query without bind//
-        echo $sql = "UPDATE users 
+          $sql = "UPDATE users 
                 SET 
                     current_balance = $current_balance, 
                     pay = $pay, 
@@ -44,11 +44,11 @@ if ($session_id) {
                     pcurrency = '$pcurrency', 
                     transaction_id = '$transaction_id' 
                 WHERE 
-                    mobile = '$mobile'";
+                    id = '$idd'";
 
-                    print_r($_SESSION);
+                   // print_r($_SESSION);
 
-            die("ASas");
+           // die("ASas");
 
         // Execute the SQL query directly
         if ($pdo->exec($sql)) {
