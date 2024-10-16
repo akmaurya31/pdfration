@@ -31,8 +31,10 @@ if ($session_id) {
         $pstatus = 'succeeded';   
         $pcurrency = $currency;
 
+      
+
         // Construct the SQL update query without bind
-        $sql = "UPDATE users 
+        echo $sql = "UPDATE users 
                 SET 
                     current_balance = $current_balance, 
                     pay = $pay, 
@@ -41,6 +43,10 @@ if ($session_id) {
                     transaction_id = '$transaction_id' 
                 WHERE 
                     mobile = '$mobile'";
+
+                    print_r($sql);
+
+            die("ASas");
 
         // Execute the SQL query directly
         if ($pdo->exec($sql)) {
@@ -87,6 +93,6 @@ if ($session_id) {
     echo 'Go to Pay';
     echo '</button>';
     echo '</div>';
-    
+
 }
 ?>
