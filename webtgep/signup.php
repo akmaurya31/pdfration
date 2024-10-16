@@ -22,7 +22,7 @@
       <!-- Mobile Field -->
       <div>
         <label for="mobile" class="block mb-2 text-sm font-medium text-gray-900">📱 Mobile *</label>
-        <input type="text" name="mobile" id="mobile" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Enter your mobile number" required />
+        <input type="text" name="mobile" id="mobile" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Enter your mobile number" required oninput="validateMobile(this)"  />
       </div>
 
       <!-- Email Field -->
@@ -64,8 +64,29 @@
       </div>
     </form>
   </div>
+  <script>
+function validateMobile(input) {
+    // Get the current value of the input
+    let value = input.value;
+
+    // Remove any non-digit characters
+    value = value.replace(/\D/g, ''); // Removes all non-digit characters
+
+    // Remove leading zero if present
+    if (value.startsWith('0')) {
+        value = value.slice(1); // Remove the first character
+    }
+
+    // Update the input value
+    input.value = value;
+}
+</script>
+
+
 </body>
 </html>
+
+
 
 
   
