@@ -29,7 +29,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
                     <th class="px-6 py-3">Name/Email</th>
                     <th class="px-6 py-3">Address</th>
                     <th class="px-6 py-3">Contact Name</th>
-                    <th class="px-6 py-3">Plan Status</th>
+                    <th class="px-6 py-3">Pay Status</th>
                     <th class="px-6 py-3">Transaction ID / UTR</th>
                     <th class="px-6 py-3">Current Balance</th>
                     <th class="px-6 py-3">Pay Date</th>
@@ -61,9 +61,9 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
                             <br /><?php echo $row['email']; ?></td>
                             <td class="px-6 py-4 font-bold"><?php echo $row['city']; ?><?php echo $row['state']; ?></td>
                             <td class="px-6 py-4 font-bold text-green-700"><?php echo $row['mobile']; ?><br/><?php echo $row['password']; ?></td>
-                            <td class="px-6 py-4 font-bold text-color-red"><?php echo $row['pay']; ?></td>
+                            <td class="px-6 py-4 font-bold text-color-red"><?php echo $row['pstatus']; ?></td>
                             <td class="px-6 py-4 font-bold"><?php echo $row['transaction_id']; ?></td>
-                            <td class="px-6 py-4 font-bold"><?php echo $rscurr; ?></td>
+                            <td class="px-6 py-4 font-bold"><?php echo $row['pay']; ?></td>
                             <td class="px-6 py-4 font-bold"><?php echo $row['pay_date']; ?></td>
                             <td class="px-6 py-4 flex flex-col space-y-2">
                                 <button class="neditButton bg-green-500 text-white py-1 px-2 rounded" data-toggle="modal" data-target="#myModal" data-userid="<?php echo $row['id']; ?>" 
