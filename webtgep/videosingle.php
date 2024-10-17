@@ -34,10 +34,25 @@ $international_vyapaar_topics = [
 
 
 
-$ro=getCurWallet($mysqlii,$_SESSION['idd']);
-$roinc=0;
-if(isset($ro->current_balance) && $ro->current_balance>0){
-  $roinc=$ro->current_balance;
+// $ro=getCurWallet($mysqlii,$_SESSION['idd']);
+// $roinc=0;
+// if(isset($ro->current_balance) && $ro->current_balance>0){
+//   $roinc=$ro->current_balance;
+// }
+
+
+$sql = "SELECT * FROM users WHERE mobile='" . $_SESSION['mobile'] . "' ORDER BY id DESC LIMIT 1";
+$ro = $mysqlii->query($sql);
+$roinc = 0;
+
+if ($ro && $ro->num_rows > 0) {
+    // Fetch the row from the result set
+    $row = $ro->fetch_assoc();
+
+    // Check if the `current_balance` exists in the row and is greater than 0
+    if (isset($row['current_balance']) && $row['current_balance'] > 0) {
+        $roinc = $row['current_balance'];
+    }
 }
 
 if($roinc<=0){

@@ -40,10 +40,13 @@ function getUserDataById($mysqli,$userId) {
   }
 }
 
+ 
+
 
 function getCurWallet($mysqli,$userId) {
-  $sql = "SELECT * FROM wallet WHERE user_id='" . $userId . "' order by id desc limit 0,1";
+    $sql = "SELECT * FROM wallet WHERE user_id='" . $userId . "' order by id desc limit 0,1";
   $result = $mysqli->query($sql);
+  //print_r($result);
   if ($result->num_rows > 0) {
       $row = $result->fetch_assoc();
       $userDataObj = new stdClass();
