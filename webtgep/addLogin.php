@@ -43,10 +43,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               $_SESSION['yourbusiness'] = trim($row['yourbusiness']);
               $_SESSION['role'] = trim($row['role']);
               $_SESSION['is_login'] = true;
+              $_SESSION['current_balance'] = trim($row['current_balance']);
+
+              
               $stmt->close();
             // echo "User logged in successfully!";
-
-              header("Location: pay.php");
+             if($row['current_balance']<0){
+                header("Location: pay.php");
+             }else if($row['current_balance']>0){
+                header("Location: video.php");
+             }else{
+                header("Location: pay.php");
+             }
               exit;
             // Do something with the user data
 

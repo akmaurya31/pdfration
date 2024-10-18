@@ -49,18 +49,11 @@ include('screen.php');
 include('set_view.php');
 
 ?>
-
+    <?php if($_SESSION['device_view']=='desktop'){  ?>
             <header class="relative">
-
             <!-- <div class="bg-cover bg-center relative" style="background-image: url('images/rectangle_2.png'); height: 853px;"> -->
-
                 <!-- <div class="relative bg-center bg-no-repeat w-full" style="background-image: url('images/rectangle_2.png'); background-size: contain; height: 100vh;"> -->
-
                     <div class="bg-cover bg-center relative" style="background-image: url('images/rectangle_2.png'); height: 853px;">
-
-
-
-
             <div class="mx-auto relative z-0">
                 <div class="relative mx-auto overflow-hidden z-[29] w-[885px]">
                 <img class="block mx-auto mt-6" src="images/-.png" alt="बहुत बड़ा बाजार - बहुत बड़ी मार्किट" width="362" height="" title="बहुत बड़ा बाजार - बहुत बड़ी मार्किट">
@@ -101,15 +94,15 @@ include('set_view.php');
                         <img class="block mx-auto mt-3 animate-bounce-left-right" src="images/international_brand.png" alt="International Brand" width="638" height="53" title="International Brand">
                 <p class="mt-6 text-[3.038194rem] font-medium text-center">बना कर रहेंगे हम</p>
             </div> -->
-
             <img src="./images/vyp.jpeg" class="w-full h-[30%]" />
-
-
         </div>
-            
         </header>
-      
-       
+        <?php }else{ ?>
+            
+            <img src="./images/mob1.jpg" class="" />
+
+
+            <?php }  ?>
        
         <section class="">
                 <?php 
@@ -129,7 +122,9 @@ include('set_view.php');
 
             <div class="l-unconstrained mb-10 bg-black">
                 <div class="l-constrained">
-                  <div class="ibiv-log">
+                 
+                <?php  if($_SESSION['device_view']=='desktop'){  ?>
+                 <div class="ibiv-log">
                     <img class="pngtree-golden-light-spot_4402336-copy-5" src="images/pngtree_golden_light_spot.png" alt="" <?php echo $l1;?> >
                     <div class="col">
                       <img class="text-8" src="images/iss_baar_international_vy.png" alt="Iss Baar International Vyappar" <?php echo $l2;?> title="Iss Baar International Vyappar">
@@ -137,6 +132,9 @@ include('set_view.php');
                     </div>
                     <img class="pngtree-golden-light-spot_4402336-copy-6" src="images/pngtree_golden_light_spot_2.png" alt=""<?php echo $l4;?> >
                   </div>
+                  <?php }  ?>
+
+
                   <div class="mission group">
                     <img class="layer-2" src="images/layer_2.png" alt="">
                     <div class="col-5">
@@ -406,6 +404,9 @@ include('set_view.php');
                   </div>
         </div>
         </section>
+
+        <?php  if($_SESSION['device_view']=='desktop'){  ?>
+
         <section class="bg-black">  
         <div class="flex  flex-auto">
             <div class="mx-auto min-h-[711px] px-0 pt-[95px]     bg-[url('images/adjustments.jpg')] bg-no-repeat">
@@ -481,14 +482,14 @@ include('set_view.php');
         </div>
       </section>
         
+ <?php   } ?>
 
-
-        <footer class="footer my-4 mx-auto relative w-[1664px]">
+        <footer class="footer my-4 mx-auto relative w-[100%] md:w-[1664px]">
             <div class="bottom-timer mx-auto relative">
                 <a href="signup.php">
-                    <div class="mx-auto min-h-[71px] rounded-[35.66px] bg-gradient-to-r from-[#f80404] to-[#ff6000] w-[667px]">
-                        <div class="max-w-[667px] text-center">
-                            <p class="text-[47.77px] font-bold leading-[71px] text-center uppercase">Grab the Special Offer</p>
+                    <div class="mx-auto min-h-[71px] rounded-[35.66px] bg-gradient-to-r from-[#f80404] to-[#ff6000] w-[100%] md:w-[667px]">
+                        <div class="max-w-[227px] md:max-w-[667px] text-center">
+                            <p class="text-[20.77px] md:text-[47.77px] font-bold leading-[71px] text-center uppercase">Grab the Special Offer</p>
                         </div>
                     </div>
                 </a>

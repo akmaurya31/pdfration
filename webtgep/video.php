@@ -85,8 +85,8 @@
           <div class="flex items-center mb-4">
             <img class="w-12 h-12 rounded-full border-2 border-indigo-500 floating" src="./images/1724738738665.jpeg    " alt="Author Photo">
             <div class="ml-4">
-              <p class="text-sm text-gray-700 font-semibold">Keynoter: Dr Manav Ahuja</p>
-              <p class="text-xs text-gray-500">Duration: 45 mins</p>
+              <p class="text-sm text-gray-700 font-semibold">Subject Matter Expert - Dr Manav Ahuja</p>
+              <p class="text-xs text-gray-500">Duration: 21 mins</p>
             </div>
           </div>
           <a href="videosingle?id=1" class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition duration-300">View Now</a>
@@ -108,8 +108,8 @@
           <div class="flex items-center mb-4">
             <img class="w-12 h-12 rounded-full border-2 border-indigo-500 floating" src="./images/1724738738665.jpeg    " alt="Author Photo">
             <div class="ml-4">
-              <p class="text-sm text-gray-700 font-semibold">Keynoter: Dr Manav Ahuja</p>
-              <p class="text-xs text-gray-500">Duration: 45 mins</p>
+              <p class="text-sm text-gray-700 font-semibold">Subject Matter Expert - Dr Manav Ahuja</p>
+              <p class="text-xs text-gray-500">Duration: 15 mins</p>
             </div>
           </div>
           <a href="videosingle?id=2" class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition duration-300">View Now</a>
@@ -131,8 +131,8 @@
           <div class="flex items-center mb-4">
             <img class="w-12 h-12 rounded-full border-2 border-indigo-500 floating" src="./images/1724738738665.jpeg" alt="Author Photo">
             <div class="ml-4">
-              <p class="text-sm text-gray-700 font-semibold">Keynoter: Dr Manav Ahuja</p>
-              <p class="text-xs text-gray-500">Duration: 45 mins</p>
+              <p class="text-sm text-gray-700 font-semibold">Subject Matter Expert - Mr Deepak Nailwal</p>
+              <p class="text-xs text-gray-500">Duration: 11 mins</p>
             </div>
           </div>
           <a href="videosingle?id=3" class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition duration-300">View Now</a>
@@ -154,8 +154,8 @@
           <div class="flex items-center mb-4">
             <img class="w-12 h-12 rounded-full border-2 border-indigo-500 floating" src="./images/1724738738665.jpeg    " alt="Author Photo">
             <div class="ml-4">
-              <p class="text-sm text-gray-700 font-semibold">Keynoter: Dr Manav Ahuja</p>
-              <p class="text-xs text-gray-500">Duration: 45 mins</p>
+              <p class="text-sm text-gray-700 font-semibold">Subject Matter Expert - Dr Manav Ahuja</p>
+              <p class="text-xs text-gray-500">Duration: 32 mins</p>
             </div>
           </div>
           <a href="videosingle?id=4" class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition duration-300">View Now</a>
@@ -180,8 +180,8 @@
           <div class="flex items-center mb-4">
             <img class="w-12 h-12 rounded-full border-2 border-indigo-500 floating" src="./images/1724738738665.jpeg    " alt="Author Photo">
             <div class="ml-4">
-              <p class="text-sm text-gray-700 font-semibold">Keynoter: Dr Manav Ahuja</p>
-              <p class="text-xs text-gray-500">Duration: 45 mins</p>
+              <p class="text-sm text-gray-700 font-semibold">Subject Matter Expert - Dr Manav Ahuja</p>
+              <p class="text-xs text-gray-500">Duration: 21 mins</p>
             </div>
           </div>
           <a href="videosingle?id=5" class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition duration-300">View Now</a>

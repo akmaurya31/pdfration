@@ -90,16 +90,19 @@ function getCurWallet($mysqli,$userId) {
   <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
     <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white  ">
       <li>
-        <a href="pay.php" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 " aria-current="page">  🎥<?php // print_r($_SESSION); ?> 
+        <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 " aria-current="page">  🎥<?php // print_r($_SESSION); ?> 
          <?php echo $_SESSION['mobile'] ?> <br/> </a>
       </li>
       <li>
         <a href="video.php" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0   ">  📩 Your Content</a>
       </li>
+
+      <?php if($_SESSION['current_balance']<0) { ?>
  
       <li>
         <a href="pay.php" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0   ">  💰PayNow</a>
       </li>
+      <?php } ?>
 
       <?php if($_SESSION['role']=='admin') { ?>
       <li>

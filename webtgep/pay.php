@@ -89,22 +89,34 @@
       <!-- Modal Body -->
       <div class="p-4">
         <!-- Your image or content here -->
-        <img src="images/payment.jpg" class="w-[75%] h-[50%]" alt="Payment Screenshot" />
+        <img src="images/payment.jpg" class="w-[60%] h-[50%]" alt="Payment Screenshot" />
+
+        <div class="bg-gray-100 border border-2px p-6 rounded-lg shadow-lg max-w-4xl mx-auto mt-8">
+  <h2 class="text-2xl font-bold text-gray-800 mb-4">Dear Participant,</h2>
+  <p class="text-lg text-gray-700 mb-4">
+  Once You make the Payment through UPI – Please send the payment Screenshot to  
+   
+
+  <!-- Highlighted WhatsApp Number -->
+  <span class="text-lg font-semibold text-green-600 mb-4">
+    WhatsApp Number: <a href="https://wa.me/919999027340" class="underline">+91- 9999027340</a>
+  </span>
+
+  <span class="text-lg text-gray-700 mb-4">
+  and We will send the Login Details to Watch IBIV – Digital Master Class within 12 hours. 
+  </span>
+
+  <span class="text-lg font-medium text-gray-800">Thanks!</span> </p>
+</div>
+
+
+
       </div>
 
       <!-- Modal Footer -->
       <div class="flex justify-end p-4 border-t border-gray-300">
-        <button
-          type="button"
-          class="mr-2 px-6 py-2 bg-red-500 text-white text-xs font-medium uppercase rounded hover:bg-red-600 focus:bg-red-600 focus:outline-none"
-          onclick="document.getElementById('exampleModal').classList.add('hidden');">
-          Close
-        </button>
-        <button
-          type="button"
-          class="px-6 py-2 bg-blue-500 text-white text-xs font-medium uppercase rounded hover:bg-blue-600 focus:bg-blue-600 focus:outline-none">
-          Save changes
-        </button>
+        
+        
       </div>
     </div>
   </div>
