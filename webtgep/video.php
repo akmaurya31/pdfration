@@ -45,7 +45,7 @@
 
   if($roinc<=0){
 
-      echo '<div class="flex flex-col w-[1025px]" >
+      echo '<div class="flex flex-col md:w-[1025px] pt-20 " >
       <div class="bg-red-100 border   border-red-400 mt-5 text-red-700 px-4 py-3 rounded relative mx-auto" role="alert">
       <strong class="font-bold">!!</strong>
       <span class="block sm:inline">Please Contact to administrator.</span>

@@ -190,7 +190,7 @@ try {
 
  
   <!-- Main Content Section -->
-  <section class="py-12 w-[900px]  mx-auto grid   gap-2">
+  <section class="py-12 md:w-[900px]  mx-auto grid   gap-2">
     <!-- Video and About the Lesson -->
     <a href="video.php" class="back-button flex items-center bg-yellow-500 text-white px-4 py-2 rounded hover:bg-blue-600">
         <span class="back-icon mr-2">⬅️</span>
@@ -200,7 +200,7 @@ try {
       <!-- Video Section -->
        <!-- <h1 class="text-xl">  <?php echo $international_vyapaar_topics[$id]['title']; ?></h1> -->
       <div class="bg-white shadow-lg rounded-lg overflow-hidden mb-8">
-        <video id="mainVideo" class=" h-[500px]" controls>
+        <video id="mainVideo" class="md:h-[500px]" controls>
           <source src="<?php echo $presignedUrl ?>" type="video/mp4"  oncontextmenu="return false;" controlslist="nodownload">
           Your browser does not support the video tag.
         </video>

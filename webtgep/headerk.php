@@ -6,6 +6,7 @@ session_start();
 <html>
 <head>
 <?php //include('meta.php');?>
+<meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="./output.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

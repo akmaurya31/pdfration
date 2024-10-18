@@ -25,20 +25,20 @@
     <div class="p-1">
     <form action="addLogin" method="post" name="add" class="space-y-4 bg-white p-2 shadow-lg rounded-lg">
   <!-- Username (Email/Mobile) Field -->
-  <div class="flex items-center">
+  <div class="flex flex-col md:flex-row md:items-center">
     <label for="username" class="w-40 text-sm font-medium text-gray-900 dark:text-white">📧 Email/Mobile *</label>
     <input type="text" name="username" id="username" placeholder="Email or Mobile" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 flex-1 p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
   </div>
 
   <!-- Password Field -->
-  <div class="flex items-center">
+  <div class="flex flex-col md:flex-row md:items-center">
     <label for="password" class="w-40 text-sm font-medium text-gray-900 dark:text-white">🔒 Password *</label>
     <input type="password" name="password" id="password" placeholder="Password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 flex-1 p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
   </div>
 
   <!-- Remember Me and Forgot Password -->
-  <div class="flex items-center justify-between mb-4 hidden">
-    <div class="flex items-center">
+  <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 hidden">
+    <div class="flex flex-col md:flex-row md:items-center">
       <input id="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600" />
       <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
     </div>
