@@ -82,12 +82,12 @@ $randomBackgroundColor = $backgroundColors[array_rand($backgroundColors)];
     हमारी टीम <strong class="font-bold">2-3 घंटे</strong> में आपसे संपर्क करेगी! ⏳ सिर्फ <strong class="text-green-500">व्हाट्सएप</strong> का उपयोग करें। धन्यवाद! 🙏✨
   </p>
 
-  <div class="flex justify-center">
+  <!-- <div class="flex justify-center">
   <a href="job.php" class="text-white m-4 bg-red-500 hover:bg-blue-700 border rounded-xl shadow px-4 py-2 inline-flex items-center blink-bg">
     <span class="mr-2 text-2xl">👉</span>
     <span class="text-2xl"><b>नौकरी / Job – Click Here 🖱️</b></span>
   </a>
-</div>
+</div> -->
 
 </div>
 
