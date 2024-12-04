@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Twilio Video Call</title>
+  <script src="https://sdk.twilio.com/js/video/releases/2.21.1/twilio-video.min.js"></script>
+  <style>
+    #local-video, #remote-video {
+      width: 45%;
+      height: auto;
+      margin: 10px;
+    }
+    #container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Twilio Video Call</h1>
+  <div id="container">
+    <video id="local-video" autoplay muted></video>
+    <video id="remote-video" autoplay></video>
+  </div>
+  <button id="join-room">Join Room</button>
+  <input id="room-name" type="text" placeholder="Enter room name">
+  <script src="app.js"></script>
+</body>
+</html>

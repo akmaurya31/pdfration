@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Twilio Video</title>
+  <script src="https://media.twiliocdn.com/sdk/js/video/latest/twilio-video.min.js"></script>
+</head>
+<body>
+  <h1>Twilio Video Room</h1>
+  
+  <input type="text" id="room-name" placeholder="Enter Room Name" />
+  <button id="join-room">Join Room</button>
+
+  <h2>Your Video</h2>
+  <video id="local-video" autoplay muted></video>
+
+  <h2>Remote Participant</h2>
+  <video id="remote-video" autoplay></video>
+
+ 
+  <script>
+     console.log(Twilio,'adfasd'); 
+    const joinButton = document.getElementById('join-room');
+    const roomNameInput = document.getElementById('room-name');
+    const localVideo = document.getElementById('local-video');
+    const remoteVideo = document.getElementById('remote-video');
+
+    async function getToken(identity = 'Rekha1', roomName = 'Rekha') {
+      const queryParams = new URLSearchParams({ identity, roomName });
+      const response = await fetch(`http://localhost:5000/token?${queryParams.toString()}`);
+      const data = await response.json();
+      return data.token;
+    }
+
+    joinButton.addEventListener('click', async () => {
+      try {
+        const token = await getToken();
+        const roomName = roomNameInput.value;
+
+        if (!token) {
+          throw new Error('Failed to fetch a valid token');
+        }
+
+        // Connect to the room
+        const room = await Twilio.Video.connect(token, { name: roomName });
+        console.log(`Connected to Room: ${room.name}`);
+
+        // Attach local video
+        const localTrack = await Twilio.Video.createLocalVideoTrack();
+        localVideo.srcObject = new MediaStream([localTrack.mediaStreamTrack]);
+
+        // Attach remote participants
+        room.on('participantConnected', participant => {
+          console.log(`Participant "${participant.identity}" connected`);
+
+          // Subscribe to participant tracks
+          participant.tracks.forEach(publication => {
+            if (publication.isSubscribed) {
+              const track = publication.track;
+              remoteVideo.srcObject = new MediaStream([track.mediaStreamTrack]);
+            }
+          });
+
+          // Listen for newly subscribed tracks
+          participant.on('trackSubscribed', track => {
+            remoteVideo.srcObject = new MediaStream([track.mediaStreamTrack]);
+          });
+        });
+
+        // Handle disconnection
+        room.on('participantDisconnected', participant => {
+          console.log(`Participant "${participant.identity}" disconnected`);
+        });
+      } catch (error) {
+        console.error('Error connecting to room:', error.message);
+      }
+    });
+  </script>
+</body>
+</html>
