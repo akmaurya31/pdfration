@@ -27,7 +27,7 @@
     </div>
 
     <div class="bg-gray-800 p-4 rounded-lg shadow-md text-center w-full md:w-1/4">
-        <p class="text-xl font-semibold"> Prashant 369/45,   Second Floor, <br> Near Jagannath Temple, Agna Gowniwada, <br> Owale, Thane - 400615</p>
+        <p class="text-xl font-semibold"> Prashant <br/> 369/45,   Second Floor, <br> Near Jagannath Temple, Agna Gowniwada, <br> Owale, Thane - 400615</p>
         <p class="mt-2 text-sm">📞 +91 8800388752</p>
     </div>
 </div>
