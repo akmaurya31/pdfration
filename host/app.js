@@ -11,7 +11,7 @@ async function getToken(identity = 'Rekha1', roomName = 'Rekha') {
     identity,
     roomName
   });
-  const response = await fetch(`http://localhost:5000/token?${queryParams.toString()}`);
+  const response = await fetch(`https://bharatcschub.online:5000/token?${queryParams.toString()}`);
   const data = await response.json();
   return data.token;
 }
