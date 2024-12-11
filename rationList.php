@@ -261,23 +261,10 @@ $result = $mysqli->query($sql);
                 data: { idd: idd },
                 success: function(response1) {
                     var response = JSON.parse(response1);
-                    $('#adhar').val(response.adhar);
                     $('#dration_no').val(response.ration);
-                    $('#town').val(response.town);
                     $('#mukhiya').val(response.mukhiya);
-                    $('#father').val(response.father);
-                    $('#cast_certificate').val(response.cast_certificate);
-                    $('#address').val(response.address);
-                    $('#gas_connection_no').val(response.gas_connection_no);
-                    $('#unit').val(response.unit);
-                    $('#dukan_no').val(response.dukan_no);
+                    $('#DrivePath').val(response.pdf_path);
                     $('#Janpad').val(response.janpad);
-                    $('.kphoto').attr('src', response.photo_path);
-                    $('.kpariwar').attr('src', response.screenshot_path);
-                    $('.kpdf').attr('href', response.pdf_path);
-                    
-                    
-
                 },
                 error: function(xhr, status, error) {
                     console.error('Failed to fetch userId from the server:', error);
@@ -286,39 +273,18 @@ $result = $mysqli->query($sql);
         });
 
 
-        $(document).ready(function() {
+ $(document).ready(function() {
         
-            $('#rationForm').submit(function(event) {
+ $('#rationForm').submit(function(event) {
     event.preventDefault();
-    // Create a new FormData object
     var formData = new FormData();
-    // Add form fields to FormData object
     $(this).find('input, textarea, select').each(function() {
         var field = $(this);
         var fieldName = field.attr('name');
         var fieldValue = field.val();
-        // Append to FormData
         formData.append(fieldName, fieldValue);
     });
-
-    // Add file inputs to FormData object
-     var pdfUpload = $('#pdfUpload')[0].files[0];
-    if (pdfUpload) {
-        formData.append('pdfUpload', pdfUpload);
-    }
-    
-    
-    
-    var photoUpload = $('#photoUpload')[0].files[0];
-    if (photoUpload) {
-        formData.append('photoUpload', photoUpload);
-    }
-
-    var screenshotUpload = $('#screenshotUpload')[0].files[0];
-    if (screenshotUpload) {
-        formData.append('screenshotUpload', screenshotUpload);
-    }
-
+  
     $.ajax({
         type: 'POST',
         url: 'jqeditRation',
@@ -334,11 +300,9 @@ $result = $mysqli->query($sql);
             swal("Error!", "There was an error processing your request.", "error");
         }
     });
-});
-
-
-
     });
+
+ });
         
     $('.ndownload').click(function() {
         var idd = $(this).data('idd');
