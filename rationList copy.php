@@ -217,18 +217,54 @@ $result = $mysqli->query($sql);
                                 <input type="text" class="form-control bg-gray-100 border border-gray-300 rounded-lg p-2 w-full" id="dration_no" name="ration_no" placeholder="Enter Your Rashan Card No.">
                                 <input type="hidden" id="frid" name="rid">
                             </div>
-
                             <div class="w-full md:w-1/3 px-2 mb-4 md:mb-0">
-                                <label for="mukhiya" class="block text-gray-700 font-bold mb-2">Mukhiya Name:</label>
-                                <input type="text" class="form-control bg-gray-100 border border-gray-300 rounded-lg p-2 w-full" id="mukhiya" name="mukhiya" placeholder="Enter Your Mukhiya Name">
+                                <label for="town" class="block text-gray-700 font-bold mb-2">Town:</label>
+                                <input type="text" class="form-control bg-gray-100 border border-gray-300 rounded-lg p-2 w-full" id="town" name="town" placeholder="Enter Your Home Town">
                             </div>
-                          
                             <div class="w-full md:w-1/3 px-2">
                                 <label for="Janpad" class="block text-gray-700 font-bold mb-2">जनपद:</label>
                                 <input type="text" class="form-control bg-gray-100 border border-gray-300 rounded-lg p-2 w-full" id="Janpad" name="Janpad" placeholder="Enter Your Janpad Name">
                             </div>
                         </div>
 
+                        <!-- Row 2 -->
+                        <div class="flex flex-wrap -mx-2 mb-4">
+                            <div class="w-full md:w-1/3 px-2 mb-4 md:mb-0">
+                                <label for="mukhiya" class="block text-gray-700 font-bold mb-2">Mukhiya Name:</label>
+                                <input type="text" class="form-control bg-gray-100 border border-gray-300 rounded-lg p-2 w-full" id="mukhiya" name="mukhiya" placeholder="Enter Your Mukhiya Name">
+                            </div>
+                            <div class="w-full md:w-1/3 px-2 mb-4 md:mb-0">
+                                <label for="father" class="block text-gray-700 font-bold mb-2">Father/Husband Name:</label>
+                                <input type="text" class="form-control bg-gray-100 border border-gray-300 rounded-lg p-2 w-full" id="father" name="father" placeholder="Enter Name">
+                            </div>
+                            <div class="w-full md:w-1/3 px-2">
+                                <label for="cast_certificate" class="block text-gray-700 font-bold mb-2">Jati:</label>
+                                <input type="text" class="form-control bg-gray-100 border border-gray-300 rounded-lg p-2 w-full" id="cast_certificate" name="cast_certificate" placeholder="Enter Your Jati">
+                            </div>
+                        </div>
+
+                        <!-- Row 3 -->
+                        <div class="flex flex-wrap -mx-2 mb-4">
+                            <div class="w-full md:w-1/3 px-2 mb-4 md:mb-0">
+                                <label for="adhar" class="block text-gray-700 font-bold mb-2">Adhar/Enrollment No.:</label>
+                                <input type="text" class="form-control bg-gray-100 border border-gray-300 rounded-lg p-2 w-full" id="adhar" name="adhar" placeholder="Enter Number" value="xxxx xxxx">
+                            </div>
+                            <div class="w-full md:w-1/3 px-2 mb-4 md:mb-0">
+                                <label for="dukan_no" class="block text-gray-700 font-bold mb-2">Dukandaar Name:</label>
+                                <input type="text" class="form-control bg-gray-100 border border-gray-300 rounded-lg p-2 w-full" id="dukan_no" name="dukan_no">
+                            </div>
+                            <div class="w-full md:w-1/3 px-2">
+                                <label for="unit" class="block text-gray-700 font-bold mb-2">Unit No.:</label>
+                                <input type="number" class="form-control bg-gray-100 border border-gray-300 rounded-lg p-2 w-full" id="unit" name="unit">
+                            </div>
+                        </div>
+
+                        <!-- Row 4 -->
+                        <div class="flex flex-wrap -mx-2 mb-4">
+                            <div class="w-full md:w-2/3 px-2 mb-4 md:mb-0">
+                                <label for="address" class="block text-gray-700 font-bold mb-2">Full Address:</label>
+                                <textarea class="form-control bg-gray-100 border border-gray-300 rounded-lg p-2 w-full" id="address" name="address" rows="3" placeholder="Enter Your Address"></textarea>
+                            </div>
 
                 <div class="w-full md:w-1/3 px-2 mb-4 md:mb-0">
                     <label for="DrivePath" class="block text-gray-700 font-bold mb-2">DrivePath File:</label>
@@ -236,10 +272,37 @@ $result = $mysqli->query($sql);
                     <a class="kpdf text-blue-500 hover:underline mt-2 block" href="https://drive.google.com/path/to/your/file" target="_blank">View DrivePath File</a>
                 </div>
 
- 
+
+
+                            <div class="w-full md:w-1/3 px-2 mb-4 md:mb-0">
+                                <label for="pdfUpload" class="block text-gray-700 font-bold mb-2">PDF Upload:</label>
+                                <input type="file" class="form-control-file border border-gray-300 rounded-lg p-2 w-full" id="pdfUpload" name="pdfUpload">
+                                <a class="kpdf text-blue-500 hover:underline mt-2 block" href="" target="_blank">Download PDF</a>
+                            </div>
+
+
+
+
+                            <div class="w-full md:w-1/3 px-2 mb-4 md:mb-0">
+                                <label for="photoUpload" class="block text-gray-700 font-bold mb-2">Photo Upload:</label>
+                                <input type="file" class="form-control-file border border-gray-300 rounded-lg p-2 w-full" id="photoUpload" name="photoUpload" accept="image/*">
+                                <img class="kphoto mt-2" src="" width="100px" />
+                            </div>
+                            <div class="w-full md:w-1/3 px-2">
+                                <label for="screenshotUpload" class="block text-gray-700 font-bold mb-2">Screenshot Upload:</label>
+                                <input type="file" class="form-control-file border border-gray-300 rounded-lg p-2 w-full" id="screenshotUpload" name="screenshotUpload" accept="image/*">
+                                <img class="kpariwar mt-2" src="" width="100px" />
+                            </div>
                         </div>
 
-                      
+                        <!-- Row 5 -->
+                        <div class="flex flex-wrap -mx-2 mb-4">
+                            <div class="w-full md:w-1/2 px-2 mb-4 md:mb-0">
+                                <label for="gas_connection_no" class="block text-gray-700 font-bold mb-2">Gas Family Connection No.:</label>
+                                <input type="text" class="form-control bg-gray-100 border border-gray-300 rounded-lg p-2 w-full" id="gas_connection_no" name="gas_connection_no" placeholder="Enter Number">
+                            </div>
+                        </div>
+
                         <!-- Submit Button -->
                         <div class="form-group mt-4">
                             <button type="submit" class="w-full bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">Save</button>
