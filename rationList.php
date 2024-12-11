@@ -265,11 +265,24 @@ $result = $mysqli->query($sql);
                                 <label for="address" class="block text-gray-700 font-bold mb-2">Full Address:</label>
                                 <textarea class="form-control bg-gray-100 border border-gray-300 rounded-lg p-2 w-full" id="address" name="address" rows="3" placeholder="Enter Your Address"></textarea>
                             </div>
+
+                <div class="w-full md:w-1/3 px-2 mb-4 md:mb-0">
+                    <label for="DrivePath" class="block text-gray-700 font-bold mb-2">DrivePath File:</label>
+                    <input type="text" class="form-control-file border border-gray-300 rounded-lg p-2 w-full" id="DrivePath" name="DrivePath" placeholder="Enter or view the drive path">
+                    <a class="kpdf text-blue-500 hover:underline mt-2 block" href="https://drive.google.com/path/to/your/file" target="_blank">View DrivePath File</a>
+                </div>
+
+
+
                             <div class="w-full md:w-1/3 px-2 mb-4 md:mb-0">
                                 <label for="pdfUpload" class="block text-gray-700 font-bold mb-2">PDF Upload:</label>
                                 <input type="file" class="form-control-file border border-gray-300 rounded-lg p-2 w-full" id="pdfUpload" name="pdfUpload">
                                 <a class="kpdf text-blue-500 hover:underline mt-2 block" href="" target="_blank">Download PDF</a>
                             </div>
+
+
+
+
                             <div class="w-full md:w-1/3 px-2 mb-4 md:mb-0">
                                 <label for="photoUpload" class="block text-gray-700 font-bold mb-2">Photo Upload:</label>
                                 <input type="file" class="form-control-file border border-gray-300 rounded-lg p-2 w-full" id="photoUpload" name="photoUpload" accept="image/*">

@@ -12,6 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $dukan_no = $_POST['dukan_no'];
     $unit = $_POST['unit'];
     $janpad = $_POST['Janpad'];
+    $DrivePath = $_POST['DrivePath'];
     $rid = $_POST['rid'];
     // $user_id = $_POST['user_id']; 
 
@@ -113,7 +114,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         gas_connection_no='$gas_connection_no', 
         dukan_no='$dukan_no', 
         unit='$unit',
-        janpad='$janpad'
+        janpad='$janpad',
+        pdf_path='$DrivePath',
         WHERE id=$rid";
 
     if($photoPath!=''){
@@ -125,7 +127,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if($pdfPath!=''){
            $sql = "UPDATE ration_req SET pdf_path='$pdfPath' WHERE id=$rid";
-    }
+    } 
   
         
       //  die("ADf");
