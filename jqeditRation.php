@@ -22,7 +22,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 $mysqli->close();
 
+function getGoogleDriveDownloadLinkWithoutRegex($inputLink) {
+    // Split the string by '/' and store in an array
+    $parts = explode('/', $inputLink);
 
+    // The file ID will be at the 5th position (index 4) in the array
+    if (isset($parts[5])) {
+        $fileId = $parts[5];
+        // Construct the direct download link
+        return "https://drive.usercontent.google.com/u/0/uc?id=" . $fileId . "&export=download";
+    } else {
+        return "Invalid Google Drive link. File ID not found.";
+    }
+}
 
 function getGoogleDriveDownloadLink($inputLink) {
     // Use preg_match to extract the file ID
@@ -37,6 +49,9 @@ function getGoogleDriveDownloadLink($inputLink) {
     }
 }
 
+//https://drive.google.com/file/d/1LMi3wH5zgHdyw3siugXlJW_BREYwoN6p/view?usp=drive_link
+
+//https://drive.usercontent.google.com/download?id=1LMi3wH5zgHdyw3siugXlJW_BREYwoN6p&export=download&authuser=0
 
 
 
