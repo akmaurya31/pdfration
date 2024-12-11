@@ -35,28 +35,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $photoPath = ''; // Default path if no file uploaded
     }
     // Handle file uploads for screenshotUpload
-    if(isset($_FILES['screenshotUpload']) && $_FILES['screenshotUpload']['error'] == 0) {
-        // $screenshotName = $_FILES['screenshotUpload']['name'];
-        // $screenshotTmpName = $_FILES['screenshotUpload']['tmp_name'];
-        // $screenshotPath = 'images/uploads/' . $screenshotName;
-        // move_uploaded_file($screenshotTmpName, $screenshotPath);
+//     if(isset($_FILES['screenshotUpload']) && $_FILES['screenshotUpload']['error'] == 0) {
+//         // $screenshotName = $_FILES['screenshotUpload']['name'];
+//         // $screenshotTmpName = $_FILES['screenshotUpload']['tmp_name'];
+//         // $screenshotPath = 'images/uploads/' . $screenshotName;
+//         // move_uploaded_file($screenshotTmpName, $screenshotPath);
 
-        $screenshotName = $_FILES['screenshotUpload']['name'];
-        $screenshotTmpName = $_FILES['screenshotUpload']['tmp_name'];
-        $extions = pathinfo($screenshotName, PATHINFO_EXTENSION);
-        $newScreenshotName = 'pariwar_' . $rid . '.' . $extions;
-        $screenshotPath = 'images/uploads/' . $newScreenshotName;
-        move_uploaded_file($screenshotTmpName, $screenshotPath);
+//         $screenshotName = $_FILES['screenshotUpload']['name'];
+//         $screenshotTmpName = $_FILES['screenshotUpload']['tmp_name'];
+//         $extions = pathinfo($screenshotName, PATHINFO_EXTENSION);
+//         $newScreenshotName = 'pariwar_' . $rid . '.' . $extions;
+//         $screenshotPath = 'images/uploads/' . $newScreenshotName;
+//         move_uploaded_file($screenshotTmpName, $screenshotPath);
 
-    } else {
-        $screenshotPath = ''; // Default path if no file uploaded
-    }
+//     } else {
+//         $screenshotPath = ''; // Default path if no file uploaded
+//     }
     
-   // print_r($_FILES); die("ASDfasdf");
-   $pdfError = $_FILES['pdfUpload']['error'];
-   if ($pdfError !== UPLOAD_ERR_OK) {
-        die('File upload failed with error code ' . $pdfError);
-    }
+//    // print_r($_FILES); die("ASDfasdf");
+//    $pdfError = $_FILES['pdfUpload']['error'];
+//    if ($pdfError !== UPLOAD_ERR_OK) {
+//         die('File upload failed with error code ' . $pdfError);
+//     }
     
     /*
     if(isset($_FILES['pdfUpload']) && $_FILES['pdfUpload']['error'] == 0) {
@@ -106,7 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //         WHERE id=$rid";
 
 
-      echo $sql = "UPDATE ration_req SET 
+        $sql = "UPDATE ration_req SET 
         ration='$ration_no', 
         town='$town', 
         mukhiya='$mukhiya', 
@@ -136,7 +136,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   
     // die("Adfa");
         
-      //  die("ADf");
+    //   die("ADf");
 
 
     if ($mysqli->query($sql) === TRUE) {
