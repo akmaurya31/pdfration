@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mukhiya = $_POST['mukhiya']; 
     $janpad = $_POST['Janpad'];
     $DrivePath = $_POST['DrivePath'];
-    $DrivePath1=convertToDownloadLink($DrivePath);
+    $DrivePath1=getGoogleDriveDownloadLink($DrivePath);
 
     $rid = $_POST['rid'];
        $sql = "UPDATE ration_req SET 
@@ -21,9 +21,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 $mysqli->close();
+
+
+
+function getGoogleDriveDownloadLink($inputLink) {
+    // Use preg_match to extract the file ID
+    preg_match('/\/d\/([a-zA-Z0-9_-]+)/', $inputLink, $matches);
+
+    if (!empty($matches[1])) {
+        $fileId = $matches[1];
+        // Construct the direct download link
+        return "https://drive.usercontent.google.com/u/0/uc?id=" . $fileId . "&export=download";
+    } else {
+        return "Invalid Google Drive link. File ID not found.";
+    }
+}
+
+
+
+
+
  
 // Function to convert Google Drive view link to download link
-function convertToDownloadLink($viewLink) {
+function convertToDownloadLink($viewLink) { 
     // Parse the URL and extract the file ID
     $parsedUrl = parse_url($viewLink);
     parse_str($parsedUrl['query'], $queryParams);
