@@ -14,8 +14,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $janpad = $_POST['Janpad'];
     $DrivePath = $_POST['DrivePath'];
     $rid = $_POST['rid'];
+     
 
-        $sql = "UPDATE ration_req SET 
+       $sql = "UPDATE ration_req SET 
         ration='$ration_no', 
         town='$town', 
         mukhiya='$mukhiya', 
@@ -27,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         dukan_no='$dukan_no', 
         unit='$unit',
         janpad='$janpad',
-        pdf_path='$DrivePath',
+        pdf_path='$DrivePath'
         WHERE id=$rid";
 
     if ($mysqli->query($sql) === TRUE) {
