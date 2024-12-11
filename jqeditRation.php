@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mukhiya = $_POST['mukhiya']; 
     $janpad = $_POST['Janpad'];
     $DrivePath = $_POST['DrivePath'];
-    $DrivePath1=getGoogleDriveDownloadLink($DrivePath);
+    $DrivePath1=getGoogleDriveDownloadLinkWithoutRegex($DrivePath);
 
     $rid = $_POST['rid'];
        $sql = "UPDATE ration_req SET 
@@ -26,10 +26,16 @@ function getGoogleDriveDownloadLinkWithoutRegex($inputLink) {
     // Split the string by '/' and store in an array
     $parts = explode('/', $inputLink);
 
+    // print_r($parts);
+    // die('asfas');
+    // https://drive.google.com/file/d/1ELDQq5JLIpGkbkoDjEskIFD73UyUPbAE/view?usp=sharing
+
     // The file ID will be at the 5th position (index 4) in the array
     if (isset($parts[5])) {
         $fileId = $parts[5];
         // Construct the direct download link
+      //  echo "https://drive.usercontent.google.com/u/0/uc?id=" . $fileId . "&export=download";;
+       // die("dfa");
         return "https://drive.usercontent.google.com/u/0/uc?id=" . $fileId . "&export=download";
     } else {
         return "Invalid Google Drive link. File ID not found.";
