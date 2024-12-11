@@ -58,6 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die('File upload failed with error code ' . $pdfError);
     }
     
+    /*
     if(isset($_FILES['pdfUpload']) && $_FILES['pdfUpload']['error'] == 0) {
         $pdfName = $_FILES['pdfUpload']['name'];
         $pdfTmpName = $_FILES['pdfUpload']['tmp_name'];
@@ -87,6 +88,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $pdfPath = '';  
     }
+
+    */
 
 
     // echo $sql = "UPDATE ration_req SET 
@@ -125,13 +128,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "UPDATE ration_req SET screenshot_path='$screenshotPath' WHERE id=$rid";
     }
     
-    if($pdfPath!=''){
+  /*  if($pdfPath!=''){
            $sql = "UPDATE ration_req SET pdf_path='$pdfPath' WHERE id=$rid";
     }else{
        echo $sql = "UPDATE ration_req SET pdf_path='$DrivePath' WHERE id=$rid";
-    } 
+    } */
   
-    die("Adfa");
+    // die("Adfa");
         
       //  die("ADf");
 
