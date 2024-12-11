@@ -127,6 +127,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if($pdfPath!=''){
            $sql = "UPDATE ration_req SET pdf_path='$pdfPath' WHERE id=$rid";
+    }else{
+        $sql = "UPDATE ration_req SET pdf_path='$DrivePath' WHERE id=$rid";
     } 
   
         
