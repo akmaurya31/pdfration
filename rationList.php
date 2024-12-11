@@ -99,7 +99,7 @@ $result = $mysqli->query($sql);
                     $bbal = isset($bal->current_balance) && $bal->current_balance > 0 ? $bal->current_balance : 0;
                     $rs = getUserDataById($mysqli, $row['user_id']);
 
-                    echo $cnt >= 1 ? "<tr class='bg-yellow-200'>" : "<tr class='bg-white-500'>";
+                    echo $cnt >= 1 ? "<tr class='bg-pink-200'>" : "<tr class='bg-white-500'>";
                     ?>
                     <td class="px-6 py-3 font-bold"><?php echo $m . '00' . $row['id']; $m++; ?></td>
                     <td class="<?php echo $rlok; ?> px-6 py-3 text-md font-bold">
