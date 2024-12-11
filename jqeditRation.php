@@ -121,12 +121,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         pdf_path='$DrivePath',
         WHERE id=$rid";
 
-    if($photoPath!=''){
-        $sql = "UPDATE ration_req SET photo_path='$photoPath' WHERE id=$rid";
-    }
-    if($screenshotPath!=''){
-        $sql = "UPDATE ration_req SET screenshot_path='$screenshotPath' WHERE id=$rid";
-    }
+    // if($photoPath!=''){
+    //     $sql = "UPDATE ration_req SET photo_path='$photoPath' WHERE id=$rid";
+    // }
+
+
+    // if($screenshotPath!=''){
+    //     $sql = "UPDATE ration_req SET screenshot_path='$screenshotPath' WHERE id=$rid";
+    // }
     
   /*  if($pdfPath!=''){
            $sql = "UPDATE ration_req SET pdf_path='$pdfPath' WHERE id=$rid";
