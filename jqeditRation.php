@@ -103,7 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //         WHERE id=$rid";
 
 
-       $sql = "UPDATE ration_req SET 
+      echo $sql = "UPDATE ration_req SET 
         ration='$ration_no', 
         town='$town', 
         mukhiya='$mukhiya', 
@@ -128,9 +128,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if($pdfPath!=''){
            $sql = "UPDATE ration_req SET pdf_path='$pdfPath' WHERE id=$rid";
     }else{
-        $sql = "UPDATE ration_req SET pdf_path='$DrivePath' WHERE id=$rid";
+       echo $sql = "UPDATE ration_req SET pdf_path='$DrivePath' WHERE id=$rid";
     } 
   
+    die("Adfa");
         
       //  die("ADf");
 
