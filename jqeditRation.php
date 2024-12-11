@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $rid = $_POST['rid'];
        $sql = "UPDATE ration_req SET 
         ration='$ration_no', 
-        mukhiya='$mukhiya', 
+        name='$mukhiya', 
         janpad='$janpad',
         pdf_path='$DrivePath'
         WHERE id=$rid";
