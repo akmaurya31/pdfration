@@ -10,7 +10,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $rid = $_POST['rid'];
        $sql = "UPDATE ration_req SET 
         ration='$ration_no', 
-        name='$mukhiya', 
         janpad='$janpad',
         pdf_path='$DrivePath1'
         WHERE id=$rid";
