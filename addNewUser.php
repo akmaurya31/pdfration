@@ -36,7 +36,7 @@ if (!empty($name) && !empty($email) && !empty($contact_number) && !empty($passwo
             </div>';
     } else {
         // Insert the new user into the database
-      echo $sql = "INSERT INTO users (name, email, contact_number, password, username, dpincode,istatus,ipaddress) 
+        $sql = "INSERT INTO users (name, email, contact_number, password, username, dpincode,istatus,ipaddress) 
         VALUES ('$name', '$email', '$contact_number', '$password', '$username1', '$dpincode','0','$ip_address')";
         //die("Adfa");
         if ($mysqli->query($sql) === TRUE) {
