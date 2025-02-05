@@ -74,7 +74,7 @@ $randomBackgroundColor = $backgroundColors[array_rand($backgroundColors)];
   <?php echo $randomMessage; ?>
   </h1>
   <p class="text-2xl font-semibold text-center mb-2 text-green-600">
-    4200+ <span class="font-extrabold text-black">जन सेवा केंद्र</span> और 6000+ <span class="font-extrabold text-black">छोटे-बड़े व्यवसायी</span> हमारे साथ हैं। 🚀
+    4300+ <span class="font-extrabold text-black">जन सेवा केंद्र</span> और 6000+ <span class="font-extrabold text-black">छोटे-बड़े व्यवसायी</span> हमारे साथ हैं। 🚀
   </p>
   
   <p class="text-lg text-center text-gray-700">
