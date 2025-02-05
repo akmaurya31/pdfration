@@ -78,7 +78,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
                 }
 
                 // Calculate total pages
-                $total_users_sql = "SELECT COUNT(*) as total_users FROM users WHERE name LIKE '%$search%' OR email LIKE '%$search%' OR contact_number LIKE '%$search%'";
+                $total_users_sql = "SELECT COUNT(*) as total_users FROM users WHERE istatus=0 and (name LIKE '%$search%' OR email LIKE '%$search%' OR contact_number LIKE '%$search%')";
                 $total_users_result = $mysqli->query($total_users_sql);
                 $total_users_row = $total_users_result->fetch_assoc();
                 $total_users = $total_users_row['total_users'];
@@ -156,7 +156,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
                                 <label for="contactDetail" class="block text-sm font-medium text-gray-700">Status</label>
                                 <input type="text" id="istatus" name="istatus" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
                         </div>
-                        
+
                     </div>
                     <button type="submit" id="s1" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700">Submit</button>
                 </form>
