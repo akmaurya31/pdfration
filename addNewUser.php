@@ -8,6 +8,7 @@ $password = trim(htmlspecialchars($_POST['password']));
 $dpincode = trim(htmlspecialchars($_POST['dpincode']));
 list($username, $domain) = explode("@", $email);
 $username1 = $username.rand(1, 9999);
+$ip_address = $_SERVER['REMOTE_ADDR'];
 
 if (!empty($name) && !empty($email) && !empty($contact_number) && !empty($password)) {
     // Check if the email or contact number already exists in the database
@@ -35,8 +36,8 @@ if (!empty($name) && !empty($email) && !empty($contact_number) && !empty($passwo
             </div>';
     } else {
         // Insert the new user into the database
-        $sql = "INSERT INTO users (name, email, contact_number, password, username, dpincode) 
-        VALUES ('$name', '$email', '$contact_number', '$password', '$username1', '$dpincode')";
+        $sql = "INSERT INTO users (name, email, contact_number, password, username, dpincode,istatus,ipaddress) 
+        VALUES ('$name', '$email', '$contact_number', '$password', '$username1', '$dpincode','0',$ip_address)";
         if ($mysqli->query($sql) === TRUE) {
             echo '<div class="bg-green-100 border border-green-400  max-w-[1325px] mt-5 mx-auto text-green-700 px-4 py-3 rounded relative" role="alert">
             <strong class="font-bold">Success! 🎉</strong>
